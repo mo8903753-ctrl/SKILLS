@@ -38,6 +38,15 @@ cp -R SKILLS/skills/* ~/.codex/skills/         # Codex
 | **youtube-kol-finder** | YouTube KOL candidate 检索、筛选、打分、成表 |
 | **shooting-brief-master** | 众筹产品拍摄需求文档（户外/消费电子），输出单页 HTML |
 
+### 获客与沟通
+
+| Skill | 用途 |
+|---|---|
+| **madspace-lead-sourcing** | 获客自动化系统：发现中国硬件品牌方线索、搭建/运行扫描器 |
+| **crowdfunding-lead-generation** | KS/IGG 代运营获客：线索筛选、cron 自动扫描 |
+| **chinese-business-copy** | 把机翻/英文思维的中文商务文案，改写成能在会议室逐页讲的正式版本 |
+| **chinese-client-messaging** | 甲方微信/邮件短消息：排期协商、风险沟通、范围讨论 |
+
 ## 开工前必读
 
 - `crowdfunding-proposal-site/reference/PITFALLS.md` — 30 条实战踩坑
