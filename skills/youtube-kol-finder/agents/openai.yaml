@@ -1,0 +1,7 @@
+interface:
+  display_name: "YouTube KOL Finder"
+  short_description: "Find YouTube KOLs for tech crowdfunding"
+  default_prompt: "Use $youtube-kol-finder to find and score YouTube KOLs for a tech crowdfunding campaign."
+
+policy:
+  allow_implicit_invocation: true

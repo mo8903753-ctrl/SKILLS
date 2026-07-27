@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crowdfunding EDM Image"
+  short_description: "Turn product renders or photos into fixed-template image EDMs."
+  default_prompt: "Create pure-image crowdfunding EDMs from my product images and campaign variables."

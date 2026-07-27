@@ -1,0 +1,92 @@
+[
+  {
+    "slot": "{{参考图_错误案例}}",
+    "filename": "static-warning-wrong-example.jpg",
+    "caption": "错误案例：不要使用夸张表情、过近人物特写或抢产品主体的画面"
+  },
+  {
+    "slot": "{{参考图_KV}}",
+    "filename": "static-kv-45-front.jpg",
+    "caption": "KV 45° 主视觉构图参考"
+  },
+  {
+    "slot": "{{参考图_核心功能}}",
+    "filename": "static-core-function-closeup.jpg",
+    "caption": "核心功能工作状态特写参考"
+  },
+  {
+    "slot": "{{参考图_产品特写}}",
+    "filename": "static-product-detail.jpg",
+    "caption": "产品正侧面与细节质感参考"
+  },
+  {
+    "slot": "{{参考图_材质细节}}",
+    "filename": "static-material-detail.jpg",
+    "caption": "材质、纹理、接口细节参考"
+  },
+  {
+    "slot": "{{参考图_场景应用}}",
+    "filename": "static-lifestyle-scene.jpg",
+    "caption": "北美户外/生活方式场景参考"
+  },
+  {
+    "slot": "{{参考图_生活镜头}}",
+    "filename": "static-life-moment.jpg",
+    "caption": "人物自然互动与中长景参考"
+  },
+  {
+    "slot": "{{参考图_产品品质}}",
+    "filename": "static-quality-test.jpg",
+    "caption": "品质测试与数据展示参考"
+  },
+  {
+    "slot": "{{参考图_纯色渲染}}",
+    "filename": "static-render-orthographic.jpg",
+    "caption": "六视图/尺寸/配件展示参考"
+  },
+  {
+    "slot": "{{参考图_核心部件}}",
+    "filename": "static-component-closeup.jpg",
+    "caption": "核心部件与模块特写参考"
+  },
+  {
+    "slot": "{{参考图_正常运转}}",
+    "filename": "static-factory-operation.jpg",
+    "caption": "产品亮灯/屏幕/运转状态参考"
+  },
+  {
+    "slot": "{{参考图_设计手稿}}",
+    "filename": "static-designer-sketch.jpg",
+    "caption": "手稿/CAD/结构草图参考"
+  },
+  {
+    "slot": "{{参考图_产线辨识}}",
+    "filename": "static-identifiable-product-line.jpg",
+    "caption": "产线中可辨识产品/半成品参考"
+  },
+  {
+    "slot": "{{参考图_生产过程}}",
+    "filename": "static-production-line.jpg",
+    "caption": "工人组装与产线远近景参考"
+  },
+  {
+    "slot": "{{参考图_零部件组装}}",
+    "filename": "static-assembly-process.jpg",
+    "caption": "核心部件/外壳组装参考"
+  },
+  {
+    "slot": "{{参考图_装货过程}}",
+    "filename": "static-packing-loading.jpg",
+    "caption": "装箱、装车、货车码放参考"
+  },
+  {
+    "slot": "{{参考图_打包装车}}",
+    "filename": "static-packed-shipment.jpg",
+    "caption": "包装完毕与待发货陈列参考"
+  },
+  {
+    "slot": "{{参考图_全流程视频}}",
+    "filename": "static-production-line.jpg",
+    "caption": "生产到包装全流程视频参考"
+  }
+]

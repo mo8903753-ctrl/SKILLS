@@ -1,0 +1,23 @@
+{
+  "skill_name": "overseas-ad-copy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我写投广文案。\n\n产品名称：Soundbud OpenAnc\n折扣：31%\n活动阶段：预热期\n\n预热页文案：\nYour First Active Noise Cancellation Open Earbuds. Experience 32dB Active Noise Cancellation in a revolutionary open-ear design. Crafted with aerospace-grade memory titanium alloy and skin-friendly liquid silicone, it sits effortlessly on your ear with zero pressure — even after 8+ hours of continuous wear. Powered by 0.1% ultra-low distortion drivers and advanced ENC mic technology, every note is pure and every call is crystal clear. With 50 hours of total battery life and IPX7 waterproof protection, Soundbud OpenAnc is your perfect companion for commuting, running, and the office.",
+      "expected_output": "Both Meta (3 formats) and Google (keywords + headlines ≤30 chars + descriptions ≤90 chars) ad copy. Headline flows directly into bullet list with no blank line. All Google headlines verified ≤30 chars.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "帮我出一套投广文案。\n\n产品名称：FitRing Pro\n折扣：25%\n活动阶段：大促期\n\nKSP列表：\n- 24/7 Health Monitoring: Heart rate, blood oxygen SpO2, sleep tracking, and stress detection\n- Ultra-Slim 2mm Titanium Ring Design: No bulky device, wear it anywhere\n- 7-Day Battery Life with wireless charging\n- IP68 Waterproof — swim, shower, workout\n- AI Health Coach: Personalized daily health insights powered by AI\n- Compatible with iOS & Android\n- No subscription fees",
+      "expected_output": "Both Meta and Google ad copy. Launch/sale stage copy should have urgency and FOMO. Google headlines strictly ≤30 chars with character counts shown.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "给我写一组广告文案，日常投放用的。\n\n产品：SleepDrop Smart Pillow Spray\n折扣：20% off\n活动阶段：日常期\n\n产品卖点：\n• 100% Natural Essential Oils (lavender, chamomile, vetiver)\n• Clinically studied ingredients — 89% users fall asleep faster\n• Just 2-3 sprays on pillow, works in minutes\n• No melatonin, no pills, non-habit forming\n• Vegan & Cruelty-free certified\n• Travel-friendly 30ml bottle\n• Pleasant, non-overwhelming scent",
+      "expected_output": "Both Meta and Google ad copy. Ongoing/evergreen tone — trust signals, lifestyle fit, benefit-focused. No urgency language. Headlines ≤30 chars.",
+      "files": []
+    }
+  ]
+}

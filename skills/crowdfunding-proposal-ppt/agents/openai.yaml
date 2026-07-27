@@ -1,0 +1,4 @@
+interface:
+  display_name: "众筹方案 PPT"
+  short_description: "调研产品、竞品和KOL，生成可编辑众筹方案PPTX"
+  default_prompt: "根据产品信息先调研分析，再严格按模板生成一份可编辑的众筹方案PPT。"
