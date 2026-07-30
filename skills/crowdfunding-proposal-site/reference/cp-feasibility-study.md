@@ -48,7 +48,7 @@ User successively deleted from channel section:
 - "+ Discord 社群预热"
 - "+ 定向行业媒体 outreach"  
 - Entire "05 海外垂直社群与论坛" strip
-- Meta/Google ratio changed from 60:40 to 70:30 throughout
+- Meta/Google ratio changed from 60:40 to 70:30 throughout（该项目当时口径；2026-07 起现行默认 = 两阶段均 90:10，见 SKILL.md）
 
 ### Budget Simplification
 Deleted from budget section:

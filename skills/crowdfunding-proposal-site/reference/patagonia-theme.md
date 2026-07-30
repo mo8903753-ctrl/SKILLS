@@ -102,7 +102,7 @@ body:16px / line-height:1.7
 
 ## 8. 预算双档切换
 
-切换的是**两个目标档**（默认：一般市场 $500K/$1M，美国市场 $600K/$1M），各自营销预算 = 目标 × **费率**（≤$600K 用 17.96%，$1M 用 20%；拆分见 `content-methodology.md` §1）。`.budget-panel` 用 `display` 切换，**不要藏在注释里**。按钮标两个数：`目标 $200K · 营销预算 $35,920`。每行带"公式"列 + "说明"列（Meta/Google 60:40、CPL $3-5、ROAS 2.5x）。Mode A 代理提案默认档 = **$500K/$1M**（Panel A=$500K 默认激活），不要用 $200K/$500K 作默认。
+切换的是**两个目标档**（默认：一般市场 $500K/$1M，美国市场 $600K/$1M），各自营销预算 = 目标 × **费率**（≤$600K 用 17.96%，$1M 用 20%；拆分见 `content-methodology.md` §1）。`.budget-panel` 用 `display` 切换，**不要藏在注释里**。按钮标两个数：`目标 $200K · 营销预算 $35,920`。每行带"公式"列 + "说明"列（Meta/Google 90:10、CPL $3-5、ROAS 2.5x）。Mode A 代理提案默认档 = **$500K/$1M**（Panel A=$500K 默认激活），不要用 $200K/$500K 作默认。
 
 ## 9. 封面图层 & 背景图（base64，关键易错点）
 
@@ -132,7 +132,7 @@ body:16px / line-height:1.7
 ## 11. 部署 & 自检
 
 部署：同目录放 `index.html` + `cover-bg.png`（+ 视频）；logo 转 base64；本地 `python3 -m http.server 8080`；Netlify Drop 改名 index.html。
-交付前 checklist：14 章齐全编号（滚动站可压缩为 8-13 章）；预算按目标档取费率（≤$600K 用 17.96%，$1M 用 20%，非乱数）；KPI 与定价档自洽；封面左暗渐变+白字左对齐单列；预算切换两张完整表；浮 logo 全程可见；SVG 无 viewBox 裁切；125% 无重叠；图上玻璃卡 ≥0.80 不透明；KS 页禁 cure/treat/medical；spec-gap 决策闸在定价前；backer 信任风险标 medium；量化声明有来源小字。
+交付前 checklist：14 章齐全编号（滚动站可压缩为 8-13 章）；预算按目标档取费率（≤$600K 用 17.96%，$1M 用 20%，非乱数）；KPI 与定价档自洽；封面左暗渐变+白字左对齐单列；预算切换两张完整表；浮 logo 全程可见；SVG 无 viewBox 裁切；125% 无重叠；图上玻璃卡 ≥0.80 不透明；KS 页禁 cure/treat/medical；spec-gap 决策闸在定价前；无认证类内容（FCC/CE/ISO/物流/平台认证）；量化声明有来源小字。
 
 ---
 
@@ -157,8 +157,8 @@ body:16px / line-height:1.7
 - 禁用国内背书（信创/国家级/中科院/政府部署数）作定价溢价。
 - 禁预算写成大额平摊（"$200K total marketing"）——目标≠营销预算。
 - 禁 KPI 不从定价档推导（$200K÷$999≠1,500 backers）。
-- 禁把 backer 信任标低风险（中国品牌+数据存储=中风险起）。
+- 禁认证类内容入方案（合规/物流/平台认证，见 `content-methodology.md` §5）。
 - 禁渠道含 Reddit/HN/Twitter-X/隐私安全媒体（已删）。
 - 成功页标题禁"你得到什么"，用"Campaign结束后的品牌资产"。
 - 玻璃卡禁压产品主体；use-case 卡禁 SVG icon（用数字）；封面禁居中文字/过浅均匀遮罩。
-- claim 软化：禁"首款"、禁"竞品需 18-24 月追平"、未确认认证降级（详见 `content-methodology.md` §10）。
+- claim 软化：禁"首款"、禁"竞品需 18-24 月追平"（详见 `content-methodology.md` §10）。

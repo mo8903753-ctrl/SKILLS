@@ -8,9 +8,9 @@ When adapting a B2B/enterprise product for a Kickstarter consumer proposal, ever
    - Example: 10GbE listed as "可选扩展槽" → must write "KS版需确认标配，当前资料为扩展槽选配"
    - Example: Docker/AI mentioned in series-level marketing but not in the specific model's datasheet → must write "需品牌方确认"
 
-2. **Does the product have the certification this claim implies?**
-   - Example: 3C certified but FCC/CE unconfirmed → must write "3C已具备 · FCC/CE需确认进度"
-   - Never assume international certifications from domestic certifications
+2. **Does the claim involve certifications?**
+   - 认证类内容（FCC/CE/技适/ISO/物流/平台认证等）**一律不进方案**（见 content-methodology.md §5）——不写"已具备"，也不写"需确认"，直接整条删除
+   - 产品资料里的认证信息不搬运进任何章节
 
 3. **Is the quantitative claim supported by the product materials?**
    - Example: "50+部署" when the materials show cases but no explicit count → must write "多行业政企客户" or ask brand for exact number
@@ -51,7 +51,7 @@ These claims passed all six verification questions against the product datasheet
 | 2×8TB RAID-TP | RAID-TP需要≥3盘 | 2×8TB：RAID1/备份；4×/8×8TB：可选RAID-TP |
 | 零遥测、零账号、零中间人 | 资料未证明零云端连接 | 可本地部署，不依赖公有云账号 |
 | 50+政企部署 | 资料有案例但无明确"50+"数字 | 多行业政企客户（法院/医院/大学/铁路等） |
-| FCC/CE认证已具备 | 资料仅明确3C认证 | 3C已具备 · FCC/CE需确认进度 |
+| FCC/CE认证已具备 | 认证类内容不入方案 | 整条删除，不出现在方案任何章节 |
 | US 60% + EU 28% + AP 18% | 总和106%，来源不明 | 删百分比，用定性优先级描述 |
 | 1台预产样机 | 与KOL数量矛盾 | 至少5台评测样机 + 1台拍摄备机 |
 

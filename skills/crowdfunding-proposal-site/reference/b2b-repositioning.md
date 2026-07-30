@@ -33,18 +33,18 @@ Map each enterprise feature to a consumer anxiety:
 **Steps:**
 1. Identify the #1 KS competitor in the same category (e.g., UGREEN NASync DXP8800 Plus for 8-bay NAS at $899-$1,049)
 2. Build a competitive pricing anchor table with: product name, positioning, key specs, KS price range, current retail price
-3. Set your SEB at or near the competitor's SEB — don't try to price higher on "enterprise features" narrative
+3. Set your Launch Special（主力档，销量 ≥60%）at or near the competitor's early-bird anchor — don't try to price higher on "enterprise features" narrative
 4. Differentiate on VALUE at the same price, not on price premium
 
 **Two-scenario pricing**: When a key spec is uncertain (e.g., 10GbE — standard or optional?), present both scenarios:
 - **Plan A** (spec included): Price at competitor anchor, compete on enterprise features at same price
 - **Plan B** (spec gapped): Drop price by $100-150 to compensate the visible spec gap in comparison tables
 
-**MSRP anchor**: Set post-KS retail at roughly 1.6-1.8x the Early Bird price. This creates the "discount depth" perception that drives KS conversion.
+**MSRP anchor**: Set post-KS retail at roughly 1.6-1.8x the Launch Special price. This creates the "discount depth" perception that drives KS conversion.
 
 **Diskless-first + Add-Ons (NOT default bundles)**: Diskless base tiers drive volume by keeping the entry price low. Hard drives, networking upgrades, extended warranty, and migration services are separate Add-Ons the user selects at checkout. This follows the UGREEN/ZimaCube proven pattern: ~65% of units sold are Diskless, Add-Ons capture the remaining revenue. Do NOT make bundles the default or the "featured" tier — it raises the psychological entry price and shrinks the funnel.
 
-**Pitfall**: Do NOT use domestic-market prestige (信创认证, 国家级实验室, 中科院血统, government deployment count) to justify a higher KS price. These credibility signals are valuable as trust elements in the narrative, but they do not translate to willingness-to-pay on Kickstarter. KS users compare price-to-specs, not price-to-pedigree.
+**Pitfall**: Do NOT use domestic-market prestige (信创, 国家级实验室, 中科院血统, government deployment count) to justify a higher KS price. These credibility signals are valuable as trust elements in the narrative, but they do not translate to willingness-to-pay on Kickstarter. KS users compare price-to-specs, not price-to-pedigree.
 
 ### 5. Competitive positioning reframe
 - Don't compare on enterprise specs directly — consumer buyers don't know what SAS is
@@ -65,6 +65,8 @@ Enterprise buyers become these Kickstarter personas:
 - If the brand has zero Western-facing assets (no English docs, no international warranty path)
 
 ## Concrete example: C2000 NAS (this session)
+
+> 下例档位命名（SEB/EB/KS Special）是该案例的历史结构；现行阶梯 = Secret Reward < Launch Special（主力 ≥60%）< SEB < EB < Late Pledge，见 SKILL.md「价格与行动」。复用时套现行命名，价位逻辑不变。
 - Original: 信创智能NAS存储一体机 for Chinese government/SOE/education/healthcare
 - Reframed: "Enterprise Storage. Your Desk." — data-center hardware in desktop form for creators
 - Stripped: 信创 certification, domestic CPU narrative, 79号文 compliance timeline

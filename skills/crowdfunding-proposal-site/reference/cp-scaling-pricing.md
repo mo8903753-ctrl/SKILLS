@@ -38,15 +38,17 @@ Label it "对标 Segai 客单水平" or "Segai 客单优先路线（对照）".
 
 ## Tier Design for Scale-First
 
+档位命名与顺序对齐现行阶梯（Secret Reward < Launch Special < SEB < EB < Late Pledge，见 SKILL.md「价格与行动」）：
+
 ```
-Super Early Bird  $139-149  限量首发，拉首日冲量
-Standard          $149.99   客户定价，入门主力档 ← MOST ORDERS HERE
-Hygiene Bundle    $199-219  杯 + 底座，主推套餐
-Couple Bundle     $279-299  双设备 + 联动，核心AOV驱动
-Add-ons           $19-49    替换内胆、支架、配件
+Secret Reward     略低于主力价   订金专属全场最低价，台数=订金付款人×上线转化率
+Launch Special    $149.99      客户锁定价 = 入门主力档 ← MOST ORDERS HERE（≥60%）
+Hygiene Bundle    $199-219     杯 + 底座，主推套餐
+Couple Bundle     $279-299     双设备 + 联动，核心AOV驱动
+Add-ons           $19-49       替换内胆、支架、配件
 ```
 
-No "Early Bird Kit" between SEB and Standard — the gap is too small to matter.
+公开档不在主力价之下另设早鸟——全场最低价只给订金用户（Secret Reward）；SEB/EB 如需设置，排在 Launch Special 之上作后续涨价档。
 
 ## KPI Auto-Consistency Check
 
@@ -90,8 +92,8 @@ different numbers and confusing them misleads the client.
 
 ## Meta/Google Budget Split
 
-Default: Meta 70% + Google 30% (not 60:40). This was user-corrected during CP
-proposal iteration.
+Default: Meta 90% + Google 10%, pre-launch 与 Launch 两阶段相同（2026-07 用户口径；
+更早的 70:30 / 60:40 均作废）。
 
 ## Public Goal Strategy
 

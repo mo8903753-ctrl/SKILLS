@@ -224,7 +224,8 @@ bud/dur 可选：点击时先把正文的预算/档期切换器切到该版本�
   <h3>已知坑</h3>
   <p>· <b>CSS 会覆盖 SVG 的 <code>fill</code> 呈现属性</b>。根节点是浅色实心圆，字必须用 CSS <code>#mapSvg .nd.root text{fill:#0C0E14}</code> 定成深色，写在标签的 <code>fill=</code> 上会被覆盖成白色 → 白字白底，肉眼像"文字被盖住"。<b>交付前用对比度实测，别只看截图。</b><br>
      · 节点多时<b>不要全铺开</b>：11 章 × 最多 5 子节点在一屏放射布局必撞。用渐进披露——同一时刻只展开一个扇形。<br>
-     · 长距离 <code>scrollTo</code> 用 <code>behavior:'auto'</code>；smooth 滚一万多像素要好几秒，会上像卡死。</p>
+     · 长距离 <code>scrollTo</code> 用 <code>behavior:'auto'</code>；smooth 滚一万多像素要好几秒，会上像卡死。<br>
+     · <b><code>.dim</code> 态的选择器优先级会压过子节点隐藏</b>：<code>#mapSvg.dim .nd:not(.hot)</code>（含 :not，特异性更高）把 <code>.nd.sub</code> 的 <code>opacity:0</code> 顶成 0.22——悬停任意节点时全部收起态子节点会以幽灵小圆漏出来（2026-07 Mori v4 实测）。修法：加 <code>#mapSvg .nd.sub:not(.open){opacity:0!important}</code>。</p>
 </div>
 
 <!-- ============ 方案图谱（会议导航层） ============ -->

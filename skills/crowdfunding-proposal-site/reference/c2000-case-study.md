@@ -1,5 +1,7 @@
 # C2000 Case Study: B2B Enterprise NAS → KS Consumer Crowdfunding
 
+> ⚠️ 本文是历史案例记录：其中的档位命名（SEB/EB/KS Special）早于现行五档阶梯（Secret Reward < Launch Special 主力 < SEB < EB < Late Pledge），且当时方案含认证类表述——现行规则是认证类内容一律不入方案（content-methodology.md §5）。复用时以 SKILL.md 现行默认为准。
+
 ## Source Product
 中科通量 金刚·C2000 信创智能NAS存储一体机 (SmarCoStor)
 - R&D lineage: 中科院计算所 · 睿芯集团
