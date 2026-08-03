@@ -35,3 +35,32 @@
 33. **"主力档"必须真的是量最大的那档**:改梯度时容易只挪标签不挪数量,出现"主力档只占 30% 支持者"而旁边的限量档占 25% 的荒谬形状。真实众筹梯度是**从 Launch Special 起量随价递减**(Late Pledge 是补单档,应当最小;Secret 是订金锁定的小档不参与该检查)。定完梯度先跑一遍:量是否递减、主力档 Launch Special 是否 ≥60%(2026-07-30 拍板)、加权 AOV × 支持者是否 = 目标金额。
 34. **主力行和合计行别用同一个高亮 class**:表格里给主力档套 `.hl` 会和"合计"行底色完全一致,读者会当成第二个合计。主力行改用左侧色条(`box-shadow:inset 3px 0 0 var(--acc)`)+ 浅得多的底色。
 35. **Vercel 部署卡在 `UNKNOWN` / builds `0ms`,多半是目录里有大文件**:项目里有 147MB 的 `_workfiles/`(原始视频)时,即使 `.vercelignore` 已排除,逐文件上传仍会挂死(实测两次部署 UNKNOWN、同步部署 420s 超时)。两个解法:① 加 `--archive=tgz` 打包成单个 tarball 上传;② 另建只含 `index.html + assets/ + .vercel/` 的干净目录再 deploy。**部署后必须 `curl` 线上 HTML 抓关键数字核验**——旧 alias 会让你看到 200 却是旧内容。
+
+---
+
+## 通用实现坑(与主题无关,任何方案都适用)
+
+### GSAP
+- **`gsap.from()` 残留 transform → 卡片重叠**(125% 尤甚):改 `fromTo({y:36,opacity:0},{y:0,opacity:1,clearProps:"transform"})`。
+- **count-up 混合格式数字**(`$500K`、`~$460K`、`1,400+`):`gsap.from({textContent:0})` 会丢前后缀。改计数对象 + 手动 prefix/num/suffix 解析;range(含 `–`)跳过。
+- **删除封面元素后残留选择器**:清掉指向已删元素的 GSAP 块(`.orb-accent`、`.cover-eyebrow`),否则 console 警告。
+
+### SVG
+- **viewBox 太紧裁切**:最低元素 y 之上留 20-40px。
+- **>100% 缩放文字重叠**:行间 y 拉开 ≥18-20px,密集区字号 8-10px,用更大 viewBox(400×380 代替 340×340)。
+
+### 编辑安全
+- **禁短数字串全局替换**:`$220` 会污染 `$220–240`→`$150–170–240`。old_string 带足上下文,替换后再搜确认无级联。
+- **execute_code 里禁用 hermes `read_file()` 改 HTML**:它带行号前缀(`187|content`),写回会把行号嵌进文件。用 Python 原生 `open().read()/write()`;必须用 read_file 时先 `re.sub(r'^\s*\d+\|','',html,flags=re.M)` 去前缀。
+
+### 反模式(DO NOT)
+- 禁外部字体 CDN 之外的外链图片 / `file://` 绝对路径(破坏离线与部署)。
+- 禁把硬盘 bundle 设为默认/featured 档(Diskless + Add-On 才对)。
+- 禁用国内背书(信创/国家级/中科院/政府部署数)作定价溢价。
+- 禁预算写成大额平摊("$200K total marketing")——目标≠营销预算。
+- 禁 KPI 不从定价档推导($200K÷$999≠1,500 backers)。
+- 禁认证类内容入方案(合规/物流/平台认证,见 `content-methodology.md` §5)。**唯一例外:日本方案的 PSE 认证必须写进风险章**(见 SKILL.md「日本众筹商务方案默认模块」)。
+- 禁渠道含 Reddit/HN/Twitter-X/隐私安全媒体(已删)。
+- 成功页标题禁"你得到什么",用"Campaign结束后的品牌资产"。
+- 玻璃卡禁压产品主体;use-case 卡禁 SVG icon(用数字);封面禁居中文字/过浅均匀遮罩。
+- claim 软化:禁"首款"、禁"竞品需 18-24 月追平"(详见 `content-methodology.md` §10)。
