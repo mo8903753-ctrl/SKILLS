@@ -36,9 +36,10 @@ description: BD 提案/投标全案——在 crowdfunding-proposal-site 底盘�
 1. **读料**：`reference/company-profile.md`（公司数据唯一口径）→ 项目资料 → （投标）招标文件拆读，清单抄成 checklist。
 2. **装底盘**：调 `crowdfunding-proposal-site`，按其工作流做方案章；公司章直接用 `reference/company-sections.html` 母版改参（资产用本 skill `assets/`，%%ASSET:名%% 占位）。
 3. **数字口径**：company-profile.md 第 0 节的规则是硬约束（300+ 总口径 vs 61 入册清单分场景；底数+以上；美国项目数据条放美国纪录）。
-4. **构建与 QA**：沿用 proposal-site 第 7-9 步（含 chinese-business-copy 润色）；投标模式加 bid-response.md 第 3 节红线扫描。
-5. **交付**：网站（Vercel 干净目录单文件直发）＋按需讲稿（`reference/speech-guide.md`，七条口径规则必须过）＋盖章件清单提醒。
-6. 数字有更新（案例数、纪录、团队）→ 回填 company-profile.md，本 skill 即全局生效。
+4. **构建与 QA**：沿用 proposal-site 第 7-9 步；投标模式加 bid-response.md 第 3 节红线扫描。
+5. **文案审核（硬闸，不可跳过）**：交付前全文过一遍 `chinese-business-copy`，覆盖本 skill 的**全部产出**——方案章、公司介绍两章、投标应答文案都算，新写文案与母版继承文案一视同仁（2026-08-10 教训：只跑了方案章、漏掉公司介绍章，美金/美元混用、中英夹杂、强硬词全漏网）。重点扫：美金→美元统一、速记短语（0→1 之类）、中英夹杂（众筹 Agency 之类）、锁定/锁死类强硬词、顿号连接分句。讲稿另按 `speech-guide.md` 七条口径过，两道审核不互相替代。
+6. **交付**：网站（Vercel 干净目录单文件直发）＋按需讲稿（`reference/speech-guide.md`）＋盖章件清单提醒。
+7. 数字有更新（案例数、纪录、团队）→ 回填 company-profile.md，本 skill 即全局生效。
 
 ## reference
 
