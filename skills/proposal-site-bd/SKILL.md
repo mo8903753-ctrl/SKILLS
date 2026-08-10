@@ -1,6 +1,6 @@
 ---
 name: proposal-site-bd
-description: BD 提案/投标全案——在 crowdfunding-proposal-site 底盘上加「完整公司介绍章 + 投标应答层 + 逐页讲稿」。当用户说"提案 / 做个提案 / 给XX出提案 / 投标文件 / 参加XX招标 / 带公司介绍的方案"时使用；纯策略方案（不带公司资质章、非投标）仍走 crowdfunding-proposal-site。
+description: BD 提案/投标全案（自包含,单独挂载即可运行）——方案站方法论已内置(site-base/),加「完整公司介绍章 + 投标应答层 + 逐页讲稿 + 中文文案审核硬闸」。当用户说"提案 / 做个提案 / 给XX出提案 / 投标文件 / 参加XX招标 / 带公司介绍的方案"时使用；纯策略方案（不带公司资质章、非投标）优先走 crowdfunding-proposal-site（如本机没有,按 site-base/METHOD.md 同样能做）。
 ---
 
 # proposal-site-bd · BD 提案与投标全案
@@ -8,13 +8,13 @@ description: BD 提案/投标全案——在 crowdfunding-proposal-site 底盘�
 ## 定位
 
 对品牌方的正式提案与投标 = **公司是谁（信任）+ 方案怎么做（能力）+ 报价（商务）**。
-本 skill 管公司章、投标变体、讲稿；**页面形式与方案方法论一律沿用 `crowdfunding-proposal-site`**（母版 CSS 整段复制、模块清单、预算/定价/KPI 方法论、QA 清单），不在本 skill 重复。
+本 skill **自包含、不依赖任何其他 skill**：方案站方法论与页面形式（母版 CSS、模块清单、预算/定价/KPI 方法论、QA 清单）内置在 `site-base/METHOD.md` 及其 reference/（crowdfunding-proposal-site 的同源副本）；中文文案审核规则内置在 `reference/chinese-copy-review.md`。本 skill 在此之上管公司章、投标变体、讲稿。上游两个 skill 更新后 rsync 重新同步内置副本即可。
 
 ## 触发判断
 
 - 有招标文件/评分表 → 投标模式：读 `reference/bid-response.md`，章节顺序严格对表招标清单。
 - 无招标、但要带公司介绍的提案 → 提案模式：按下方默认大纲(公司介绍固定两章,置于方案之后)。
-- 用户只要方案不要公司章 → 转 `crowdfunding-proposal-site`。
+- 用户只要方案不要公司章 → 本机有 `crowdfunding-proposal-site` 则转它；单独挂载环境直接按 `site-base/METHOD.md` 做。
 
 ## 默认大纲（提案模式 · 用户拍板顺序，统一照此写和改）
 
@@ -34,15 +34,17 @@ description: BD 提案/投标全案——在 crowdfunding-proposal-site 底盘�
 ## 工作流
 
 1. **读料**：`reference/company-profile.md`（公司数据唯一口径）→ 项目资料 → （投标）招标文件拆读，清单抄成 checklist。
-2. **装底盘**：调 `crowdfunding-proposal-site`，按其工作流做方案章；公司章直接用 `reference/company-sections.html` 母版改参（资产用本 skill `assets/`，%%ASSET:名%% 占位）。
+2. **装底盘**：按 `site-base/METHOD.md` 工作流做方案章（母版 CSS、模块、方法论都在 site-base/reference/）；公司章直接用 `reference/company-sections.html` 母版改参（资产用本 skill `assets/`，%%ASSET:名%% 占位）。
 3. **数字口径**：company-profile.md 第 0 节的规则是硬约束（300+ 总口径 vs 61 入册清单分场景；底数+以上；美国项目数据条放美国纪录）。
-4. **构建与 QA**：沿用 proposal-site 第 7-9 步；投标模式加 bid-response.md 第 3 节红线扫描。
-5. **文案审核（硬闸，不可跳过）**：交付前全文过一遍 `chinese-business-copy`，覆盖本 skill 的**全部产出**——方案章、公司介绍两章、投标应答文案都算，新写文案与母版继承文案一视同仁（2026-08-10 教训：只跑了方案章、漏掉公司介绍章，美金/美元混用、中英夹杂、强硬词全漏网）。重点扫：美金→美元统一、速记短语（0→1 之类）、中英夹杂（众筹 Agency 之类）、锁定/锁死类强硬词、顿号连接分句。讲稿另按 `speech-guide.md` 七条口径过，两道审核不互相替代。
+4. **构建与 QA**：沿用 site-base/METHOD.md 第 7-9 步；投标模式加 bid-response.md 第 3 节红线扫描。
+5. **文案审核（硬闸，不可跳过）**：交付前全文过一遍中文商务文案审核——规则见 `reference/chinese-copy-review.md`（本机装有 chinese-business-copy skill 时直接调用它，内容同源）。覆盖本 skill 的**全部产出**——方案章、公司介绍两章、投标应答文案都算，新写文案与母版继承文案一视同仁（2026-08-10 教训：只跑了方案章、漏掉公司介绍章，美金/美元混用、中英夹杂、强硬词全漏网）。重点扫：美金→美元统一、速记短语（0→1 之类）、中英夹杂（众筹 Agency 之类）、锁定/锁死类强硬词、顿号连接分句。讲稿另按 `speech-guide.md` 七条口径过，两道审核不互相替代。
 6. **交付**：网站（Vercel 干净目录单文件直发）＋按需讲稿（`reference/speech-guide.md`）＋盖章件清单提醒。
 7. 数字有更新（案例数、纪录、团队）→ 回填 company-profile.md，本 skill 即全局生效。
 
 ## reference
 
+- `site-base/` — **内置方案站底盘**：METHOD.md（crowdfunding-proposal-site 全文副本）+ reference/（母版 HTML/内容方法论/PITFALLS/甘特/动效等 17 个文件），单独挂载环境的方案章全按这里做
+- `chinese-copy-review.md` — 中文商务文案审核规则（chinese-business-copy 同源副本），工作流第 5 步硬闸用
 - `company-profile.md` — 完整公司介绍数据册（定位/核心数字/平台资质/奖项/团队/深度案例/责任边界/案例索引）
 - `madspace-cases.md` — 61 项入册案例明细 + 职责/产出清单（飞书 20260616 版全文）
 - `company-sections.html` — 公司介绍 4 章 HTML 母版（简介资质/团队/案例证明/服务承诺，proposal-site 类名体系）
