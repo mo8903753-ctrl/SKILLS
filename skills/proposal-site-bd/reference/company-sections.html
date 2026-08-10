@@ -1,16 +1,15 @@
 <!-- =====================================================================
-公司介绍 4 章母版 · proposal-site 类名体系（viaim 母版 CSS + css_extra 组件）
-用法：复制进项目 body，%%ASSET:名%% 由构建脚本读取本 skill assets/<名>.jpg|png 转 base64 替换。
-所需自定义组件 CSS（.tender/.shots/.certgrid/.awardgrid/.jcards/.wallband/.cases/.declare 等）
-参考莎士比亚案 css_extra.css；statbar/gains/tbw/sub-t 为 viaim 母版自带。
-数字口径以 company-profile.md 为准；投标场景按 bid-response.md 增删（如条款对照框、美国数据条规则）。
+公司介绍 · 两章母版(提案默认结构,置于方案主体之后、收尾之前)
+%%ASSET:名%% ← 构建脚本读本 skill assets/<名>.jpg|png 转 base64 替换。
+组件 CSS 见莎士比亚案 css_extra.css;statbar/gains/tbw/sub-t 为 viaim 母版自带。
+数字口径以 company-profile.md 为准;可直接预览的成品实例:company-example.html
 ===================================================================== -->
 
-<!-- ============ B1 企业简介与资质 ============ -->
-<section class="ch" id="cb-intro">
+<!-- ============ 公司介绍 · 章一:简介 / 资质 / 团队 / 承诺 ============ -->
+<section class="ch" id="co-intro">
   <div class="wrap">
-    <div class="eyebrow rv">公司介绍 <span class="zh">企业简介与资质</span></div>
-    <h2 class="cht rv" style="--d:.06s">MadSpace 迈思创新：<span class="mk">一站式海外众筹全案公司</span>，行业内最早、团队最完整、案例最多</h2>
+    <div class="eyebrow rv">公司介绍 · 一 <span class="zh">MadSpace 迈思创新</span></div>
+    <h2 class="cht rv" style="--d:.06s">一站式海外众筹全案公司，<span class="mk">行业内最早、团队最完整、案例最多</span></h2>
     <p class="lede rv" style="--d:.1s">MadSpace 迈思创新(境内主体：北京迈思创新科技有限公司；境外签约主体：MADSPACE INTERNATIONAL HOLDINGS CO., LIMITED)自 2015 年起深耕海外众筹，首个项目即破 100 万美金。覆盖 Kickstarter / Indiegogo / Makuake / GREEN FUNDING / Wadiz 等平台，累计操盘项目 300 余个，长期服务 UGREEN 绿联、Rokid、TCL 雷鸟、科沃斯、追觅、科大讯飞、飞宇科技、传音 TECNO 等品牌。策划、设计、剪辑、投放、开发、3D 渲染、客服全生产力岗位内部配置，核心环节不外包。</p>
 
     <div class="statbar rv" style="--d:.12s" id="g-cred">
@@ -19,17 +18,17 @@
       <div class="st"><div class="k">单项目最高(日本纪录)</div><div class="v">$<span class="num" data-n="7020000">0</span></div></div>
       <div class="st"><div class="k">欧美单项目纪录</div><div class="v">$<span class="num" data-n="2051250">0</span></div></div>
     </div>
-    <p class="note rv">美国市场项目替换第 3 格为「KOL 合作 1,500+ 位」或「海外用户库 100,000+」，数据条不以日本纪录领衔(bid-response.md 规则)。</p>
+    <p class="note rv">美国市场项目第 3 格换成「KOL 合作 1,500+ 位」或「海外用户库 100,000+」,数据条不以日本纪录领衔。</p>
 
     <h3 class="sub-t rv" style="margin-top:44px">平台资质 · 中国唯一海外三大众筹平台官方合作伙伴</h3>
-    <div class="gains rv" style="--d:.06s" id="g-plat">
+<div class="gains rv" style="--d:.06s" id="g-plat">
       <div class="gain"><div class="gnum">Kickstarter</div><h4>官方推荐营销专家</h4><p>EXPERT PARTNER,项目页协作者栏实名挂牌,可在线核验。</p></div>
       <div class="gain"><div class="gnum">Makuake</div><h4>中国唯一官方合作伙伴</h4><p>首家获 Makuake Partner 奖项的众筹 Agency;另为 Indiegogo / Wadiz / 啧啧 / flyingV 官方推荐服务商。</p></div>
       <div class="gain"><div class="gnum">Google · Meta · Reddit</div><h4>媒体渠道代理</h4><p>Google 多项官方认证与 Meta 全版位投放体系,Reddit Ads 社区渠道能力;二级渠道代理授权见下方证明。</p></div>
     </div>
 
     <h3 class="sub-t rv" style="margin-top:44px">平台代理资质 · 授权证明</h3>
-    <div class="certgrid rv" style="--d:.06s" id="g-certs">
+<div class="certgrid rv" style="--d:.06s" id="g-certs">
       <figure class="certcard"><img src="%%ASSET:cert_google%%" alt="Google 二级渠道代理授权证明">
         <figcaption><b>Google / YouTube 二级渠道代理授权</b>覆盖搜索 / 展示 / YouTube / Shopping 广告投放与运营·授权期 2026 年全年</figcaption></figure>
       <figure class="certcard"><img src="%%ASSET:cert_meta%%" alt="Meta 二级渠道代理授权证明">
@@ -37,7 +36,7 @@
     </div>
 
     <h3 class="sub-t rv" style="margin-top:44px">行业奖项</h3>
-    <div class="awardgrid rv" style="--d:.06s" id="g-awards">
+<div class="awardgrid rv" style="--d:.06s" id="g-awards">
       <figure class="certcard"><img src="%%ASSET:award_igg%%" alt="Indiegogo 2023 GOGO Awards">
         <figcaption><b>Indiegogo 2023 GOGO Awards · 年度最佳文案奖</b>获奖项目含 Litheli W1 Pro 等 MadSpace 操盘案例</figcaption></figure>
       <figure class="certcard"><img src="%%ASSET:award_oty%%" alt="Makuake Of The Year 2024">
@@ -47,15 +46,9 @@
       <figure class="certcard"><img src="%%ASSET:award_team%%" alt="Makuake Partner 赏 · 团队合影">
         <figcaption><b>Makuake Partner 赏(2024)</b>日本 Makuake 平台官方合作伙伴奖项 · 团队现场合影</figcaption></figure>
     </div>
-  </div>
-</section>
 
-<!-- ============ B2 团队配置(按项目改人数与岗位) ============ -->
-<section class="ch" id="cb-team">
-  <div class="wrap">
-    <div class="eyebrow rv">公司介绍 <span class="zh">项目团队配置</span></div>
-    <h2 class="cht rv" style="--d:.06s">项目总负责(联合创始人级)+ <span class="mk">六模块负责人制</span>专项小组</h2>
-    <div class="tbw rv" style="--d:.08s" id="g-team">
+    <h3 class="sub-t rv" style="margin-top:44px">项目团队配置</h3>
+<div class="tbw rv" style="--d:.08s" id="g-team">
       <table class="dt">
         <thead><tr><th>模块</th><th class="num-r">人数</th><th>职责与资历</th></tr></thead>
         <tbody>
@@ -69,17 +62,23 @@
         </tbody>
       </table>
     </div>
-    <p class="note rv">人数按项目实配填写(莎士比亚案口径:七岗 16 人);中英双语工作,模块负责人制,周会同步;核心岗位锁定至项目结案。</p>
+    <p class="note rv">人数按项目实配填写;中英双语工作,模块负责人制,周会同步;核心岗位锁定至项目结案。</p>
+
+    <h3 class="sub-t rv" style="margin-top:44px">服务承诺</h3>
+<div class="gains rv" style="--d:.1s;grid-template-columns:repeat(2,1fr)" id="g-sla">
+      <div class="gain"><div class="gnum">01 · SLA</div><h4>分级响应</h4><p>预热期 7×12 · 上线期 7×24;页面问题 4 小时响应 24 小时修复;重大故障 30 分钟响应 4 小时恢复。</p></div>
+      <div class="gain"><div class="gnum">02 · 资产</div><h4>账号归属与数据移交</h4><p>全部账号以品牌方主体注册、我方不持有任何账号;源码与素材按节点移交;合作终止后限期完整移交并出具确认函。</p></div>
+    </div>
   </div>
 </section>
 
-<!-- ============ B3 案例证明(真截图) ============ -->
-<section class="ch" id="cb-cases">
+<!-- ============ 公司介绍 · 章二:案例证明(重点) ============ -->
+<section class="ch" id="co-cases">
   <div class="wrap">
-    <div class="eyebrow rv">公司介绍 <span class="zh">案例证明</span></div>
+    <div class="eyebrow rv">公司介绍 · 二 <span class="zh">案例证明</span></div>
     <h2 class="cht rv" style="--d:.06s">案例是最好的自我介绍，<span class="mk">项目页协作者挂牌全部可在线核验</span></h2>
 
-    <div class="shots rv" style="--d:.1s" id="g-cases">
+<div class="shots rv" style="--d:.1s" id="g-cases">
       <div class="shot"><div class="simg"><img src="%%ASSET:case_rokid%%" alt="Rokid AR Lite Kickstarter 页面"></div>
         <div class="scap"><div class="sk">KICKSTARTER · 智能穿戴</div><h4>Rokid AR Lite 空间计算套装</h4>
           <p><span class="sv">HK$9,586,083 · 2,222 名支持者</span><br>$1,000,000 USD Milestone · 协作者栏 MadSpace 实名挂牌</p></div></div>
@@ -95,10 +94,10 @@
     </div>
 
     <h3 class="sub-t rv" style="margin-top:48px">跨平台交付能力 · 日本市场纪录</h3>
-    <div class="shot rv" style="--d:.06s" id="g-nasync"><div class="simg"><img src="%%ASSET:case_nasync%%" alt="UGREEN NASync GREEN FUNDING 页面"></div>
+<div class="shot rv" style="--d:.06s" id="g-nasync"><div class="simg"><img src="%%ASSET:case_nasync%%" alt="UGREEN NASync GREEN FUNDING 页面"></div>
       <div class="scap"><div class="sk">GREEN FUNDING · 主导投放</div><h4>UGREEN NASync 日本站 — 日本众筹历史第一</h4>
         <p><span class="sv">¥1,022,625,414 · 16,849 名支持者 · 达成率 102,262%</span><br>由 MadSpace 主导投放的明星项目</p></div></div>
-    <div class="jcards rv" style="--d:.08s" id="g-jcards">
+<div class="jcards rv" style="--d:.08s" id="g-jcards">
       <figure class="jcard"><img src="%%ASSET:jcard_aiwatch%%" alt="科大讯飞 AIWATCH"><figcaption><b>iflytek AIWATCH</b><br>170,892,070 円 · 4,867 人</figcaption></figure>
       <figure class="jcard"><img src="%%ASSET:jcard_hoverair%%" alt="HOVERAir X1 Smart"><figcaption><b>HOVERAir X1 Smart</b><br>212,410,602 円 · 3,337 人</figcaption></figure>
       <figure class="jcard"><img src="%%ASSET:jcard_halliday%%" alt="Halliday AI 眼镜"><figcaption><b>Halliday AI 眼镜</b><br>161,308,420 円 · 3,061 人</figcaption></figure>
@@ -106,7 +105,7 @@
     </div>
 
     <h3 class="sub-t rv" style="margin-top:48px">百万美元级案例一览(按项目品类换选,数据见 madspace-cases.md)</h3>
-    <div class="cases" id="g-caselist">
+<div class="cases" id="g-caselist">
       <div class="case rv"><div class="ck">KS · 全案运营</div><h4>IRMO M1 外骨骼机器人</h4><div class="cv">$1,112,581</div><div class="cd">智能穿戴 · 0→1 破百万</div></div>
       <div class="case rv"><div class="ck">KS · 页面+广告+KOL</div><h4>DNSYS X1 户外外骨骼</h4><div class="cv">$1,188,887</div><div class="cd">智能穿戴 · 品类头部</div></div>
       <div class="case rv"><div class="ck">KS · 全案运营</div><h4>FeiyuTech Pocket 3</h4><div class="cv">$1,090,214</div><div class="cd">消费硬件 · 2,740 名支持者</div></div>
@@ -117,18 +116,6 @@
       <div class="case rv"><div class="ck">KS · 全案运营</div><h4>ORTUR H20 激光雕刻</h4><div class="cv">$441,605</div><div class="cd">协作者挂牌可核验</div></div>
     </div>
 
-    <figure class="wallband rv" style="--d:.08s" id="g-wall"><img src="%%ASSET:cover_wall%%" alt="MadSpace 历史项目案例墙"><figcaption>MADSPACE PROJECT WALL · 历史操盘项目主视觉墙(节选)</figcaption></figure>
-  </div>
-</section>
-
-<!-- ============ B4 服务承诺 ============ -->
-<section class="ch" id="cb-sla">
-  <div class="wrap">
-    <div class="eyebrow rv">公司介绍 <span class="zh">服务承诺</span></div>
-    <h2 class="cht rv" style="--d:.06s">SLA 分级响应与<span class="mk">资产完整移交</span>，承诺写入合同</h2>
-    <div class="gains rv" style="--d:.1s;grid-template-columns:repeat(2,1fr)" id="g-sla">
-      <div class="gain"><div class="gnum">01 · SLA</div><h4>分级响应</h4><p>预热期 7×12 · 上线期 7×24;页面问题 4 小时响应 24 小时修复;重大故障 30 分钟响应 4 小时恢复。</p></div>
-      <div class="gain"><div class="gnum">02 · 资产</div><h4>账号归属与数据移交</h4><p>全部账号以品牌方主体注册、我方不持有任何账号;源码与素材按节点移交;合作终止后限期完整移交并出具确认函。</p></div>
-    </div>
+<figure class="wallband rv" style="--d:.08s" id="g-wall"><img src="%%ASSET:cover_wall%%" alt="MadSpace 历史项目案例墙"><figcaption>MADSPACE PROJECT WALL · 历史操盘项目主视觉墙(节选)</figcaption></figure>
   </div>
 </section>
