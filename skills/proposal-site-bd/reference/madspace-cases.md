@@ -40,7 +40,7 @@
 | 6 | **INMO** **GO3 AI智能眼镜** | Kickstarter | US$1,041,892 | 页面策划与制作 广告规划与执行 广告创意与优化 | 2026年4月28日 - 2026年6月12日 | https://www.kickstarter.com/projects/inmo-go3-ai-glasses/everyday-wear-ai-glasses |
 | 7 | **Hengbot** **Sirius**** ****四足机器狗** | Kickstarter | US$880,612 | 广告规划与执行 广告创意与优化 | 2025年7月11日 - 2025年8月25日 | https://www.kickstarter.com/projects/hengbot/sirius-the-worlds-most-dynamic-robotic-dog-for-endless-fun |
 | 8 | **Rokid** **AR Lite 空间计算套装（移动影音随身大屏）** | Kickstarter | US$1,158,200 | Pepcom媒体展会 时代广场用户访谈 邮件营销 | 2024年5月27日 - 2024年7月11日 | https://www.kickstarter.com/projects/rokid/rokid-ar-lite/faqs?lang=zh |
-| 9 | **DNSYS** **X1 户外轻量外骨骼** | Kickstarter | US$1,188,887 | 页面策划与制作 广告创意与优化 KOL与公关协助 | 2024年4月16日 - 2024年5月31日 | https://www.kickstarter.com/projects/dnsys/dnsys-z1-knee-exoskeleton-defy-gravity-go-beyond |
+| 9 | **DNSYS** **X1 户外轻量外骨骼** | Kickstarter | US$1,188,887 | 页面策划与制作 广告创意与优化 KOL与公关协助 | 2024年4月16日 - 2024年5月31日 | https://www.kickstarter.com/projects/dnsys/dnsys-x1-exoskeleton-unleash-superhuman-athletic-potential ⚠飞书原文链接指到 Z1 膝部外骨骼(另一campaign),此处已改为 X1 正确链接,飞书源表待改 |
 | 10 | **ALLPOWERS** **Monster X 便携式储能电源** | Indiegogo | US$2,051,250 | 全案运营 | 2020年5月20日 - 2020年7月19日 | https://www.indiegogo.com/en/projects/allpowersteam/monster-x-the-future-of-portable-power-stations |
 | 11 | **WalkingPad** **R1 Pro 折叠跑步机** | Indiegogo | US$1,522,699 | 全案运营 | 2019年10月24日 - 2019年12月23日 | https://www.indiegogo.com/en/projects/xiaomicrowdfunding/walkingpad-r1-pro-the-best-gym-alternative |
 | 12 | **FeiyuTech** **Pocket 3 无线分离式手持云台相机** | Kickstarter | US$1,090,214 | 全案运营 | 2023年4月11日 - 2023年5月12日 | https://www.kickstarter.com/projects/feiyutech/feiyu-pocket-3-compact-and-versatile-3-axis-gimbal-camera |

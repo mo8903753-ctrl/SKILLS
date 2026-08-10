@@ -12,3 +12,4 @@
 .tcard p{font-size:14px;color:var(--faint);line-height:1.7}
 @media(max-width:1000px){.teamgrid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){.teamgrid{grid-template-columns:repeat(2,1fr)}}
+.case .cimg{display:block;width:calc(100% + 40px);margin:-22px -20px 14px;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid var(--hair2)}

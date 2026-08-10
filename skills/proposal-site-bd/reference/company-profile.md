@@ -76,6 +76,7 @@ UGREEN 绿联 · Rokid · TCL/雷鸟 · 科沃斯 · 追觅 · 飞宇科技 · �
 - 美国 KS：assets/case_rokid.jpg（HK$9,586,083 · 2,222 人）/ case_inmo.jpg（HK$8,414,447 · 1,513 人）/ case_tecno.jpg（HK$3,263,824）/ case_yashica.jpg（HK$5,911,312 · 1,923 人）
 - 日本：assets/case_nasync.jpg（¥1,022,625,414 · 16,849 人 · 达成率 102,262%）+ jcard_aiwatch/hoverair/halliday/hidock.jpg
 - 案例墙合成图：assets/cover_wall.jpg；logo：assets/logo_dark.png
+- 百万级案例卡配图 8 张（众筹页官方主图,16:9,800px）：assets/caselist_irmo/dnsys/feiyu/walkingpad/allpowers/hoorii/yashica/ortur.jpg。⚠飞书清单里 DNSYS 那行链接指到的是 Z1 膝部外骨骼(后出的另一campaign),X1 正确链接=kickstarter.com/projects/dnsys/dnsys-x1-exoskeleton-unleash-superhuman-athletic-potential(配图取自该页);WalkingPad IGG 页无 og 主图,配图取页内产品图。KS 页有盾,补抓图用 playwright 带界面模式、一个页面一开一关。
 - 平台徽章：assets/badge_ks.png(KS EXPERT PARTNER) / badge_mk.jpg(Makuake Partner)
 - 团队人物照 14 张：assets/team_raymond/evan/weiwei/journey/garo/gina/xujin/senior/leon/yoyo/anton/kathy/kaixin/bill(源=绿联终版 deck P8)
 - ⚠不参与视频生产制作:对外表述不写"剪辑/3D 渲染/宣传短片制作"类能力
