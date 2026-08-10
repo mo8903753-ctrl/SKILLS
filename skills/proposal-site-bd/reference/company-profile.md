@@ -50,7 +50,7 @@ MadSpace 迈思创新 · 一站式海外众筹全案公司。行业内最早、�
 ## 5. 团队
 
 - **关键成员**：Raymond（创始人 · Mokacam 品牌创始人 · 原华为数通海外渠道总监 · 原绿盟科技渠道总监）· Evan Pan（VP & COO · 15 年北美 C 端营销 · 麦吉尔大学）· Weiwei（联合创始人 · 25 年北美经历 · 台湾市场负责人）· Journey（联合创始人 · 8 年众筹营销 · 累计 $4,000 万+ 项目管理 · 参与项目最高 $702 万）· Garo/Gina（美国本土 PR · 20 年+ · 曾任 MonsterBeats 全球市场总监 · CES 展会资源）· Xujin/Senior（投放 10 年+/8 年+）· Leon（项目经理 6 年+）· YOYO（文案）· Kaixin/Bill（设计）· Anton/Kathy（英文客服）
-- **组织模式**：项目总负责（联合创始人级）+ 六模块负责人制（策略定位/视觉素材/广告投放/项目与内容/KOL·PR/客服与社区），专项小组制、中英双语、周会同步；全生产力岗位内部配置（策划/运营/设计/剪辑/投广/开发/3D 渲染/客服），核心环节不外包
+- **组织模式**：项目总负责（联合创始人级）+ 六模块负责人制（策略定位/视觉素材/广告投放/项目与内容/KOL·PR/客服与社区），专项小组制、中英双语、周会同步；全生产力岗位内部配置（策划/运营/设计/投广/开发/客服），核心环节不外包
 - 单项目投标口径参考（莎士比亚案）：七岗 16 人——总负责 1 / 视觉 2 / 开发 3 / 投放 4 / PR 红人 3 / 客服 2 / 供应链 1
 
 ## 6. 深度案例模板（三个可复用的故事线）
@@ -76,3 +76,6 @@ UGREEN 绿联 · Rokid · TCL/雷鸟 · 科沃斯 · 追觅 · 飞宇科技 · �
 - 美国 KS：assets/case_rokid.jpg（HK$9,586,083 · 2,222 人）/ case_inmo.jpg（HK$8,414,447 · 1,513 人）/ case_tecno.jpg（HK$3,263,824）/ case_yashica.jpg（HK$5,911,312 · 1,923 人）
 - 日本：assets/case_nasync.jpg（¥1,022,625,414 · 16,849 人 · 达成率 102,262%）+ jcard_aiwatch/hoverair/halliday/hidock.jpg
 - 案例墙合成图：assets/cover_wall.jpg；logo：assets/logo_dark.png
+- 平台徽章：assets/badge_ks.png(KS EXPERT PARTNER) / badge_mk.jpg(Makuake Partner)
+- 团队人物照 14 张：assets/team_raymond/evan/weiwei/journey/garo/gina/xujin/senior/leon/yoyo/anton/kathy/kaixin/bill(源=绿联终版 deck P8)
+- ⚠不参与视频生产制作:对外表述不写"剪辑/3D 渲染/宣传短片制作"类能力
