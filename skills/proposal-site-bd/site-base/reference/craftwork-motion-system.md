@@ -46,7 +46,7 @@ JS 只切 `data-state="open|closed"`,CSS 盯属性放动画:
 @keyframes accordionDown{from{height:0}to{height:var(--acc-h)}}
 @keyframes accordionUp{from{height:var(--acc-h)}to{height:0}}
 ```
-用途映射:方案图谱全屏层=overlayShow/contentShow;FAQ/风险手风琴=accordionDown(JS 先量 scrollHeight 写入 `--acc-h`);导航/眉题提示=slideDownAndFade。
+用途映射:方案图谱全屏层=overlayShow/contentShow;FAQ 手风琴=accordionDown(JS 先量 scrollHeight 写入 `--acc-h`);导航/眉题提示=slideDownAndFade。
 
 ## 4. 加载与入场
 ```css

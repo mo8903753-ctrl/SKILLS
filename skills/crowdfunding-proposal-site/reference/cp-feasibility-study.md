@@ -6,7 +6,7 @@ CP Series: male intimate wellness device with AI companion ecosystem
 - Software: Spine 2D character companion, voice cloning, AI image/video generation, real-time Vision AI sync
 - Target: $500K internal goal on Kickstarter, $149.99 entry price
 
-## Structure (11 sections, feasibility study variant)
+## Structure (10 sections, feasibility study variant)
 
 01. Cover — video background (title above, `width:100%;height:auto` no crop)
 02. 核心判断 — 3-card thesis: market validated, tiered pricing, upgrade entry
@@ -18,7 +18,6 @@ CP Series: male intimate wellness device with AI companion ecosystem
 08. 营销渠道 — 4 priority strips (YouTube → Meta+Google → 3rd-party communities → PR)
 09. 执行路线 — 6-phase timeline (T-8 weeks pre-launch through post-launch ops)
 10. 预算方案 — $500K × 17.96% = $89,800 single-goal budget table + explanation
-11. KPI与风险 — 4 KPI stat-strip + 4 risk cards (3-line format)
 
 ## Key Design Decisions
 
