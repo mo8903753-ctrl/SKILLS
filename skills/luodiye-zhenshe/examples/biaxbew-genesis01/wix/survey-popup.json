@@ -1,0 +1,25 @@
+{
+  "pageId": "lflu4",
+  "title": "Genesis01 Launch Survey",
+  "containerId": "comp-mv6d91g2",
+  "copyId": "comp-mv6dmi8p",
+  "secondaryCloseId": "comp-mv6dmi8r",
+  "image": {
+    "id": "comp-mv6f83sd",
+    "type": "DESKTOP"
+  },
+  "cta": {
+    "id": "comp-mv6f4neu",
+    "type": "DESKTOP"
+  },
+  "surveyURL": "https://forms.gle/DjiKNt7eVM2qXjoh7",
+  "imageAsset": "assets/popup/survey-desk.png",
+  "copy": {
+    "eyebrow": "YOU’RE ON THE LIST",
+    "headline": "Help shape Genesis01.",
+    "body": "Tell us what matters most in your next keyboard. Take our 1-minute launch survey and help shape what comes next.",
+    "incentive": "Complete the survey for a chance to win one of five $50 Amazon gift cards.",
+    "cta": "Take the survey",
+    "secondary": "Maybe later"
+  }
+}

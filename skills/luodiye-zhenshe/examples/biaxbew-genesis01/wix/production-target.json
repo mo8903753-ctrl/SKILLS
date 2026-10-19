@@ -1,0 +1,44 @@
+{
+  "metaSiteId": "c88dbc40-682a-4166-b4d3-12c2a4329ca9",
+  "siteId": "e93701cd-75dc-4b40-a798-43c6c1b150d8",
+  "homePageId": "tuckg",
+  "editorUrl": "https://w95182-website-153.editor.wix.com/html/editor/web/renderer/edit/e93701cd-75dc-4b40-a798-43c6c1b150d8?metaSiteId=c88dbc40-682a-4166-b4d3-12c2a4329ca9",
+  "sections": [
+    {
+      "id": "comp-mv6d41ai",
+      "type": "DESKTOP"
+    },
+    {
+      "id": "comp-mv6d905m",
+      "type": "DESKTOP"
+    },
+    {
+      "id": "comp-mv6d905q",
+      "type": "DESKTOP"
+    },
+    {
+      "id": "comp-mv6d905s",
+      "type": "DESKTOP"
+    }
+  ],
+  "formWidgets": [
+    {
+      "id": "comp-mv6dgng8",
+      "type": "DESKTOP"
+    },
+    {
+      "id": "comp-mv6dl8wh",
+      "type": "DESKTOP"
+    },
+    {
+      "id": "comp-mv6dl8wm",
+      "type": "DESKTOP"
+    }
+  ],
+  "nativeSubmissionCollection": "comp-mv6dgny0_Forms/contactForm10",
+  "successPopupPageId": "lflu4",
+  "mediaMap": "wix/media-map.production.json",
+  "bundle": "wix/dist-production/gx-genesis.js",
+  "dns": "Managed by user; do not change",
+  "temporaryURL": "https://w95182.wixsite.com/website-153"
+}

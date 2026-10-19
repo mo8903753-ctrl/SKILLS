@@ -26,6 +26,7 @@ cp -R SKILLS/skills/* ~/.codex/skills/         # Codex
 |---|---|
 | **ad-flywheel-impact** | 投放飞轮·震慑版（2.3-repo）：调用生图工具生成完整广告；固定 Figma 范例参考、产品与 Logo 核对、逐图质检和生成来源校验。Figma 只收纳成品，不能替代生图。 |
 | **landingpage** | 众筹预热页中英文文案生成器（从产品 Excel 出） |
+| **luodiye-zhenshe** | 落地页震慑版：Kickstarter / 众筹预热落地页全流程（全量盘点素材 → 按卖点查竞品动效 → GSAP 滚动交互页 → Wix 自定义元素 + 原生表单收邮箱 → 截图自检 → 发布交接），含完整案例源码。 |
 | **ad-copywriting** | Meta / Google 海外广告文案（从 KSP 或预热页文案出） |
 | **pretest-report-v2** | 预热投广前测报告（从 Meta 后台导出数据出）；`pretest-report` 为初版 |
 | **crowdfunding-edm-image** | 图片式众筹 EDM |
