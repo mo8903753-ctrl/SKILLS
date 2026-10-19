@@ -1,0 +1,47 @@
+{
+  "project": null,
+  "items": [
+    {
+      "creative_id": null,
+      "master_id": null,
+      "parent_id": null,
+      "version": 1,
+      "category": null,
+      "mode": null,
+      "reference_id": null,
+      "retained_elements": [],
+      "changed_variable": null,
+      "source_assets": [],
+      "source_video": null,
+      "time_seconds": null,
+      "claim_evidence": [],
+      "prompt_path": null,
+      "asset_path": null,
+      "width": null,
+      "height": null,
+      "text_mode": "TXT",
+      "language": null,
+      "sha256": null,
+      "qa_status": "pending",
+      "qa_notes": [],
+      "figma_node_id": null,
+      "figma_frame_id": null,
+      "figma_url": null,
+      "evidence_level": "exploration_no_metrics",
+      "reference_library_url": null,
+      "reference_frame_id": null,
+      "reference_frame_url": null,
+      "reference_checked_at": null,
+      "reference_access_status": "not_checked",
+      "production_method": "image_generation",
+      "generation": {
+        "tool": null,
+        "record_path": null,
+        "prompt_path": null,
+        "input_assets": [],
+        "output_sha256": null,
+        "complete_ad": false
+      }
+    }
+  ]
+}

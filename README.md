@@ -24,6 +24,7 @@ cp -R SKILLS/skills/* ~/.codex/skills/         # Codex
 
 | Skill | 用途 |
 |---|---|
+| **ad-flywheel-impact** | 投放飞轮·震慑版（2.3-repo）：调用生图工具生成完整广告；固定 Figma 范例参考、产品与 Logo 核对、逐图质检和生成来源校验。Figma 只收纳成品，不能替代生图。 |
 | **landingpage** | 众筹预热页中英文文案生成器（从产品 Excel 出） |
 | **ad-copywriting** | Meta / Google 海外广告文案（从 KSP 或预热页文案出） |
 | **pretest-report-v2** | 预热投广前测报告（从 Meta 后台导出数据出）；`pretest-report` 为初版 |
@@ -56,3 +57,7 @@ cp -R SKILLS/skills/* ~/.codex/skills/         # Codex
 
 - 本仓库**不含**各 skill 的大体积素材（模板 PDF、归档 zip），只保留 SKILL.md 与 references 等逻辑部分。
 - 部分 reference 母版内含真实客户方案数据，**仅限内部使用，请保持仓库 private**。
+
+### 投放飞轮·震慑版
+
+调用：`执行投放飞轮·震慑版`。安装或更新后重载技能，确认加载 `2.3-repo`。实际生图/编辑工具及 ego lite、Figma 权限由本机提供；缺少生图工具时明确阻塞，不改用 Figma 拼广告。仓库只含规则、脚本与脱敏案例，不含客户原始素材或第三方技能。

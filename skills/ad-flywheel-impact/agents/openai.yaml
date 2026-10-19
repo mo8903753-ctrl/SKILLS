@@ -1,0 +1,4 @@
+interface:
+  display_name: "投放飞轮·震慑版"
+  short_description: "必须生图工具输出完整广告；禁止在 Figma 拼广告，只导入成品"
+  default_prompt: "使用 $ad-flywheel-impact（投放飞轮·震慑版），先确认真实生图工具可用，根据我的产品资料、范例和竞品要求调用工具生成完整广告图；工具不可用则报告阻塞，禁止在 Figma 拼广告，核对外观与 Logo，全部质检后按素材类型整理到指定 Figma，并记录参考来源供迭代。"

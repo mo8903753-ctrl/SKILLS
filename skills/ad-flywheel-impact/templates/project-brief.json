@@ -1,0 +1,42 @@
+{
+  "brand": null,
+  "model": null,
+  "market": null,
+  "language": null,
+  "stage": null,
+  "product_url": null,
+  "figma_target": null,
+  "asset_root": null,
+  "approved_product_assets": [],
+  "approved_logo_assets": [],
+  "approved_claims": [
+    {
+      "text": null,
+      "source": null,
+      "verified_at": null
+    }
+  ],
+  "offer": {
+    "text": null,
+    "conditions": null,
+    "source": null
+  },
+  "cta": null,
+  "batch": {
+    "count": 48,
+    "mode": "new-library",
+    "no_text_count": null,
+    "aspect_ratios": [
+      "1:1"
+    ]
+  },
+  "reference_map": [],
+  "real_scenes": "original-photo-or-video-only",
+  "people_preference": null,
+  "product_lock_notes": [],
+  "project_overrides": [],
+  "user_corrections": [],
+  "reference_library_url": "https://www.figma.com/design/hkRhOHVzWHJHgEuBeliAoL/?node-id=0-1",
+  "reference_library_file_key": "hkRhOHVzWHJHgEuBeliAoL",
+  "reference_access_status": "not_checked"
+}
