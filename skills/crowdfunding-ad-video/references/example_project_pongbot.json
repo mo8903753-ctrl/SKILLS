@@ -1,0 +1,48 @@
+{
+  "_comment": "Neutral schema; populate all assets, copy, offers and source times from the current authorized project. No historical client data included.",
+  "lang": "en",
+  "out_dir": "out",
+  "cache_dir": "work/pieces",
+  "cards_dir": "work/cards",
+  "brand": {
+    "title": "",
+    "logo_png": "inputs/brand-logo.png",
+    "product_cutout": "inputs/product-cutout.png"
+  },
+  "platform": {
+    "name": "",
+    "logo_png": "inputs/platform-logo.png",
+    "badge_pre": "",
+    "badge_post": "",
+    "band_line1": "",
+    "band_line2": ""
+  },
+  "offer": {
+    "tag_lines": [],
+    "top_tag_lines": [],
+    "ticket": {
+      "head": "",
+      "pre": "",
+      "big": "",
+      "post": "",
+      "note": ""
+    },
+    "cta": {
+      "pre": "",
+      "number": "",
+      "pct": "",
+      "post": ""
+    },
+    "cta_sub": "",
+    "cta_sub_lines": []
+  },
+  "tvc": {
+    "source": "inputs/source.mp4",
+    "fps": null,
+    "src_size": [],
+    "tails": {},
+    "vframe": [],
+    "edits": []
+  },
+  "overlay_jobs": []
+}

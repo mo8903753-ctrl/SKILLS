@@ -1,0 +1,31 @@
+{
+  "project": null,
+  "sources": [],
+  "image_branch": {
+    "status": "pending",
+    "manifest_path": "images/manifest.json"
+  },
+  "video_branch": {
+    "status": "pending_inventory",
+    "reason": null,
+    "skill": "crowdfunding-ad-video",
+    "project_config": "video/project.json",
+    "items": [
+      {
+        "creative_id": null,
+        "production_method": "source_video_edit",
+        "source_path": null,
+        "segments": [],
+        "asset_path": null,
+        "sha256": null,
+        "duration_seconds": null,
+        "width": null,
+        "height": null,
+        "audio_review_status": "pending",
+        "visual_review_status": "pending",
+        "copy_sources": []
+      }
+    ]
+  },
+  "overall_status": "pending"
+}

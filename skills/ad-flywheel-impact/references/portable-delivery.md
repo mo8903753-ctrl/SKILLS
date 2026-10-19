@@ -15,7 +15,7 @@ project/brief.json；sources/；research/；prompts/；output/；delivery/images
 
 ## 完成交付
 逐图原尺寸检查+整批联系表+Figma总览/代表大图/横图/NT检查。成图加载清晰再验收。记录母版/变体/修订和文本模式数量；一个概念多背景不重复说成多个母版。
-用 `scripts/check_delivery.py PROJECT_ROOT manifest.json --require-generation --zip OUTPUT.zip` 校验已列出的文件/哈希并打包；脚本不会证明视觉质量或Figma存在。Figma必须另外实际验证。最终答复简洁提供数量、Figma、ZIP、尚存缺口。
+用 `scripts/check_delivery.py PROJECT_ROOT manifest.json --zip OUTPUT.zip` 校验已列出的文件/哈希并打包；脚本不会证明视觉质量或Figma存在。Figma必须另外实际验证。最终答复简洁提供数量、Figma、ZIP、尚存缺口。
 
 ## 中断恢复
 checkpoint.md 记录：当前用户约束、完成编号/版本、原素材与prompt相对路径、已验收/待修图、Figma页面与节点、工具仍运行的任务、下一步。恢复先查文件和实时平台，再从缺口续作。不得重跑整批冒充新增，不要把已经删除的旧节点当新图位置。

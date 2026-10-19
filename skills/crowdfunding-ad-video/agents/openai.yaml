@@ -1,0 +1,4 @@
+interface:
+  display_name: "众筹广告视频素材"
+  short_description: "TVC或客户成片→KS/IGG/Makuake/嘖嘖投放素材：剪版、竖版、压字、折扣框"
+  default_prompt: "用 crowdfunding-ad-video 把这个 TVC 剪成 Kickstarter 预热投放素材"
