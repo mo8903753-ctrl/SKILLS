@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucy AI Studio 日本众筹整体方案 — MadSpace</title>
+<meta name="description" content="Cephalon Lucy AI Studio 日本 Makuake 众筹整体方案 · 五个盘位，五章方案。Prepared by MadSpace.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="importmap">{"imports":{"three":"./assets/vendor/three.module.min.js","three/addons/":"./assets/vendor/addons/"}}</script>
+<link rel="modulepreload" href="assets/vendor/three.module.min.js">
+<link rel="preload" href="assets/model/lucy.glb" as="fetch" crossorigin>
+</head>
+<body>
+<a class="skip-link" href="#main">跳至正文</a>
+
+<!-- preloader -->
+<div id="loader" aria-hidden="true">
+  <div class="lt"><span>CEPHALON × MADSPACE</span><span>LUCY AI STUDIO · JAPAN PLAN · 2026.11</span></div>
+  <div><div class="lc"><em id="lcNum" style="font-style:normal">000</em><span>%</span></div><div class="lbar"><i id="lcBar"></i></div></div>
+</div>
+
+<!-- fixed layers -->
+<div id="backdrop" aria-hidden="true">
+  <div class="sbg" style="--c:#2B50E0"></div><div class="sbg" style="--c:#DCE4FF"></div><div class="sbg" style="--c:#FF6A3D"></div><div class="sbg" style="--c:#B9C7FF"></div>
+  <div class="disc" id="disc"></div>
+  <div class="bd huge" data-bd="hero">LUCY <span class="o">AI</span></div>
+  <div class="bd word" data-bd="unbox">N2 · <span class="o">5 BAYS</span></div>
+  <div class="bd num" data-bd="d1">01</div>
+  <div class="bd num" data-bd="d2">02</div>
+  <div class="bd num" data-bd="d3">03</div>
+  <div class="bd num" data-bd="d4">04</div>
+  <div class="bd num" data-bd="d5">05</div>
+  <div class="bd huge" data-bd="outro">MAKUAKE</div>
+</div>
+<canvas id="stage" aria-hidden="true"></canvas>
+<div id="overlay" aria-hidden="true"><svg id="ovSvg"></svg><div id="ovCo"></div></div>
+<div id="sleeve" aria-hidden="true"><div class="sl-in"><div class="sl-k" id="slK">DRIVE 01 · READING</div><div class="sl-t" id="slT">判断</div></div></div>
+
+<header id="hdr">
+  <a class="brand roll-host" href="#hero" data-go="#hero"><i></i><span class="roll" data-roll>CEPHALON · LUCY</span></a>
+  <nav aria-label="盘位导航">
+    <a href="#ch1" data-go="#d1" data-drive-nav="1"><span class="roll" data-roll>01 判断</span></a>
+    <a href="#ch2" data-go="#d2" data-drive-nav="2"><span class="roll" data-roll>02 市场</span></a>
+    <a href="#ch3" data-go="#d3" data-drive-nav="3"><span class="roll" data-roll>03 定价</span></a>
+    <a href="#ch4" data-go="#d4" data-drive-nav="4"><span class="roll" data-roll>04 渠道</span></a>
+    <a href="#ch5" data-go="#d5" data-drive-nav="5"><span class="roll" data-roll>05 执行</span></a>
+  </nav>
+  <div class="hbtns">
+    <span class="pill dark" aria-hidden="true"><span class="dot"></span>JAPAN · MAKUAKE</span>
+    <button class="pill blue" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu"><span class="roll" data-roll>MENU</span></button>
+  </div>
+</header>
+
+<div id="menu" role="dialog" aria-modal="true" aria-label="方案目录">
+  <div class="mlist">
+    <a class="mrow" href="#ch1" data-go="#d1"><span class="n">01</span><span class="t">判断<small>WHY LUCY · 核心判断 / 受众与场景</small></span><span class="s">CH 01—02</span></a>
+    <a class="mrow" href="#ch2" data-go="#d2"><span class="n">02</span><span class="t">市场<small>MARKET · 市场与竞争</small></span><span class="s">CH 03</span></a>
+    <a class="mrow" href="#ch3" data-go="#d3"><span class="n">03</span><span class="t">定价<small>MONEY · 定价与单位经济 / 资金需求与转化</small></span><span class="s">CH 04—05</span></a>
+    <a class="mrow" href="#ch4" data-go="#d4"><span class="n">04</span><span class="t">渠道<small>REACH · 页面叙事与渠道 / KOL 与广告</small></span><span class="s">CH 06—07</span></a>
+    <a class="mrow" href="#ch5" data-go="#d5"><span class="n">05</span><span class="t">执行<small>EXECUTE · 时间线 / 可行性与品牌资产</small></span><span class="s">CH 08—09</span></a>
+  </div>
+  <div class="mside">
+    <div><h3>五章方案</h3><p>滚动浏览，或直接点选盘位进入对应章节。</p></div>
+    <div class="keys">M — 打开 / 关闭目录<br>1–5 — 直达对应盘位<br>拖拽 — 旋转主机（首屏与开盘场景）</div>
+  </div>
+</div>
+
+<nav id="hud" aria-label="盘位进度">
+  <a href="#ch1" data-go="#d1" data-hud="1"><span class="bx"></span><span class="pr"></span><span class="nm">01 判断</span></a>
+  <a href="#ch2" data-go="#d2" data-hud="2"><span class="bx"></span><span class="pr"></span><span class="nm">02 市场</span></a>
+  <a href="#ch3" data-go="#d3" data-hud="3"><span class="bx"></span><span class="pr"></span><span class="nm">03 定价</span></a>
+  <a href="#ch4" data-go="#d4" data-hud="4"><span class="bx"></span><span class="pr"></span><span class="nm">04 渠道</span></a>
+  <a href="#ch5" data-go="#d5" data-hud="5"><span class="bx"></span><span class="pr"></span><span class="nm">05 执行</span></a>
+</nav>
+<div id="scrollbar" aria-hidden="true"><i></i></div>
+<div id="cursor" aria-hidden="true"><div class="c-ring"></div><div class="c-dot"></div><div class="c-lb">DRAG</div></div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="scene" data-scene="hero" data-cursor="DRAG">
+  <div class="sticky">
+    <div class="draghint" aria-hidden="true"><svg viewBox="0 0 34 14"><path d="M1 7h32M5 3 1 7l4 4M29 3l4 4-4 4" stroke="currentColor" fill="none"/></svg>拖拽旋转主机</div>
+    <div class="hero-copy">
+      <div>
+        <div class="kicker h-in">Cephalon × MadSpace — Japan Crowdfunding Plan</div>
+        <h1 class="h-split"><span class="en">Lucy AI Studio</span>日本众筹整体方案</h1>
+        <p class="sub h-in">给 AI Agent 一台专用计算机，<br>给创作与项目数据一个本地工作空间。</p>
+        <div class="statbar h-in">
+          <div class="st"><div class="k">上线时间</div><div class="v">2027.01.21</div></div>
+          <div class="st"><div class="k">前置预热</div><div class="v"><span data-count="45">45</span> 天</div></div>
+          <div class="st"><div class="k">双档目标</div><div class="v">$500K / $1M</div></div>
+          <div class="st"><div class="k">主推配置</div><div class="v">Max · <span data-count="128">128</span>GB</div></div>
+        </div>
+        <div class="prep h-in">Prepared by <img src="assets/img/i00-4f5186.png" width="183" height="56" alt="MadSpace"> · 日本众筹全案代理</div>
+      </div>
+      <div class="hero-side">
+        <div class="tag h-in">AGENT WORKSTATION<br>PRIVATE STORAGE<br><b>222.5 × 222.5 × 224 MM</b></div>
+        <div class="scrollcue h-in">SCROLL TO OPEN THE BAY <i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPIN (product rotates, colour wipes, facts pop) ============ -->
+<section id="spin" class="scene" data-scene="spin">
+  <div class="sticky">
+    <article class="spin-pop l c-blue"><div class="sp-k">01 / 04 · MEMORY</div><div class="sp-big">128GB</div><h3>Ryzen AI Max+ 395<br>统一内存</h3><p>Max 配置面向本地语言、视觉、语音与创作模型，具体能力随所选模型与配置确定。</p></article>
+    <article class="spin-pop r c-ice"><div class="sp-k">02 / 04 · STORAGE</div><div class="sp-big">5 × 3.5"</div><h3>五盘位项目存储</h3><p>最高约 100TB 选装容量，代码、素材、模型文件与输出围绕同一项目归档。</p></article>
+    <article class="spin-pop l c-orange"><div class="sp-k">03 / 04 · NETWORK</div><div class="sp-big">10GbE</div><h3>Wi-Fi 7 · 10GbE</h3><p>Max 与 Ultra 配备 10GbE，SMB 共享与局域网访问让团队直接调用项目资料。</p></article>
+    <article class="spin-pop r c-peri"><div class="sp-k">04 / 04 · ALWAYS ON</div><div class="sp-big">24/7</div><h3>Agent 常开工位</h3><p>笔记本合上，Codex、Claude Code、Hermes 等 Agent 任务继续在 Lucy 上运行。</p></article>
+    <div class="spin-idx" aria-hidden="true"><span>OBJECT 001</span><b id="spinDeg">000°</b></div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="mq-track" data-mq="1"><span>AGENT WORKSTATION <i></i> <em>128GB</em> UNIFIED MEMORY <i></i> 5 × SATA BAYS <i></i> MAKUAKE <em>2027.01.21</em> <i></i></span></div></div>
+
+<!-- ============ UNBOX ============ -->
+<section id="unbox" class="scene" data-scene="unbox" data-cursor="DRAG">
+  <div class="sticky">
+    <div class="scene-copy u-copy">
+      <div class="eb">OPEN THE BAY · N2 DRIVE CAGE</div>
+      <h2><span class="en">5 BAYS / 5 ACTS</span>五章方案</h2>
+    </div>
+    <div class="u-steps" aria-hidden="true"><span><i><b></b></i>取下前盖</span><span><i><b></b></i>盘位索引</span><span><i><b></b></i>拉出 01</span></div>
+  </div>
+</section>
+
+<!-- ============ DRIVE 01 ============ -->
+<section id="d1" class="scene intro" data-scene="drive" data-drive="1" data-cursor="OPEN">
+  <div class="sticky">
+    <div class="scene-copy">
+      <div class="eb">DRIVE 01 / 05 · CHAPTER 01—02</div>
+      <h2><span class="en">WHY LUCY</span>判断</h2>
+      <ul class="ch-list"><li>核心判断<span>CH 01</span></li><li>受众与场景<span>CH 02</span></li></ul>
+      <div class="keynums"><div><b>128GB</b><span>统一内存 · Max</span></div><div><b>5 盘位</b><span>3.5" SATA</span></div><div><b>~100TB</b><span>选装容量上限</span></div></div>
+    </div>
+    <div class="gohint">继续滚动 · 拉出盘位内容</div>
+  </div>
+</section>
+
+<section id="ch1" class="chapter" data-group="1">
+ <div class="wrap" id="c01">
+  <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 01</b>01 / Core Judgment</div><h2 class="chname sp">核心判断</h2></div><div class="bignum" aria-hidden="true">01</div></div>
+  <p class="lede rv">Lucy 的占位是 <span class="mk">AI Agent 专用计算机</span>：把长期任务、所选本地模型、项目文件和可扩展存储放进同一个常开工作空间，让用户的日常电脑回到用户手里。</p>
+  <div class="deck" id="deck" aria-label="核心价值四张卡片">
+  <div class="sticky">
+   <article class="dcard c-blue"><span class="dc-orb"></span><div class="dc-top"><span>01 / ALWAYS READY</span><span>01 — 04</span></div><div class="dc-num">01</div><div class="dc-body"><h3>长任务有独立工位</h3><p>Agent 在 Lucy 上持续处理代码、文档和素材。用户合上笔记本、出差或切换工作，任务仍有固定运行环境。</p><span class="dc-tag">AGENT · 常开工位</span></div></article>
+   <article class="dcard c-ink"><span class="dc-orb"></span><div class="dc-top"><span>02 / LOCAL MODELS</span><span>02 — 04</span></div><div class="dc-num">02</div><div class="dc-body"><h3>本地模型有计算底座</h3><p>Max 的 Ryzen AI Max+ 395 与 128GB 统一内存面向本地语言、视觉、语音和创作模型，具体能力随所选模型与配置确定。</p><span class="dc-tag">128GB · 本地模型</span></div></article>
+   <article class="dcard c-ice"><span class="dc-orb"></span><div class="dc-top"><span>03 / PRIVATE FILES</span><span>03 — 04</span></div><div class="dc-num">03</div><div class="dc-body"><h3>项目资料留在本地</h3><p>五个 SATA 盘位支持最高约 100TB 选装容量。代码、素材、模型文件与输出可以围绕同一项目归档，硬盘按所选方案配置。</p><span class="dc-tag">5 × SATA · 项目记忆</span></div></article>
+   <article class="dcard c-orange"><span class="dc-orb"></span><div class="dc-top"><span>04 / OPEN WORKFLOW</span><span>04 — 04</span></div><div class="dc-num">04</div><div class="dc-body"><h3>沿用已有工具链</h3><p>Codex、Claude Code、OpenClaw、Hermes 与 ComfyUI 构成开放入口；第三方工具的账号、许可和设置由用户选择。</p><span class="dc-tag">OPEN · 工具链</span></div></article>
+   <div class="deck-prog" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+  </div>
+  </div>
+  <div class="band" data-theme="ice">
+  <h3 class="sub-t sp" data-n="01.A">三种配置的适用场景</h3>
+  <div class="specs">
+    <div class="spec rv"><h3>PRO</h3><ul><li>Ryzen 9 7940HS</li><li>32GB DDR5</li><li>256GB NVMe</li><li>双 2.5GbE</li><li>轻量 Agent 与文档工作</li></ul></div>
+    <div class="spec max rv"><span class="flag">主推</span><h3>MAX</h3><ul><li>Ryzen AI Max+ 395</li><li>128GB 统一内存</li><li>1TB NVMe</li><li>10GbE</li><li>本地创作与高阶 Agent</li></ul></div>
+    <div class="spec rv"><h3>ULTRA</h3><ul><li>Ryzen AI Max+ Pro 495</li><li>192GB 统一内存</li><li>1TB NVMe</li><li>10GbE</li><li>高负载与团队工作流</li></ul></div>
+  </div>
+  <p class="note rv" style="margin-top:18px">三款均为五 SATA 盘位、Wi-Fi 7；Max 与 Ultra 为 10GbE。最高约 100TB 为选装硬盘后的容量上限，实际可用容量取决于盘型与存储布局。</p>
+  </div>
+  <h3 class="sub-t sp" data-n="01.B">传播卖点</h3>
+  <div class="sellpts">
+   <div class="sp-card rv"><span class="sp-n">01</span><h4>Ubuntu 开放计算环境</h4><p>本地 AI 计算与开放系统，Agent 有固定运行环境。</p></div>
+   <div class="sp-card rv"><span class="sp-n">02</span><h4>Hermes 工作流</h4><p>Hermes 工作流与第三方工具配置，沿用已有 Agent。</p></div>
+   <div class="sp-card rv"><span class="sp-n">03</span><h4>ComfyUI 创作入口</h4><p>ComfyUI 创作入口与本地文件访问，素材不出设备。</p></div>
+   <div class="sp-card rv"><span class="sp-n">04</span><h4>SMB 共享与局域网</h4><p>SMB 共享、局域网访问与进阶 OS 控制。</p></div>
+   <div class="sp-card hot rv"><span class="sp-n">05</span><h4>Lucy AIOS 与 companion app</h4><p>系统与手机端配套应用，上线前锁定交付清单后展示。</p><span class="sp-tag">上线前实测</span></div>
+   <div class="sp-card hot rv"><span class="sp-n">06</span><h4>H3 · LTX 2.5 · ComfyUI</h4><p>本地创作模型组合，最终配置在上线前确认。</p><span class="sp-tag">上线前实测</span></div>
+   <div class="sp-card hot rv"><span class="sp-n">07</span><h4>模型精度与产出速度</h4><p>模型精度、视频规格与实际产出速度，以实测数据呈现。</p><span class="sp-tag">上线前实测</span></div>
+   <div class="sp-card hot rv"><span class="sp-n">08</span><h4>功耗 · 噪声 · 温度</h4><p>长时间运行表现，实测完成后作为常开工位的证明。</p><span class="sp-tag">上线前实测</span></div>
+  </div>
+  <p class="note rv" style="margin-top:18px">Kickstarter 项目页将 35W 待机功耗、180W 满载功耗、28dB 待机噪声与 42dB 负载噪声列为初步估算。日本传播不把这些估算写成实测结果。</p>
+  <div class="figs mt-lg">
+    <figure class="figure"><div class="im"><img src="assets/img/i02-ff8b94.jpg" width="671" height="1000" loading="lazy" alt="ComfyUI 本地创作工作流界面" data-par></div><figcaption>COMFYUI · 提示词、参考素材与版本在同一工作流中管理</figcaption></figure>
+    <figure class="figure"><div class="im"><img src="assets/img/i03-c5231d.jpg" width="848" height="1264" loading="lazy" alt="桌面上的 Lucy 主机与本地项目素材库" data-par></div><figcaption>LOCAL PROJECT MEMORY · 计算与项目资料放在手边</figcaption></figure>
+  </div>
+  <span class="srcline rv">产品依据：<a href="https://www.kickstarter.com/projects/744045479/cephalon-ondevice-ai-with-a-selfevolving-ecosystem" target="_blank" rel="noreferrer">Kickstarter 项目页与配置图</a> · <a href="https://cephalon.cloud/h3/studio/" target="_blank" rel="noreferrer">Cephalon H3 Studio 官网</a></span>
+ </div>
+
+ <div class="stmt band" data-theme="blue" data-stmt>
+  <div class="sticky"><div class="stmt-k">AD DIRECTION 02 · 首屏承诺</div><p class="stmt-t">笔记本合上，<br>任务继续。</p><p class="stmt-s">长任务在 Lucy 上持续运行，用户的日常电脑回到用户手里。</p></div>
+ </div>
+
+ <div id="c02" class="band" data-theme="ink" style="padding:130px 0 120px">
+  <div class="wrap">
+   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 01</b>02 / Audience &amp; Use Cases</div><h2 class="chname sp">受众与场景</h2></div><div class="bignum" aria-hidden="true">02</div></div>
+  </div>
+  <div class="hgal">
+   <div class="sticky">
+    <div class="hgal-track">
+     <div class="hgal-intro"><p class="lede">核心人群锁定 <span class="mk">每周都在真实使用 AI 工作的人</span>。他们有持续任务、有项目文件，也有让数据留在本地的明确理由。</p><p class="note" style="margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.14em">SCROLL → 4 GROUPS</p></div>
+     <article class="aud"><div class="im"><img src="assets/img/i04-31e02d.jpg" width="900" height="600" loading="lazy" alt="日本办公室内协作的数字化团队"></div><div class="txt"><div class="ix">GROUP 01</div><h3>开发与数字化团队</h3><p>代码、依赖、文档与 Agent 运行放在固定环境，减少任务对个人电脑的占用。</p></div></article>
+     <article class="aud"><div class="im"><img src="assets/img/i05-499f63.jpg" width="900" height="600" loading="lazy" alt="日本居家工作室中的内容创作者"></div><div class="txt"><div class="ix">GROUP 02</div><h3>影像与内容创作者</h3><p>参考素材、ComfyUI 工作流、版本和成片围绕同一项目留存，方便持续试片与交付。</p></div></article>
+     <article class="aud"><div class="im"><img src="assets/img/i06-c68535.jpg" width="900" height="731" loading="lazy" alt="日本居家办公空间中的独立顾问"></div><div class="txt"><div class="ix">GROUP 03</div><h3>独立顾问与研究工作</h3><p>客户资料、研究文档与知识库留在本地，在授权范围内调用所选模型与工具。</p></div></article>
+     <article class="aud"><div class="im"><img src="assets/img/i07-4c5f0b.jpg" width="900" height="600" loading="lazy" alt="日本城市办公环境中的企业创新负责人"></div><div class="txt"><div class="ix">GROUP 04</div><h3>创新与技术负责人</h3><p>用一台专用设备验证 Agent 工作流，再决定团队推广、算力分配与数据治理方式。</p></div></article>
+    </div>
+    <div class="hgal-bar"><i></i></div>
+   </div>
+  </div>
+  <div class="wrap">
+   <div class="painlist">
+    <div class="pain rv"><span class="pn">01</span><b>任务持续</b>长任务不依赖笔记本一直打开。</div>
+    <div class="pain rv"><span class="pn">02</span><b>文件集中</b>项目输入、过程与输出不再散落。</div>
+    <div class="pain rv"><span class="pn">03</span><b>本地优先</b>适合本地处理的数据留在本地。</div>
+    <div class="pain rv"><span class="pn">04</span><b>工具开放</b>保留已有 Agent 与创作工具选择。</div>
+   </div>
+   <p class="lede rv" style="margin-top:60px"><b>首发沟通顺序：</b>先讲 Agent 专用工位，再讲本地创作与五盘位项目记忆。Pro 面向轻量工作，Ultra 面向高负载团队；Max展示完整产品力，降低选择成本。</p>
+  </div>
+ </div>
+</section>
+
+<!-- ============ DRIVE 02 ============ -->
+<section id="d2" class="scene intro" data-scene="drive" data-drive="2" data-cursor="OPEN">
+  <div class="sticky">
+    <div class="scene-copy">
+      <div class="eb">DRIVE 02 / 05 · CHAPTER 03</div>
+      <h2><span class="en">MARKET</span>市场</h2>
+      <ul class="ch-list"><li>市场与竞争<span>CH 03</span></li></ul>
+      <div class="keynums"><div><b>4</b><span>日本对标产品</span></div><div><b>$959+</b><span>三款日本价格起</span></div><div><b>3</b><span>价格 · 形态 · 叙事锚点</span></div></div>
+    </div>
+    <div class="gohint">继续滚动 · 拉出盘位内容</div>
+  </div>
+</section>
+
+<section id="ch2" class="chapter" data-group="2">
+ <div class="wrap" id="c03">
+  <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 02</b>03 / Market &amp; Competition</div><h2 class="chname sp">市场与竞争</h2></div><div class="bignum" aria-hidden="true">03</div></div>
+
+  <div class="ladder" id="ladder">
+   <div class="lh"><h4>日本公开价格带 · 美元折算</h4><span>Lucy Max 主力成交价位于文件管理型 AI NAS 与同代 128GB 小主机之间</span></div>
+   <div class="lad-axis">
+    <div class="ax"></div>
+    <div class="tk" style="left:0%">$0</div><div class="tk" style="left:20%">$1,000</div><div class="tk" style="left:40%">$2,000</div><div class="tk" style="left:60%">$3,000</div><div class="tk" style="left:80%">$4,000</div><div class="tk" style="left:100%">$5,000</div>
+    <div class="lad-pt dn" style="left:9.52%"><i></i><div class="lb">UnifyDrive UT2<small>$475.81</small></div></div>
+    <div class="lad-pt" style="left:19.74%"><i></i><div class="lb">Zettlab D6 Ultra<small>$986.88</small></div></div>
+    <div class="lad-range" style="left:59.98%;width:12%"><div class="lb">Lucy Max<small>$2,999 – $3,599</small></div></div>
+    <div class="lad-pt dn" style="left:89.75%"><i></i><div class="lb">GMKtec EVO-X2<small>$4,487.50</small></div></div>
+    <div class="lad-pt" style="left:94.88%"><i></i><div class="lb">DGX Spark<small>$4,743.75</small></div></div>
+   </div>
+  </div>
+
+  <div class="tbw mt-lg rv" tabindex="0" role="region" aria-label="日本竞品比较表"><table class="dt">
+  <caption>日本在售与已众筹产品的决策比较</caption>
+  <thead><tr><th scope="col">竞品</th><th scope="col">价格与核心规格</th><th scope="col">它的主场</th><th scope="col">Lucy 的立场</th></tr></thead>
+  <tbody>
+  <tr><td><a href="https://www.makuake.com/project/zettlab_ai_nas/" target="_blank" rel="noreferrer">Zettlab D6 Ultra</a></td><td class="num">约 $986.88<br><span class="note">32GB · Core Ultra 5 · 六盘位</span></td><td>本地文件检索、分类、转写与大容量 NAS。</td><td><b>从文件管理推进到 Agent 执行与本地创作，128GB 统一内存面向更重模型。</b></td></tr>
+  <tr><td><a href="https://gadget.phileweb.com/post-102583/" target="_blank" rel="noreferrer">UnifyDrive UT2</a></td><td class="num">约 $475.81<br><span class="note">8GB · 双 SSD · 便携 NAS</span></td><td>外出拍摄、移动备份、存储卡直读。</td><td><b>Lucy 固定承担持续计算与项目工作流，以便携存储覆盖不到的任务深度建立价值。</b></td></tr>
+  <tr><td><a href="https://kakaku.com/item/K0001719254/" target="_blank" rel="noreferrer">GMKtec EVO-X2</a></td><td class="num">约 $4,487.50<br><span class="note">128GB / 2TB · Ryzen AI Max+ 395</span></td><td>同代芯片的通用高性能小主机。</td><td><b>同代计算底座之上增加五盘位、Agent 工作流与本地创作交付，Max 价格仍有解释空间。</b></td></tr>
+  <tr><td><a href="https://www.nttpc.co.jp/press/campaign/2026/02/202602251000.html" target="_blank" rel="noreferrer">NVIDIA DGX Spark</a></td><td class="num">约 $4,743.75<br><span class="note">128GB · GB10 · CUDA 生态</span></td><td>CUDA 原生 AI 开发与 NVIDIA 软件生态。</td><td><b>不与 CUDA 生态硬碰，主打开放 Agent、私有项目存储与日常创作的整机路径。</b></td></tr>
+  </tbody></table></div>
+  <span class="srcline rv">价格依据：各链接当前公开价；Zettlab 原始价 JPY 157,900，UT2 原始价 JPY 76,130，GMKtec 原始价 JPY 718,000，DGX Spark 原始价 JPY 690,000 未税。UT2 海外成绩约 $1M / 2,393 人，来源为品牌公开公告。</span>
+  <div class="band" data-theme="blue">
+  <h3 class="sub-t sp" data-n="03.A">三类锚点</h3>
+  <div class="anchors">
+   <div class="card anchor rv"><div class="ai">¥</div><h3>价格锚点</h3><p>Max 主力成交价 $2,999–$3,599，低于当前 GMKtec 与 DGX Spark 的日本公开价，同时高于文件管理型 AI NAS。价格差异由 128GB、五盘位与工作流支撑。</p></div>
+   <div class="card anchor rv"><div class="ai">▣</div><h3>形态锚点</h3><p>用户已经理解 NAS 与 AI 小主机。Lucy 直接沿用这套品类理解，解释为“Agent 专用计算机 + 私有项目存储”，降低新硬件的认知成本。</p></div>
+   <div class="card anchor rv"><div class="ai">→</div><h3>叙事锚点</h3><p>避开泛化的自我进化生态，集中讲三个结果：长任务不占用笔电、项目文件留在本地、工作过程与输出可以回看。</p></div>
+  </div>
+  </div>
+ </div>
+</section>
+
+<!-- ============ DRIVE 03 ============ -->
+<section id="d3" class="scene intro" data-scene="drive" data-drive="3" data-cursor="OPEN">
+  <div class="sticky">
+    <div class="scene-copy">
+      <div class="eb">DRIVE 03 / 05 · CHAPTER 04—05</div>
+      <h2><span class="en">MONEY</span>定价</h2>
+      <ul class="ch-list"><li>定价与单位经济<span>CH 04</span></li><li>资金需求与转化<span>CH 05</span></li></ul>
+      <div class="keynums"><div><b>$3,676</b><span>加权 AOV</span></div><div><b>3 款</b><span>Pro · Max · Ultra 同步</span></div><div><b>136/272</b><span>目标支持者</span></div></div>
+    </div>
+    <div class="gohint">继续滚动 · 拉出盘位内容</div>
+  </div>
+</section>
+
+<section id="ch3" class="chapter" data-group="3">
+ <div class="wrap" id="c04">
+  <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 03</b>04 / Pricing &amp; Unit Economics</div><h2 class="chname sp">定价与单位经济</h2></div><div class="bignum" aria-hidden="true">04</div></div>
+  <p class="lede rv">日本首发 <span class="mk">Pro / Max / Ultra 三款同步上线，主推 Max · 128GB</span>。价格以美国公开档位 1.2 倍为基准，再按日本折扣梯与价格尾数落地；三款的数量比例参考 Kickstarter 各档位的实际销量。</p>
+  <div class="tbw mt-lg rv" tabindex="0" role="region" aria-label="美国价格换算表"><table class="dt">
+  <caption>美国公开价格 × 1.2：三款配置日本价格基准</caption>
+  <thead><tr><th scope="col">配置</th><th scope="col">美国众筹公开价</th><th scope="col">日本换算基准</th><th scope="col">美国零售锚点</th><th scope="col">日本零售参考</th></tr></thead>
+  <tbody>
+  <tr><td>Pro</td><td class="num">$799</td><td class="num">$958.80</td><td class="num">$899</td><td class="num">$1,078.80</td></tr>
+  <tr class="main"><td>Max</td><td class="num">$2,499 / $2,799 / $2,999</td><td class="num">$2,998.80 / $3,358.80 / $3,598.80</td><td class="num">$3,999</td><td class="num">$4,798.80</td></tr>
+  <tr><td>Ultra</td><td class="num">$3,799 / $3,999</td><td class="num">$4,558.80 / $4,798.80</td><td class="num">$4,999</td><td class="num">$5,998.80</td></tr>
+  </tbody></table></div>
+  <p class="note rv" style="margin-top:14px">日本零售参考直接来自美国零售价 × 1.2：Pro $899 → $1,078.80，Max $3,999 → $4,798.80，Ultra $4,999 → $5,998.80。</p>
+
+  <h3 class="sub-t sp" data-n="04.A">配置比例：参考 Kickstarter 实际销量</h3>
+  <div class="mixbars" id="mixbars">
+   <div class="mb-row"><div class="mb-lb">Kickstarter 实际<small>按档位统计 56 人</small></div><div class="mb-bar"><i class="pro" style="--w:14.3%"><span>Pro 8 · 14%</span></i><i class="max" style="--w:16.1%"><span>Max 9 · 16%</span></i><i class="ult" style="--w:69.6%"><span>Ultra 39 · 70%</span></i></div></div>
+   <div class="mb-row"><div class="mb-lb">日本规划<small>$500K 136 人 / $1M 272 人</small></div><div class="mb-bar"><i class="pro" style="--w:13.3%"><span>Pro 13%</span></i><i class="max" style="--w:37.2%"><span>Max 37% · 主推</span></i><i class="ult" style="--w:49.5%"><span>Ultra 50%</span></i></div></div>
+  </div>
+  <p class="note rv" style="margin-top:18px">Ultra 在美国占约七成，说明高配需求真实存在；日本传播主推 Max，把约 20 个百分点从 Ultra 转向 Max，Pro 维持美国比例。比例为规划值，上线后按实际成交调整库存与广告素材。</p>
+  <span class="srcline rv">销量依据：<a href="https://www.kickstarter.com/projects/744045479/cephalon-ondevice-ai-with-a-selfevolving-ecosystem/rewards" target="_blank" rel="noreferrer">Kickstarter 奖励页各档位 Backers</a> · 读取于 2026-11-03，项目进行中（$179,658 / 57 位支持者）</span>
+
+  <div class="band" data-theme="ink">
+  <h3 class="sub-t sp" data-n="04.B">三款首发档位</h3>
+  <div class="tgroup-h"><span class="tg-name">MAX · 128GB</span><span class="tg-tag">主推 · 四档折扣梯</span></div>
+  <div class="tiers">
+   <div class="tier"><div class="tn">24 小时限定</div><div class="off">37% OFF</div><div class="pr">$<span data-count="3030">3,030</span> <small>标价</small></div><p>首日全档可叠 1% 优惠券，测算成交约 $2,999。以公开起 24 小时限制，不设置数量上限。</p><div class="lim">测算数量 8 / 13 台</div></div>
+   <div class="tier"><div class="tn">超早鸟</div><div class="off">35% OFF</div><div class="pr">$<span data-count="3118">3,118</span></div><p>承接首日之后的早期购买。$500K / $1M 建议上限分别为 20 / 40 台。</p><div class="lim">测算数量 11 / 20 台</div></div>
+   <div class="tier hot"><div class="badge">主力档</div><div class="tn">早鸟 + 中期加开</div><div class="off">30% OFF</div><div class="pr">$<span data-count="3355">3,355</span></div><p>首批与中期加开同价。加开只重启稀缺，不提高价格。</p><div class="lim">首批 9 + 加开 7 / 首批 20 + 加开 17</div></div>
+   <div class="tier hot"><div class="badge">长尾主销</div><div class="tn">Makuake 限定</div><div class="off">25% OFF</div><div class="pr">$<span data-count="3599">3,599</span></div><p>不限量，承接中后期与项目结束前的持续购买，仍低于日本零售参考。</p><div class="lim">测算数量 16 / 30 台 · 不限量</div></div>
+  </div>
+  <div class="tgroup2">
+   <div><div class="tgroup-h"><span class="tg-name">PRO · 32GB</span><span class="tg-tag">轻量 Agent 与文档工作</span></div>
+    <div class="tiers t2">
+     <div class="tier"><div class="tn">超早鸟</div><div class="off">11% OFF</div><div class="pr">$<span data-count="959">959</span></div><p>对应美国 $799 × 1.2，低门槛入口。</p><div class="lim">测算数量 11 / 19 台</div></div>
+     <div class="tier"><div class="tn">Makuake 限定</div><div class="off">7% OFF</div><div class="pr">$<span data-count="999">999</span></div><p>不限量，承接轻量需求的持续购买。</p><div class="lim">测算数量 7 / 18 台</div></div>
+    </div></div>
+   <div><div class="tgroup-h"><span class="tg-name">ULTRA · 192GB</span><span class="tg-tag">高负载与团队工作流</span></div>
+    <div class="tiers t2">
+     <div class="tier"><div class="tn">超早鸟</div><div class="off">24% OFF</div><div class="pr">$<span data-count="4559">4,559</span></div><p>对应美国 $3,799 × 1.2，美国销量最高的配置。</p><div class="lim">测算数量 36 / 73 台</div></div>
+     <div class="tier"><div class="tn">Makuake 限定</div><div class="off">20% OFF</div><div class="pr">$<span data-count="4799">4,799</span></div><p>对应美国 $3,999 × 1.2，不限量承接团队采购。</p><div class="lim">测算数量 31 / 62 台</div></div>
+    </div></div>
+  </div>
+  <p class="note rv" style="margin-top:18px">折扣以日本零售参考为基准。首日 1% 券适用于全部 Return；Max 24 小时限定 $3,030 × 99% = $2,999.70，模型按 $2,999 规划价取整，其余 Reward 按标价成交。</p>
+  <div class="aovline mt-lg rv"><div class="f">$500K ≈ Pro(11×$959 + 7×$999) + Max(8×$2,999 + 11×$3,118 + 16×$3,355 + 16×$3,599) + Ultra(36×$4,559 + 31×$4,799) = $499,989<br>$1M = Pro(19×$959 + 18×$999) + Max(13×$2,999 + 20×$3,118 + 37×$3,355 + 30×$3,599) + Ultra(73×$4,559 + 62×$4,799) = $1,000,000</div><div class="e">136 / 272 位支持者 · 加权 AOV 约 <b>$3,676</b> · 配置比例 Pro 13% / Max 37% / Ultra 50%</div></div>
+  </div>
+  <span class="srcline rv">价格依据：<a href="https://www.kickstarter.com/projects/744045479/cephalon-ondevice-ai-with-a-selfevolving-ecosystem/rewards" target="_blank" rel="noreferrer">Kickstarter 原始奖励页</a></span>
+ </div>
+
+ <div class="wrap band" id="c06" data-theme="ice" style="padding-top:150px;padding-bottom:120px;margin-top:40px">
+  <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 03</b>05 / Funding &amp; Conversion</div><h2 class="chname sp">资金需求与转化</h2></div><div class="bignum" aria-hidden="true">05</div></div>
+  <p class="lede rv">两档目标对应两套独立营销配置。<span class="mk">$500K 先验证达标确定性，$1M 放大平台与广告供给</span>；支持者、来源与档位全部同步扩容。</p>
+  <div class="seg mt-lg" id="n-budget" role="group" aria-label="目标预算切换">
+   <button type="button" class="on" data-bud="L" aria-pressed="true">目标 $500K<span class="bt-sub">营销预算约 $81,550</span></button>
+   <button type="button" data-bud="R" aria-pressed="false">目标 $1M<span class="bt-sub">营销预算 $183,400</span></button>
+  </div>
+  <div id="budgetL" class="mt-lg">
+   <div class="kpis"><div class="kpi"><div class="kv">$500K</div><div class="kk">众筹目标</div><div class="kd">平台成交口径</div></div><div class="kpi"><div class="kv">$81,550</div><div class="kk">纯营销预算 · 16.31%</div><div class="kd">线下展示按约 $1,600 计</div></div><div class="kpi"><div class="kv">136</div><div class="kk">目标支持者</div><div class="kd">三款八档合计</div></div><div class="kpi"><div class="kv">$3,676.39</div><div class="kk">加权 AOV</div><div class="kd">$499,989 ÷ 136</div></div></div>
+   <div class="bars"><div class="brow"><div class="bn">预热广告<small>45 天蓄水</small></div><div class="bt"><i style="--w:43.75%"></i></div><div class="bv">5.25% · $26,250</div></div><div class="brow"><div class="bn">上线广告<small>60–90 天转化</small></div><div class="bt"><i style="--w:83.33%"></i></div><div class="bv">10.00% · $50,000</div></div><div class="brow"><div class="bn">媒体与 KOL</div><div class="bt"><i style="--w:5.17%"></i></div><div class="bv">0.62% · $3,100</div></div><div class="brow"><div class="bn">PR / 线下 / 工具</div><div class="bt"><i style="--w:3.58%"></i></div><div class="bv">约 $2,200</div></div><div class="brow total"><div class="bn">营销费用合计</div><div class="bt"><i style="--w:100%"></i></div><div class="bv">16.31% · 约 $81,550</div></div></div>
+   <div class="tbw mt-lg" tabindex="0" role="region" aria-label="$500K 预算表"><table class="dt"><caption>$500K · 营销预算拆分</caption><thead><tr><th scope="col">项目</th><th scope="col">比例</th><th scope="col">金额</th><th scope="col">执行口径</th></tr></thead><tbody>
+   <tr><td>预热广告</td><td class="num">5.25%</td><td class="num">$26,250</td><td>45 天 · Meta 90% / Google 10%</td></tr>
+   <tr><td>上线广告</td><td class="num">10.00%</td><td class="num">$50,000</td><td>60–90 天 · 预估 ROAS 3.0</td></tr>
+   <tr><td>媒体与 KOL</td><td class="num">0.62%</td><td class="num">$3,100</td><td>合作费用与效果佣金</td></tr>
+   <tr><td>PR TIMES 通稿</td><td class="num">0.04%</td><td class="num">$200</td><td>上线节点通稿</td></tr>
+   <tr><td>线下展示</td><td class="num">0.31%</td><td class="num">约 $1,600</td><td>实机演示与创作者体验</td></tr>
+   <tr><td>其他营销工具</td><td class="num">0.08%</td><td class="num">$400</td><td>邮件、预约与转化工具</td></tr>
+   <tr class="total"><td>营销费用合计</td><td class="num">16.31%</td><td class="num">约 $81,550</td><td>不含平台扣除、税费、BOM、物流与品牌方人力</td></tr>
+   </tbody></table></div>
+   <div class="grid2 mt-lg">
+    <div class="card"><h4>预热转化</h4><div class="costline"><span>预热 Lead 数</span><b>500</b></div><div class="costline"><span>目标 CPL</span><b>$52.50</b></div><div class="costline"><span>预热转化率</span><b>3%</b></div><div class="costline"><span>预热 Lead 转化</span><b>15 人</b></div><div class="costline"><span>上线广告预估订单</span><b>41 人</b></div><div class="costline total"><span>上线广告预估 ROAS</span><b>3.0</b></div></div>
+    <div class="card"><h4>来源转化</h4><div class="costline"><span>平台流量</span><b>61 人</b></div><div class="costline"><span>众筹期投放</span><b>41 人</b></div><div class="costline"><span>预热 Lead 转化</span><b>15 人</b></div><div class="costline"><span>其他 / PR/KOL</span><b>17 / 2 人</b></div><div class="costline total"><span>合计</span><b>136 人</b></div></div>
+   </div>
+   <div class="tbw mt-lg" tabindex="0" role="region" aria-label="$500K 档位转化"><table class="dt"><caption>$500K · 每个 Reward 的转化与金额</caption><thead><tr><th scope="col">Reward</th><th scope="col">成交价</th><th scope="col">支持者</th><th scope="col">筹资金额</th></tr></thead><tbody>
+   <tr><td>Pro · 超早鸟</td><td class="num">$959</td><td class="num">11</td><td class="num">$10,549</td></tr><tr><td>Pro · Makuake 限定</td><td class="num">$999</td><td class="num">7</td><td class="num">$6,993</td></tr><tr><td>Max · 24 小时限定</td><td class="num">$2,999</td><td class="num">8</td><td class="num">$23,992</td></tr><tr><td>Max · 超早鸟</td><td class="num">$3,118</td><td class="num">11</td><td class="num">$34,298</td></tr><tr class="main"><td>Max · 早鸟（含同价加开）</td><td class="num">$3,355</td><td class="num">16</td><td class="num">$53,680</td></tr><tr class="main"><td>Max · Makuake 限定</td><td class="num">$3,599</td><td class="num">16</td><td class="num">$57,584</td></tr><tr><td>Ultra · 超早鸟</td><td class="num">$4,559</td><td class="num">36</td><td class="num">$164,124</td></tr><tr><td>Ultra · Makuake 限定</td><td class="num">$4,799</td><td class="num">31</td><td class="num">$148,769</td></tr><tr class="total"><td>合计 / 加权 AOV</td><td class="num">$3,676.39</td><td class="num">136</td><td class="num">$499,989</td></tr>
+   </tbody></table></div>
+  </div>
+  <div id="budgetR" class="mt-lg" hidden>
+   <div class="kpis"><div class="kpi"><div class="kv">$1M</div><div class="kk">众筹目标</div><div class="kd">平台成交口径</div></div><div class="kpi"><div class="kv">$183,400</div><div class="kk">纯营销预算 · 18.34%</div><div class="kd">上线广告提高到 12%</div></div><div class="kpi"><div class="kv">272</div><div class="kk">目标支持者</div><div class="kd">三款八档合计</div></div><div class="kpi"><div class="kv">$3,676.47</div><div class="kk">加权 AOV</div><div class="kd">$1,000,000 ÷ 272</div></div></div>
+   <div class="bars"><div class="brow"><div class="bn">预热广告<small>45 天蓄水</small></div><div class="bt"><i style="--w:44.17%"></i></div><div class="bv">5.30% · $53,000</div></div><div class="brow"><div class="bn">上线广告<small>60–90 天转化</small></div><div class="bt"><i style="--w:100%"></i></div><div class="bv">12.00% · $120,000</div></div><div class="brow"><div class="bn">媒体与 KOL</div><div class="bt"><i style="--w:5.83%"></i></div><div class="bv">0.70% · $7,000</div></div><div class="brow"><div class="bn">PR / 线下 / 工具</div><div class="bt"><i style="--w:2.83%"></i></div><div class="bv">$3,400</div></div><div class="brow total"><div class="bn">营销费用合计</div><div class="bt"><i style="--w:100%"></i></div><div class="bv">18.34% · $183,400</div></div></div>
+   <div class="tbw mt-lg" tabindex="0" role="region" aria-label="$1M 预算表"><table class="dt"><caption>$1M · 营销预算拆分</caption><thead><tr><th scope="col">项目</th><th scope="col">比例</th><th scope="col">金额</th><th scope="col">执行口径</th></tr></thead><tbody>
+   <tr><td>预热广告</td><td class="num">5.30%</td><td class="num">$53,000</td><td>45 天 · Meta 90% / Google 10%</td></tr><tr><td>上线广告</td><td class="num">12.00%</td><td class="num">$120,000</td><td>60–90 天 · 预估 ROAS 2.5</td></tr><tr><td>媒体与 KOL</td><td class="num">0.70%</td><td class="num">$7,000</td><td>10 人矩阵与效果佣金</td></tr><tr><td>PR TIMES 通稿</td><td class="num">0.03%</td><td class="num">$300</td><td>上线与中期两次节点</td></tr><tr><td>线下展示</td><td class="num">0.25%</td><td class="num">$2,500</td><td>实机演示与团队体验</td></tr><tr><td>其他营销工具</td><td class="num">0.06%</td><td class="num">$600</td><td>邮件、预约与转化工具</td></tr><tr class="total"><td>营销费用合计</td><td class="num">18.34%</td><td class="num">$183,400</td><td>不含平台扣除、税费、BOM、物流与品牌方人力</td></tr>
+   </tbody></table></div>
+   <div class="grid2 mt-lg"><div class="card"><h4>预热转化</h4><div class="costline"><span>预热 Lead 数</span><b>1,000</b></div><div class="costline"><span>目标 CPL</span><b>$53.00</b></div><div class="costline"><span>预热转化率</span><b>3%</b></div><div class="costline"><span>预热 Lead 转化</span><b>30 人</b></div><div class="costline"><span>上线广告预估订单</span><b>82 人</b></div><div class="costline total"><span>上线广告预估 ROAS</span><b>2.5</b></div></div><div class="card"><h4>来源转化</h4><div class="costline"><span>平台流量</span><b>122 人</b></div><div class="costline"><span>众筹期投放</span><b>82 人</b></div><div class="costline"><span>预热 Lead 转化</span><b>30 人</b></div><div class="costline"><span>其他 / PR/KOL</span><b>34 / 4 人</b></div><div class="costline total"><span>合计</span><b>272 人</b></div></div></div>
+   <div class="tbw mt-lg" tabindex="0" role="region" aria-label="$1M 档位转化"><table class="dt"><caption>$1M · 每个 Reward 的转化与金额</caption><thead><tr><th scope="col">Reward</th><th scope="col">成交价</th><th scope="col">支持者</th><th scope="col">筹资金额</th></tr></thead><tbody><tr><td>Pro · 超早鸟</td><td class="num">$959</td><td class="num">19</td><td class="num">$18,221</td></tr><tr><td>Pro · Makuake 限定</td><td class="num">$999</td><td class="num">18</td><td class="num">$17,982</td></tr><tr><td>Max · 24 小时限定</td><td class="num">$2,999</td><td class="num">13</td><td class="num">$38,987</td></tr><tr><td>Max · 超早鸟</td><td class="num">$3,118</td><td class="num">20</td><td class="num">$62,360</td></tr><tr class="main"><td>Max · 早鸟（含同价加开）</td><td class="num">$3,355</td><td class="num">37</td><td class="num">$124,135</td></tr><tr class="main"><td>Max · Makuake 限定</td><td class="num">$3,599</td><td class="num">30</td><td class="num">$107,970</td></tr><tr><td>Ultra · 超早鸟</td><td class="num">$4,559</td><td class="num">73</td><td class="num">$332,807</td></tr><tr><td>Ultra · Makuake 限定</td><td class="num">$4,799</td><td class="num">62</td><td class="num">$297,538</td></tr><tr class="total"><td>合计 / 加权 AOV</td><td class="num">$3,676.47</td><td class="num">272</td><td class="num">$1,000,000</td></tr></tbody></table></div>
+  </div>
+  <p class="note rv" style="margin-top:22px">CPL 与转化均为高客单专业受众的目标值，不作为历史业绩。$500K 线下展示按比例计算后约至百位美元，合计采用同约数口径。60 天版提高上线广告日均投入，90 天版延长中段投放，两档总额保持一致。</p>
+ </div>
+</section>
+
+<!-- ============ DRIVE 04 ============ -->
+<section id="d4" class="scene intro" data-scene="drive" data-drive="4" data-cursor="OPEN">
+  <div class="sticky">
+    <div class="scene-copy">
+      <div class="eb">DRIVE 04 / 05 · CHAPTER 06—07</div>
+      <h2><span class="en">REACH</span>渠道</h2>
+      <ul class="ch-list"><li>页面叙事与渠道<span>CH 06</span></li><li>KOL 与广告<span>CH 07</span></li></ul>
+      <div class="keynums"><div><b>75%</b><span>平台流量 + 上线广告</span></div><div><b>7 / 10</b><span>KOL 矩阵人数</span></div><div><b>90 / 10</b><span>Meta / Google</span></div></div>
+    </div>
+    <div class="gohint">继续滚动 · 拉出盘位内容</div>
+  </div>
+</section>
+
+<section id="ch4" class="chapter" data-group="4">
+ <div class="wrap" id="c05">
+  <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 04</b>06 / Campaign Narrative &amp; Channels</div><h2 class="chname sp">页面叙事与渠道</h2></div><div class="bignum" aria-hidden="true">06</div></div>
+  <p class="lede rv">页面先回答“为什么需要一台 Agent 专用计算机”，再证明本地计算、项目存储与工具链。<span class="mk">先建立工作方式，再给出 Max 价格</span>。</p>
+  <div class="band" data-theme="blue">
+  <div class="flow mt-lg">
+   <div class="fstep rv"><span class="fbig">01</span><div class="fk">01 / 首屏</div><h3>给 AI Agent 一个固定工位</h3><p>黑色整机、128GB 统一内存与“笔记本合上，任务继续”的首屏承诺，直接说明使用理由。</p></div>
+   <div class="fstep rv"><span class="fbig">02</span><div class="fk">02 / 任务证明</div><h3>从一句需求到可检查的结果</h3><p>演示整理项目文件夹、读取文档、输出摘要与 README，让用户看到过程、权限与结果。</p></div>
+   <div class="fstep rv"><span class="fbig">03</span><div class="fk">03 / 本地能力</div><h3>所选模型与创作工具在自己的设备上运行</h3><p>展示 Hermes、ComfyUI 与本地模型分工，明确账号、许可、网络和模型配置边界。</p></div>
+   <div class="fstep rv"><span class="fbig">04</span><div class="fk">04 / 项目记忆</div><h3>五盘位承载素材、模型与输出</h3><p>把项目输入、工作流、版本和交付物放在同一台设备，解释选装容量与存储布局。</p></div>
+   <div class="fstep rv"><span class="fbig">05</span><div class="fk">05 / 配置选择</div><h3>Max 是本地创作与高阶 Agent 的主力</h3><p>对比 Pro / Max / Ultra 的内存、处理器、系统盘和网络，让 Max 的适用人群自我识别。</p></div>
+   <div class="fstep rv"><span class="fbig">06</span><div class="fk">06 / 行动与风险解除</div><h3>价格、交付、软件状态与常见问题</h3><p>依次呈现 24 小时限定、超早鸟、早鸟与 Makuake 限定，写清首日 1% 券、交付月份、软件清单与实测边界。</p></div>
+  </div>
+  </div>
+  <h3 class="sub-t sp" data-n="06.A">订单来源：平台流量与上线广告承担 75%</h3>
+  <div class="mixrow mt">
+   <div class="donut-svg" id="mixDonut" role="img" aria-label="订单来源饼图：平台 45%，上线广告 30%，预热 10%，其他 13%，PR 与 KOL 2%" data-seg="45:#2B50E0,30:#63B4A6,10:#D4AB5E,13:#8991A3,2:#4E5566"><svg viewBox="0 0 200 200"></svg><div class="dc"><b>136 / 272</b><span>目标支持者</span></div></div>
+   <ul class="legend">
+    <li class="rv"><i style="background:#2B50E0"></i><span>众筹平台流量 · 45%</span><b>61 / 122 人</b></li>
+    <li class="rv"><i style="background:#63B4A6"></i><span>众筹期投放 · 30%</span><b>41 / 82 人</b></li>
+    <li class="rv"><i style="background:#D4AB5E"></i><span>预热 Lead 转化 · 10%</span><b>15 / 30 人</b></li>
+    <li class="rv"><i style="background:#8991A3"></i><span>其他渠道 · 13%</span><b>17 / 34 人</b></li>
+    <li class="rv"><i style="background:#4E5566"></i><span>PR / KOL · 2%</span><b>2 / 4 人</b></li>
+   </ul>
+  </div>
+  <p class="note rv" style="margin-top:18px">图例人数依次为 $500K / $1M，合计 136 / 272 人；众筹期投放人数按预估 ROAS 与加权 AOV 反推，预热转化按 500 / 1,000 条 Lead × 3%。</p>
+  <div class="grid2 mt-lg">
+   <div class="card rv"><h4>首日 1% 优惠券</h4><p>公开至首日日本时间 23:59，全部 Return 可叠加。24 小时限定标价 37% OFF，叠加后约 38% OFF；其他档同样保留 1% 首日行动理由。</p></div>
+   <div class="card rv"><h4>中期同价加开</h4><p>Max 早鸟首批 $500K / $1M 分别释放 9 / 20 台，中期加开 7 / 17 台。加开已计入 16 / 37 台总量，价格保持 $3,355。</p></div>
+  </div>
+ </div>
+
+ <div class="stmt band" data-theme="ink" data-stmt>
+  <div class="sticky"><div class="stmt-k">AD DIRECTION 04 · 数据主权</div><p class="stmt-t">AI、数据<br>本地化。</p><p class="stmt-s">适合本地处理的数据留在本地，在授权范围内调用所选模型与工具。</p></div>
+ </div>
+
+ <div class="wrap" id="c07" style="margin-top:120px">
+  <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 04</b>07 / KOL &amp; Paid Media</div><h2 class="chname sp">KOL 与广告</h2></div><div class="bignum" aria-hidden="true">07</div></div>
+  <p class="lede rv">日本以 YouTube 实机内容建立可信度，以 Meta 90% / Google 10% <span class="mk">投广获取意向用户</span>。固定预算下可以优先考虑内容复用。</p>
+  <div class="kmat mt-lg">
+   <div class="card rv"><h4>$500K · 7 人 / 7 台样机</h4><div class="dots" aria-hidden="true"><i class="m"></i><i class="m"></i><i></i><i></i><i></i><i></i><i></i></div><div class="costline"><span>头部</span><b>0 人</b></div><div class="costline"><span>腰部</span><b>2 人</b></div><div class="costline"><span>KOC</span><b>5 人</b></div><div class="costline"><span>媒体与 KOL 预算</span><b>$3,100</b></div><div class="costline total"><span>合作方式</span><b>寄评测 + 效果佣金</b></div></div>
+   <div class="card rv"><h4>$1M · 10 人 / 10 台样机</h4><div class="dots" aria-hidden="true"><i class="h"></i><i class="m"></i><i class="m"></i><i class="m"></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="costline"><span>头部（效果佣金）</span><b>1 人</b></div><div class="costline"><span>腰部</span><b>3 人</b></div><div class="costline"><span>KOC</span><b>6 人</b></div><div class="costline"><span>媒体与 KOL 预算</span><b>$7,000</b></div><div class="costline total"><span>合作方式</span><b>寄评测 + 效果佣金</b></div></div>
+  </div>
+  <p class="note rv" style="margin-top:18px">预算用于达人合作费用与效果佣金。候选名单用于预对接，不构成固定合作或报价承诺。每位最多一条主视频，$500K 配置 7 条，$1M 配置 10 条；90 天仅延长排期，不增加达人数量。</p>
+  <h3 class="sub-t sp" data-n="07.A" id="n-kolcand">优先候选 · 已覆盖直接竞品内容</h3>
+  <div class="kolgrid">
+   <article class="kol rv"><a class="thumb" href="https://www.youtube.com/watch?v=oYE-CVazMfU" target="_blank" rel="noreferrer" data-cursor="PLAY"><img src="assets/img/i08-4267f2.jpg" width="480" height="360" loading="lazy" alt="Zettlab D6 视频封面"><span class="play"></span></a><div class="who"><img src="assets/img/i09-7f92be.jpg" width="48" height="48" loading="lazy" alt="Tokyo Ramen Guy 头像"><div><b>Tokyo Ramen Guy</b><span>229K 订阅</span></div></div><div class="vtitle">AI 加入 NAS 之后：Zettlab D6 本地存储体验</div><div class="metrics"><span>73,370 播放</span><span>57 赞</span></div><span class="srcline"><a href="https://www.youtube.com/watch?v=oYE-CVazMfU" target="_blank" rel="noreferrer">查看视频</a></span></article>
+   <article class="kol rv"><a class="thumb" href="https://www.youtube.com/watch?v=io_FBxHEFz4" target="_blank" rel="noreferrer" data-cursor="PLAY"><img src="assets/img/i10-03cd4a.jpg" width="480" height="360" loading="lazy" alt="Zettlab AI NAS 视频封面"><span class="play"></span></a><div class="who"><img src="assets/img/i11-4e946e.jpg" width="48" height="48" loading="lazy" alt="Tech Ishihara 头像"><div><b>Tech Ishihara</b><span>76.7K 订阅</span></div></div><div class="vtitle">无需月费的本地 AI NAS：Zettlab 实机评测</div><div class="metrics"><span>32,989 播放</span><span>28 赞</span></div><span class="srcline"><a href="https://www.youtube.com/watch?v=io_FBxHEFz4" target="_blank" rel="noreferrer">查看视频</a></span></article>
+   <article class="kol rv"><a class="thumb" href="https://www.youtube.com/watch?v=3JhVG277uSI" target="_blank" rel="noreferrer" data-cursor="PLAY"><img src="assets/img/i12-07915e.jpg" width="480" height="360" loading="lazy" alt="Zettlab D4 视频封面"><span class="play"></span></a><div class="who"><img src="assets/img/i13-166815.jpg" width="48" height="48" loading="lazy" alt="Satoru Toda Gadget 头像"><div><b>Satoru Toda Gadget</b><span>327K 订阅</span></div></div><div class="vtitle">Zettlab AI NAS D4：专用 AI 与机身显示体验</div><div class="metrics"><span>10,736 播放</span><span>129 赞</span></div><span class="srcline"><a href="https://www.youtube.com/watch?v=3JhVG277uSI" target="_blank" rel="noreferrer">查看视频</a></span></article>
+   <article class="kol rv"><a class="thumb" href="https://www.youtube.com/watch?v=jJSO0gJKmVs" target="_blank" rel="noreferrer" data-cursor="PLAY"><img src="assets/img/i14-da0fd6.jpg" width="480" height="360" loading="lazy" alt="DGX Spark 八机比较视频封面"><span class="play"></span></a><div class="who"><img src="assets/img/i15-ec86ed.jpg" width="48" height="48" loading="lazy" alt="Deep IT PC Trend Lab 头像"><div><b>Deep IT PC Trend Lab</b><span>10K 订阅</span></div></div><div class="vtitle">128GB 显存：DGX Spark 八款机型横向比较</div><div class="metrics"><span>4,994 播放</span><span>61 赞</span></div><span class="srcline"><a href="https://www.youtube.com/watch?v=jJSO0gJKmVs" target="_blank" rel="noreferrer">查看视频</a></span></article>
+   <article class="kol rv"><a class="thumb" href="https://www.youtube.com/watch?v=X74MVlS2MsI" target="_blank" rel="noreferrer" data-cursor="PLAY"><img src="assets/img/i16-f092c1.jpg" width="480" height="360" loading="lazy" alt="DGX Spark 与 Mac Studio 讨论视频封面"><span class="play"></span></a><div class="who"><img src="assets/img/i17-fe0f77.jpg" width="48" height="48" loading="lazy" alt="Tech 1001 Nights 头像"><div><b>Tech 1001 Nights</b><span>9.32K 订阅</span></div></div><div class="vtitle">从 Mac Studio 用户视角看 DGX Spark</div><div class="metrics"><span>3,069 播放</span><span>33 赞</span></div><span class="srcline"><a href="https://www.youtube.com/watch?v=X74MVlS2MsI" target="_blank" rel="noreferrer">查看视频</a></span></article>
+   <article class="kol rv"><a class="thumb" href="https://www.youtube.com/watch?v=g5EHtVgnrAQ" target="_blank" rel="noreferrer" data-cursor="PLAY"><img src="assets/img/i18-43e823.jpg" width="480" height="360" loading="lazy" alt="Zettlab D6 Ultra 视频封面"><span class="play"></span></a><div class="who"><img src="assets/img/i19-98a3e9.jpg" width="48" height="48" loading="lazy" alt="Satoshi Shimizu Initial B 头像"><div><b>Satoshi Shimizu · Initial B</b><span>5.54K 订阅</span></div></div><div class="vtitle">Zettlab D6 Ultra：本地 LLM 与高规格 NAS 实测</div><div class="metrics"><span>1,500 播放</span><span>21 赞</span></div><span class="srcline"><a href="https://www.youtube.com/watch?v=g5EHtVgnrAQ" target="_blank" rel="noreferrer">查看视频</a></span></article>
+  </div>
+  <span class="srcline rv">数据读取于 2026-11-03 · 订阅、播放与点赞均来自对应 YouTube 视频公开页面；未读取的指标不展示。</span>
+  <div class="band" data-theme="ice">
+  <h3 class="sub-t sp" data-n="07.B">广告预算分配与受众</h3>
+  <div class="adpies">
+   <div class="adpie rv"><div class="donut-svg" role="img" aria-label="预热广告：Meta 90%，Google 10%" data-seg="90:#2B50E0,10:#C3C9D6"><svg viewBox="0 0 200 200"></svg><div class="dc"><b>90%</b><span>Meta</span></div></div><div><h3>预热广告</h3><p class="note">Meta 90% · $23,625 / $47,700<br>Google 10% · $2,625 / $5,300<br>45 天 Lead 蓄水与平台预约</p></div></div>
+   <div class="adpie rv"><div class="donut-svg" role="img" aria-label="上线广告：Meta 90%，Google 10%" data-seg="90:#2B50E0,10:#C3C9D6"><svg viewBox="0 0 200 200"></svg><div class="dc"><b>90%</b><span>Meta</span></div></div><div><h3>上线广告</h3><p class="note">Meta 90% · $45,000 / $108,000<br>Google 10% · $5,000 / $12,000<br>60 天提高日均，90 天延长中段</p></div></div>
+  </div>
+  <div class="grid3 mt-lg">
+   <div class="card rv"><h4>第一圈层 · AI 工作流</h4><p>软件开发、数据科学、IT 管理、视频创作、独立开发者与 ComfyUI 兴趣叠加。日本 25–55 岁，规划覆盖 80–150 万人。</p></div>
+   <div class="card rv"><h4>第二圈层 · 决策者</h4><p>企业主、创新负责人、CTO、IT 主管与独立顾问。以高客单设备理解能力和团队采购动机筛选，规划覆盖 50–100 万人。</p></div>
+   <div class="card rv"><h4>第三圈层 · 高意图召回</h4><p>搜索本地 AI 工作站、AI NAS、Ryzen AI Max+ 395、DGX Spark 与本地 ComfyUI 的用户；预热访问与预约池规划 500–2,000 人。</p></div>
+  </div>
+  <p class="note rv" style="margin-top:14px">受众覆盖是投放规划区间，不代表平台历史数据。执行时通过 Meta 官方 Marketing API 读取实时预估，并按实际 CPL、Lead 质量与成交反馈收紧人群。</p>
+  </div>
+ </div>
+ <div class="band" data-theme="ink" style="padding:20px 0 110px">
+ <div class="wrap"><h3 class="sub-t sp" data-n="07.C">5 组 1:1 广告素材方向</h3></div>
+ <div class="strip" id="adStrip" data-cursor="DRAG">
+  <div class="strip-track">
+   <div class="adtile"><img src="assets/img/i01-2c4b71.jpg" width="1024" height="576" loading="lazy" alt="给 AI Agent 一个家"><div class="cap">给 AI Agent 一个家<span>AD 01</span></div></div>
+   <div class="adtile"><img src="assets/img/i20-c865ab.jpg" width="680" height="804" loading="lazy" alt="笔记本合上，任务继续"><div class="cap">笔记本合上，任务继续<span>AD 02</span></div></div>
+   <div class="adtile"><img src="assets/img/i21-d2c518.jpg" width="680" height="906" loading="lazy" alt="在本地完成下一条作品"><div class="cap">在本地完成下一条作品<span>AD 03</span></div></div>
+   <div class="adtile"><img src="assets/img/i22-7391e6.jpg" width="680" height="844" loading="lazy" alt="AI、数据本地化"><div class="cap">AI、数据本地化<span>AD 04</span></div></div>
+   <div class="adtile"><img src="assets/img/i23-8e5d1a.jpg" width="680" height="1149" loading="lazy" alt="从一句需求到可检查的结果"><div class="cap">从一句需求到可检查的结果<span>AD 05</span></div></div>
+  </div>
+ </div>
+ <p class="strip-hint">← 拖拽浏览素材 →</p>
+ <div class="wrap"><p class="note rv" style="margin-top:24px">落地日文广告文案在独立执行阶段完成本地化校对；图片中的中文用于说明点击路径与素材结构。</p></div>
+ </div>
+</section>
+
+<!-- ============ DRIVE 05 ============ -->
+<section id="d5" class="scene intro" data-scene="drive" data-drive="5" data-cursor="OPEN">
+  <div class="sticky">
+    <div class="scene-copy">
+      <div class="eb">DRIVE 05 / 05 · CHAPTER 08—09</div>
+      <h2><span class="en">EXECUTE</span>执行</h2>
+      <ul class="ch-list"><li>时间线与上线执行<span>CH 08</span></li><li>可行性与品牌资产<span>CH 09</span></li></ul>
+      <div class="keynums"><div><b>01.21</b><span>2027 Makuake 上线</span></div><div><b>30%</b><span>48h 目标进度</span></div><div><b>45 天</b><span>前置预热</span></div></div>
+    </div>
+    <div class="gohint">继续滚动 · 拉出盘位内容</div>
+  </div>
+</section>
+
+<section id="ch5" class="chapter" data-group="5">
+ <div class="wrap" id="c08">
+  <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 05</b>08 / Timeline &amp; Launch</div><h2 class="chname sp">时间线与上线执行</h2></div><div class="bignum" aria-hidden="true">08</div></div>
+  <p class="lede rv">2026 年 12 月 7 日开始 45 天预热，2027 年 1 月 21 日上线。<span class="mk">60 天建立冲刺效率，90 天延长中段转化</span>；两档上线广告总额相同。</p>
+  <div class="band" data-theme="blue" style="padding-bottom:60px">
+  <h3 class="sub-t sp" data-n="08.A">上线 0–48h 作战窗口</h3>
+  <div class="launch" id="launch"><span class="lline"></span>
+   <div class="lstep"><div class="lt">T−72h</div><div class="ld"></div><p>首批评测内容解禁，PR TIMES 通稿分发，预约用户收到上线提醒。</p></div>
+   <div class="lstep"><div class="lt">T−24h</div><div class="ld"></div><p>邮件与 LINE 倒计时，全部 Lead 收到 24 小时限定与首日 1% 券说明。</p></div>
+   <div class="lstep t0"><div class="lt">T0 · 上线</div><div class="ld"></div><p>Makuake 正式公开，全渠道推送，首日优惠券与 24 小时限定同步生效。</p></div>
+   <div class="lstep"><div class="lt">T+2h</div><div class="ld"></div><p>检查支付、页面转化与档位库存，集中修正首屏和常见问题。</p></div>
+   <div class="lstep"><div class="lt">T+6h</div><div class="ld"></div><p>上线广告全量开启，访问与预约再营销池激活，监测高意图关键词。</p></div>
+   <div class="lstep t48"><div class="lt">T+48h · 30%</div><div class="ld"></div><p>目标 $150K / $300K；首 72 小时向 35% 推进，复盘来源与成交配置。</p></div>
+  </div>
+  </div>
+  <h3 class="sub-t sp" data-n="08.B">全案周计划表</h3>
+  <p class="note rv">按自然周排布。实心为 60 天执行，斜纹为 90 天延伸；评测样机在上线前 4–6 周寄出，发货期纳入同一张表。</p>
+  <div class="gwrap mt" tabindex="0" role="region" aria-label="全案自然周甘特表" data-cursor="SCROLL →"><table class="gantt"><caption class="visually-hidden">2026 年 11 月至 2027 年 4 月全案自然周计划，60 天主档与 90 天延伸</caption><thead>
+  <tr><th class="tk" rowspan="3" scope="col">任务</th><th class="ph p1" colspan="4" scope="col">筹备期</th><th class="ph p2" colspan="6" scope="col">预热期</th><th class="ph p3" colspan="14" scope="col">众筹期</th><th class="ph p4" colspan="1" scope="col">发货期</th></tr>
+  <tr><th class="mo" colspan="4" scope="col">11 月</th><th class="mo" colspan="4" scope="col">12 月</th><th class="mo" colspan="4" scope="col">1 月</th><th class="mo" colspan="4" scope="col">2 月</th><th class="mo" colspan="4" scope="col">3 月</th><th class="mo" colspan="5" scope="col">4 月</th></tr>
+  <tr><th scope="col">第2周</th><th scope="col">第3周</th><th scope="col">第4周</th><th scope="col">第5周</th><th scope="col">第1周</th><th scope="col">第2周</th><th scope="col">第3周</th><th scope="col">第4周</th><th scope="col">第1周</th><th scope="col">第2周</th><th scope="col">第3周</th><th scope="col">第4周</th><th scope="col">第1周</th><th scope="col">第2周</th><th scope="col">第3周</th><th scope="col">第4周</th><th scope="col">第1周</th><th scope="col">第2周</th><th scope="col">第3周</th><th scope="col">第4周</th><th scope="col">第5周</th><th scope="col">第1周</th><th scope="col">第2周</th><th scope="col">第3周</th><th scope="col">第4周</th></tr>
+  </thead><tbody id="ganttBody"></tbody></table></div>
+  <div class="glegend rv"><span><i style="background:var(--acc)"></i>筹备 / 前置</span><span><i style="background:var(--teal)"></i>预热期</span><span><i style="background:var(--gold)"></i>众筹 60 天</span><span><i style="background:repeating-linear-gradient(45deg,var(--gold) 0 4px,transparent 4px 8px)"></i>90 天延伸周</span><span><i style="background:var(--faint)"></i>发货期</span><span style="color:var(--neg)">◆ 关键节点</span></div>
+  <h3 class="sub-t sp" data-n="08.C">全周期时间线 · 周级</h3>
+  <div class="tl2" id="tl2"><span class="tlfill"></span>
+   <div class="tl2-ph">筹备期 · 4 周<small>2026.11.09 — 2026.12.06</small></div>
+   <div class="tl2-wk l"><div class="card"><div class="wk">11 月第 2 周</div><h5>策略与卖点锁定</h5><p>主推 Max、三款同步上线、目标双档与定价对齐，启动素材授权。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r"><div class="card"><div class="wk">11 月第 3 周</div><h5>内容生产</h5><p>主视觉、实机演示、页面结构与 5 组广告素材方向同步推进。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk l"><div class="card"><div class="wk">11 月第 4 周</div><h5>KOL 档期与样机</h5><p>候选报价与档期锁定，$500K / $1M 分别备货 7 / 10 台评测样机。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r"><div class="card"><div class="wk">11 月第 5 周</div><h5>转化资产就位</h5><p>预热页、平台预约、邮件序列与转化追踪完成联调。</p></div><span class="dot"></span></div>
+   <div class="tl2-ph teal">预热期 · 45 天<small>2026.12.07 — 2027.01.20</small></div>
+   <div class="tl2-wk l teal"><div class="card"><div class="wk">12 月第 1 周</div><h5>投放启动</h5><p>Meta 90% / Google 10% 开跑，校准高意图人群与目标 CPL。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r teal"><div class="card"><div class="wk">12 月第 2 周</div><h5>素材轮换</h5><p>测试 Agent 工位、本地创作与私有存储三条主线，按 Lead 质量调整素材。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk l teal"><div class="card"><div class="wk">12 月第 3 周</div><h5>达人预热、寄样与 PR 排期</h5><p>上线前 4–6 周寄出评测样机，确认提纲、真实演示素材、解禁时间与通稿排期。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r teal"><div class="card"><div class="wk">12 月第 4 周</div><h5>蓄水加速</h5><p>保留高转化素材，平台预约与 LINE 内容同步，淘汰低意图 Lead。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk l teal"><div class="card"><div class="wk">1 月第 1 周</div><h5>页面与邮件收口</h5><p>完成三款配置、Reward、交付与软件边界页面，启动一周倒计时序列。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r teal"><div class="card"><div class="wk">1 月第 2–3 周</div><h5>上线倒计时</h5><p>全量 Lead 分层触达，确认首日券、24 小时限定与评测内容解禁。</p></div><span class="dot"></span></div>
+   <div class="tl2-ph gold">众筹期 · 60 天<small>2027.01.21 — 2027.03.22</small></div>
+   <div class="tl2-wk l gold"><div class="card"><div class="wk">1 月第 3 周</div><h5>首日与首 72 小时</h5><p>首日券、24 小时限定、广告与首批评测集中释放，48h 目标 30%。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r gold"><div class="card"><div class="wk">1 月第 4 周</div><h5>首轮转化复盘</h5><p>按来源、配置与页面路径复盘，调整超早鸟库存与广告预算。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk l gold"><div class="card"><div class="wk">2 月第 1 周</div><h5>评测第二批</h5><p>继续释放实机工作流内容，60 天按所选矩阵排期，不超过 7 / 10 条。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r gold"><div class="card"><div class="wk">2 月第 2 周</div><h5>中段转化优化</h5><p>更新 FAQ、软件实测与交付信息，召回页面访问和预约人群。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk l gold"><div class="card"><div class="wk">2 月第 3 周</div><h5>早鸟同价加开</h5><p>释放 Max 7 / 17 台中期加开数量，维持 $3,355，不新增价格。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r gold"><div class="card"><div class="wk">2 月第 4 周</div><h5>实机体验与搜索补强</h5><p>线下演示 Agent 与本地创作，提升高意图搜索和再营销权重。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk l gold"><div class="card"><div class="wk">3 月第 1 周</div><h5>未转化 Lead 召回</h5><p>按内容兴趣分组推送案例、FAQ 与交付节点，控制低效广告。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r gold"><div class="card"><div class="wk">3 月第 2 周</div><h5>尾盘倒计时</h5><p>邮件、LINE、达人片段与广告同步倒计时，保持 Makuake 限定不限量。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk l gold"><div class="card"><div class="wk">3 月第 4 周</div><h5>60 天档结束</h5><p>3 月 22 日结束众筹，发布结果与后续交付说明。</p></div><span class="dot"></span></div>
+   <div class="tl2-ph gold">90 天延伸 · 中段延长<small>2027.03.23 — 2027.04.21</small></div>
+   <div class="tl2-wk r gold ext"><div class="card"><div class="wk">3 月第 4 周</div><h5>长尾内容继续</h5><p>以真实使用案例承接平台流量，$1M 累计增加至 10 条；$500K 保持 7 条并延长释放窗口。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk l gold ext"><div class="card"><div class="wk">3 月第 5 周</div><h5>高意图搜索扩展</h5><p>围绕本地模型、AI NAS 与同代芯片比较补充搜索素材。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r gold ext"><div class="card"><div class="wk">4 月第 1 周</div><h5>团队场景证明</h5><p>展示开发、创作与独立顾问三类工作流，维持中段广告效率。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk l gold ext"><div class="card"><div class="wk">4 月第 2 周</div><h5>最后 72 小时</h5><p>全渠道倒计时，未转化 Lead 分层召回，广告向高 ROAS 组集中。</p></div><span class="dot"></span></div>
+   <div class="tl2-wk r gold ext"><div class="card"><div class="wk">4 月第 3 周</div><h5>90 天档结束</h5><p>4 月 21 日结束众筹，发布结果、交付节奏与后续更新。</p></div><span class="dot"></span></div>
+   <div class="tl2-ph">发货期 · 订单与生产衔接<small>2027 年 4 月第 4 周起</small></div>
+   <div class="tl2-wk l"><div class="card"><div class="wk">4 月第 4 周</div><h5>订单整理与生产排期</h5><p>核对地址、配置与选装硬盘，发送交付通知并确认生产排期。</p></div><span class="dot"></span></div>
+  </div>
+  <div class="band" data-theme="ice" style="padding-bottom:80px">
+  <h3 class="sub-t sp" data-n="08.D">60 天筹款节奏 · 归一化模拟</h3>
+  <div class="rhythm"><div class="rbars" id="rhythmBars" role="img" aria-label="60 天筹款节奏：首 48 小时 30%，首 72 小时累计 35%，最后 72 小时 20%"></div><div class="rlabels"><span>首 48h · 30% / 首 72h · 35%</span><span>中段 · 按矩阵 7 / 10 条分批释放</span><span>最后 72h · 20%</span></div></div>
+  <div class="rnotes"><div class="rnote rv"><div class="rk">首周</div><p>预热 Lead、首日券、平台预约与首批评测集中，48h 先达 30%，首 72h 推进 35%。</p></div><div class="rnote rv"><div class="rk">中段</div><p>$500K 保持 7 条，$1M 可增至 10 条；90 天延长搜索与再营销，不增加达人数量。</p></div><div class="rnote rv"><div class="rk">最后 72h</div><p>邮件、LINE、达人片段与广告同步召回，Makuake 限定承接尾盘需求。</p></div></div>
+  </div>
+ </div>
+
+ <div class="wrap" id="c09" style="margin-top:170px">
+  <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 05</b>09 / Feasibility &amp; Brand Assets</div><h2 class="chname sp">可行性与品牌资产</h2></div><div class="bignum" aria-hidden="true">09</div></div>
+  <div class="grid3">
+   <div class="card win rv"><div class="num">01 / PRODUCT</div><h3>差异可以演示</h3><p>长任务独立运行、128GB 本地模型、五盘位项目记忆和开放工具链，都能用真实工作流表达，无需依赖概念口号。</p></div>
+   <div class="card win rv"><div class="num">02 / MARKET</div><h3>品类已有用户教育</h3><p>Zettlab 与 UT2 教育了本地存储，DGX Spark 与同代小主机教育了本地计算。Lucy 将两种理解路径连接到 Agent 工作。</p></div>
+   <div class="card win rv"><div class="num">03 / ECONOMICS</div><h3>高客单降低人数门槛</h3><p>美国项目 2026-11-03 快照为 $179,658 / 57 人，AOV 约 $3,152。日本 $500K / $1M 分别需要 136 / 272 人（加权 AOV 约 $3,676），目标拆解清晰。</p></div>
+  </div>
+  <span class="srcline rv">美国快照：<a href="https://www.kickstarter.com/projects/744045479/cephalon-ondevice-ai-with-a-selfevolving-ecosystem" target="_blank" rel="noreferrer">Kickstarter 项目页</a> · 2026-11-03 · 项目仍在进行，数字仅用于高客单分析。</span>
+  <h3 class="sub-t sp" data-n="09.A">方案成立的四个前提</h3>
+  <div class="grid2">
+   <div class="card rv"><h4>软件与实测</h4><p>上线前锁定 Lucy AIOS、H3 模型版本、量化精度、视频规格、产出速度与长时运行数据，所有传播与实机一致。</p></div>
+   <div class="card rv"><h4>成本与交付</h4><p>三款配置分别核算 BOM、国际履约、日本配送、售后与样机分摊，确认各档毛利后锁定 Reward 价格。</p></div>
+   <div class="card rv"><h4>评测与内容</h4><p>品牌方提供 7 / 10 台评测样机与真实演示素材，优先证明 Agent 任务、文件权限和本地创作结果。</p></div>
+   <div class="card rv"><h4>投放与平台</h4><p>500 / 1,000 条高意图 Lead、3% 预热转化与平台 45% 来源需要按周复核； $1M 依赖同步扩大的广告供给。</p></div>
+  </div>
+  <h3 class="sub-t sp" data-n="09.B">品牌方关键配合清单</h3>
+  <div class="grid2">
+   <div class="card soft rv"><h4>产品决策</h4><p>三款配置与主推 Max、选装硬盘、交付月份、软件清单与日本零售参考。</p></div>
+   <div class="card soft rv"><h4>信任资产</h4><p>7 / 10 台评测样机、真实任务录屏、长时运行与功耗温度实测。</p></div>
+   <div class="card soft rv"><h4>转化资产</h4><p>产品图与视频授权、功能演示、FAQ、价格与首日券审批。</p></div>
+   <div class="card soft rv"><h4>交付资产</h4><p>订单与地址核对、选装配置、生产排期、发货通知和售后流程。</p></div>
+  </div>
+  <div class="band" data-theme="blue" style="padding-bottom:40px">
+  <h3 class="sub-t sp" data-n="09.C">Campaign 结束后的品牌资产</h3>
+  <div class="assets5">
+   <div class="asset rv"><div class="an">01 / 资金</div><h3>众筹成交</h3><p>$500K 验证起步，按来源效率扩向 $1M。</p></div>
+   <div class="asset rv"><div class="an">02 / 用户</div><h3>高价值用户</h3><p>136 / 272 位 Pro / Max / Ultra 支持者与可持续触达的 Lead 池。</p></div>
+   <div class="asset rv"><div class="an">03 / 信誉</div><h3>日本案例</h3><p>真实评测、平台成交与可公开的交付记录。</p></div>
+   <div class="asset rv"><div class="an">04 / 素材</div><h3>长期内容库</h3><p>产品演示、达人片段、广告素材与 FAQ。</p></div>
+   <div class="asset rv"><div class="an">05 / 渠道</div><h3>销售冷启动</h3><p>平台用户、创作者关系与后续电商承接基础。</p></div>
+  </div>
+  </div>
+ </div>
+</section>
+
+<div class="marquee blue" aria-hidden="true"><div class="mq-track" data-mq="-1"><span>TASKS KEEP RUNNING <i></i> FILES STAY LOCAL <i></i> RESULTS STAY VISIBLE <i></i> <em>LUCY AI STUDIO</em> <i></i></span></div></div>
+
+<!-- ============ OUTRO ============ -->
+<section id="outro" class="scene" data-scene="outro">
+  <div class="sticky">
+    <p class="closing">Cephalon 的日本机会，在于把 <span class="mk">Agent 专用计算机</span> 讲成一条可验证的工作路径：任务持续运行，资料留在本地，结果随时可查看。</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <div class="fl"><img src="assets/img/i00-4f5186.png" width="183" height="56" loading="lazy" alt="MadSpace"><span>众筹全案代理 · 日本市场</span></div>
+    <div class="fnav"><a class="pill roll-host" href="#hero" data-go="#hero"><span class="roll" data-roll>BACK TO TOP ↑</span></a><button class="pill dark roll-host" type="button" data-open-menu><span class="roll" data-roll>ALL DRIVES</span></button></div>
+    <div class="fr">Lucy AI Studio Japan Crowdfunding Plan<br>Prepared by MadSpace · 2026.11</div>
+  </div>
+  <div class="wordmark" aria-hidden="true"><span>C</span><span>E</span><span>P</span><span>H</span><span>A</span><span>L</span><span>O</span><span class="b">N</span></div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

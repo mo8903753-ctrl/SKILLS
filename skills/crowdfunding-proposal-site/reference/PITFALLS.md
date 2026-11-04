@@ -64,3 +64,19 @@
 - 成功页标题禁"你得到什么",用"Campaign结束后的品牌资产"。
 - 玻璃卡禁压产品主体;use-case 卡禁 SVG icon(用数字);封面禁居中文字/过浅均匀遮罩。
 - claim 软化:禁"首款"、禁"竞品需 18-24 月追平"(详见 `content-methodology.md` §10)。
+
+## 沉浸版（3D + GSAP + Lenis 文件夹站）实战坑 · 2026-11 Cephalon Lucy
+29. **`main` 不能加 `z-index`**：一加就成了独立层叠上下文，章节(z4) 被压在固定的 sleeve(z3) 下面，整章内容"消失"。层级只放在 `.scene/.chapter/#sleeve/#stage/#backdrop` 这些直接参与比较的元素上。
+30. **`body{overflow-x:hidden}` + `html{overflow-x:clip}` = 所有 sticky 失效**：html 非 visible 时 body 的 overflow 不再传给视口，body 自己变成滚动容器。正确组合：`html{overflow-x:clip}` + `body{overflow-x:clip}`（clip 不建滚动容器）。只给 body 不给 html 时，手机上溢出内容会撑宽布局视口，固定顶栏的 MENU 被挤出屏。
+31. **ScrollTrigger `onEnter` 在刷新时同步触发 → TDZ 报错整站白屏**：页面带滚动位置刷新时，`create()` 当场就跑 onEnter，引用到下面才 `let` 的变量直接抛错，后续模块全不执行（加载页卡在 000）。回调里用到的变量先声明；并设 `history.scrollRestoration='manual'`。
+32. **3D 场景不要用 GSAP pin 驱动**：多个 scrubbed timeline 抢同一组 3D 状态会打架、反向滚动错乱。改为 `sceneState(scene,p)` 纯函数，每帧按滚动位置算一次；各场景起点=上一场景终点。
+33. **用 `camera.setViewOffset` 把主角推到屏幕一侧**，不要移动模型（会破坏阴影、投影标注和 raycast）。
+34. **丝带文字镜像**：带状网格朝外那面的 UV 方向和视线相反，字是反的；u 取 `-len/repeat`，贴图 offset 方向同步反过来。
+35. **CanvasTexture 写中文要等字体**：`await document.fonts.ready` + `document.fonts.load('900 40px "Noto Serif SC"', 文本)` 后再画，否则盘面标签是系统宋体。
+36. **深色/蓝色色块上顶栏字消失**：顶栏是固定白底思路写的。每帧 `elementsFromPoint` 取顶栏下方元素，属于蓝/墨区就切 `html[data-hdr=dark]`。
+37. **蓝底上把 logo 反白会变成一团白斑**（图标有实心色块）。用原色 logo + 白色圆角胶囊底。
+38. **组件背景写死 `var(--bg)` 会在换色时留下白块**：全部改 `var(--card)`；蓝底徽标文字用 `var(--on-acc)`，否则蓝主题里白底白字。
+39. **ego-browser 的 `page.screenshot` 在大屏上尺寸错位**（只截到左上一部分，像是模型飞出画面）：截图改用 `page.cdp('Page.captureScreenshot')`，并用 `Emulation.setDeviceMetricsOverride` 固定 1600×900 / 390×844；判断构图前先用投影坐标确认，别凭错位截图改相机。后台标签 rAF 会被节流，Lenis 动画不走——测跳转时让目标页在前台或用 immediate。
+40. **演讲者窗口翻页回弹**：方案页平滑滚动途中仍在广播旧位置，把讲稿拽回上一屏。两端翻页后锁 2.6s 再跟随。
+41. **Lusion 类重 WebGL 站在后台浏览器里加载卡在 005**：研究参考站时别死等，结合 DOM 结构（如字母重复=滚字 hover）和已知站点特征复刻。
+42. **Vercel 首次 `vercel deploy --prod` 会顺手关联 GitHub 仓库**，之后 push main 自动部署；`git push` 偶发 `SSL_ERROR_SYSCALL`，重试即可。线上偶有 CDN 延迟，核验 URL 加随机参数。
