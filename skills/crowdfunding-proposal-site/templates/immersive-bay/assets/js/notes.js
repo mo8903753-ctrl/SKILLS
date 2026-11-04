@@ -343,6 +343,62 @@ export const NOTES = [
   ]
  },
  {
+  "sel": "#c10",
+  "ch": "第五章 执行",
+  "t": "迈思相关案例",
+  "sec": 20,
+  "s": "最后简单介绍一下我们在相关品类上做过的项目。迈思从 2015 年开始做海外众筹，目前累计 300 多个项目，日本团队有 16 位同事，其中 8 位是日籍。",
+  "cues": [
+   "300+ 项目",
+   "$100M+ 累计",
+   "日本团队 16 人"
+  ]
+ },
+ {
+  "sel": "[data-n=\"10.A\"]",
+  "ch": "第五章 执行",
+  "t": "同品类参照：NASync",
+  "sec": 25,
+  "s": "和 Lucy 最接近的是绿联的 NASync，同样是多盘位的私有存储设备。这个项目在 Makuake 筹到大约 639 万美元，是日本 Funded 的历史纪录，在韩国 Wadiz 也是科技类目第一。这批用户和素材经验，Lucy 这边可以直接参考。",
+  "cues": [
+   "$6.39M · Makuake 历史纪录",
+   "韩国 Wadiz 科技第 1"
+  ]
+ },
+ {
+  "sel": "[data-n=\"10.B\"]",
+  "ch": "第五章 执行",
+  "t": "相关案例",
+  "sec": 25,
+  "s": "其他相关的案例我们按四类整理了：存储与计算、AI 硬件、创作者工具，以及高客单项目。其中 TECNO Pocket GO 用的也是 AMD Ryzen 平台，AI 硬件里有几个项目在 Makuake 是所在类目的历史第一。",
+  "cues": [
+   "Pocket GO · AMD Ryzen",
+   "AIWATCH / AI Glass / LOOI 类目第 1"
+  ]
+ },
+ {
+  "sel": "[data-n=\"10.C\"]",
+  "ch": "第五章 执行",
+  "t": "KOL 合作实绩",
+  "sec": 15,
+  "s": "KOL 方面，我们合作过 1,500 多位达人，包括 ETA PRIME、ShortCircuit 这类科技频道，以及日本本地的头部创作者。",
+  "cues": [
+   "ETA PRIME 125 万订阅",
+   "ShortCircuit 350 万+ 播放"
+  ]
+ },
+ {
+  "sel": "[data-n=\"10.D\"]",
+  "ch": "第五章 执行",
+  "t": "线下展示与平台认可",
+  "sec": 15,
+  "s": "线下我们可以安排 Yodobashi、Nojima、茑屋家电等门店展示；平台这边，迈思在 2023 和 2024 年拿到了 Makuake Of The Year 和 Makuake Partner 赏。",
+  "cues": [
+   "Yodobashi · Nojima · 茑屋家电",
+   "Makuake Of The Year 2023 / 2024"
+  ]
+ },
+ {
   "sel": "#outro",
   "ch": "收尾",
   "t": "收尾",

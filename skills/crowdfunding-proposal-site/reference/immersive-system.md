@@ -88,9 +88,9 @@
 - 子标题 `h3.sub-t[data-n="04.B"]`：编号作 `:before` 显示在同一行左侧。
 
 ## 6. 3D 主角规范
-- 模型：GLB，**节点命名即接口**（Front_Cover、HDD_01…05、HDD_0X_Front_Plate、HDD_0X_Top_Label、Front_Status_LED）。换产品先确认可动部件是独立节点。
+- 模型：GLB，**节点命名即接口**（Front_Cover、HDD_01…05、HDD_0X_Front_Plate、HDD_0X_Side_Label、Front_Status_LED）。换产品先确认可动部件是独立节点。**部件排列方向决定机位与标注**：Lucy v2 模型（2026-11-04）五块硬盘竖立、沿 X 横向并排（真实 Jonsbo N2 结构），所以每章相机 `tx` 跟随该盘 x 位置、标签印在硬盘左侧面（相机在左前方，拉出后正对镜头）、unbox 标签在盘位上方扇形展开 + 引线、尺寸线横在下方、HUD 是五个竖条。部件若上下叠放，则改为 `ty` 跟随、标签印顶面、标注沿左侧竖排。
 - 白底打光：RoomEnvironment(0.03) + ACES 曝光 1.3 + 冷白主光(投影) + 蓝色轮廓光 + ShadowMaterial 地面(0.13) + 地面蓝色辐射光晕贴图。黑色机身在白底上要靠 rim 和 env 撑出边缘。
-- 盘面标签：在 Top_Label 包围盒上方 0.35mm 加平面，CanvasTexture 写「DRIVE 0X / 中文章节名 / 英文 / 章节号」，**等字体加载完再画**。
+- 盘面标签：在 Side_Label 包围盒外 0.35mm 加平面（`rotation.y=-π/2` 朝 −X），CanvasTexture 写「DRIVE 0X / 中文章节名 / 英文 / 章节号」，**等字体加载完再画**。
 - 可交互：raycast 只在 `interactive==='drives'` 时测硬盘；拖拽只在 `drag===true` 的场景。
 
 ## 7. 演示配套

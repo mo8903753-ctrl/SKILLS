@@ -14,7 +14,7 @@ cd templates/immersive-bay && python3 -m http.server 8765   # 打开 http://127.
 | `index.html` | 全部方案内容。场景：`#hero` `#spin` `#unbox` `#d1…#d5` `#outro`；章节：`.chapter#ch1…ch5`；色块：`<div class="band" data-theme="ice|blue|ink">`；全屏主张：`[data-stmt]`；彩色卡片堆叠：`#deck` |
 | `assets/css/site.css` | tokens 在顶部 `@property` + `:root` + `.chapter[data-t=…]`；一般不用改 |
 | `assets/js/app.js` | `LABELS`（每章 zh/en/章节号，印到盘面）、`V`/`driveView`（相机机位）、`sceneState`（每个场景的分段编排）、`DISC_C`（每章圆盘色）、`SPIN_AT`（spin 换色时点）、`GANTT_ROWS`、`WF`（瀑布图数据，可删）|
-| `assets/js/stage.js` | 模型路径、可动节点名（Front_Cover / HDD_0X…）、丝带文字 `words`、灯光 |
+| `assets/js/stage.js` | 模型路径、可动节点名（Front_Cover / HDD_0X / HDD_0X_Side_Label…）、`driveEdge`（标注锚点）、丝带文字 `words`、灯光 |
 | `assets/js/notes.js` | 演讲稿唯一数据源；改完跑 `python3 tools/notes2md.py . "项目名 · 演讲稿"` 生成 `演讲稿.md` |
 | `presenter.html` | 演讲者窗口，通常不用改（标题里的项目名可改） |
 | `assets/model/*.glb` | 换成新产品模型 |
@@ -28,6 +28,9 @@ cd templates/immersive-bay && python3 -m http.server 8765   # 打开 http://127.
 6. **讲稿**：每屏一条 notes，口吻按 speech-presenter.md。
 7. **QA**：见 SKILL.md「沉浸版 QA」。
 8. **部署**：独立私有仓库 + Vercel，push 即部署。
+
+## 案例章（CH 10）
+`#c10` 是「代理商相关案例」章节：公司数据带 + 最相关案例大卡 + 分组案例墙 `.cs-card` + KOL 截图 + 线下展示 + 平台奖项，并在市场/KOL 章插 `.refcase` 回指。素材从公司介绍 PDF 用 PyMuPDF 按卡片坐标裁图（`assets/img/cases/`）；日本方案金额按 160 折美元，日元原值只进 `.srcline`。
 
 ## 内含的客户数据
 `index.html`、`notes.js`、`演讲稿.md`、`assets/img/*` 是 Cephalon 真实方案内容与素材，只作版式与口吻参照；新项目必须全部替换，不得把 Lucy 的数字带进别家方案。

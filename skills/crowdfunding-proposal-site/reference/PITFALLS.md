@@ -80,3 +80,6 @@
 40. **演讲者窗口翻页回弹**：方案页平滑滚动途中仍在广播旧位置，把讲稿拽回上一屏。两端翻页后锁 2.6s 再跟随。
 41. **Lusion 类重 WebGL 站在后台浏览器里加载卡在 005**：研究参考站时别死等，结合 DOM 结构（如字母重复=滚字 hover）和已知站点特征复刻。
 42. **Vercel 首次 `vercel deploy --prod` 会顺手关联 GitHub 仓库**，之后 push main 自动部署；`git push` 偶发 `SSL_ERROR_SYSCALL`，重试即可。线上偶有 CDN 延迟，核验 URL 加随机参数。
+43. **大跳转后内容迟迟不出现**：`ScrollTrigger.batch('.rv')` 在菜单/演讲者窗口/数字键跳转时会把途经的几十个元素放进同一批，`stagger:0.07` 累加成好几秒，目标章节看起来是空的（实测案例章数据带空白）。stagger 必须封顶：`stagger: i => Math.min(i, 6) * 0.07`。
+44. **从公司介绍 PDF 取案例别信文本抽取顺序**：pypdf 抽出来的项目名和金额是乱序的（实测 Note A1 / CODE27 金额对调）。用 PyMuPDF 把案例页渲染成图逐张对照，再按卡片坐标裁产品图。
+45. **模型结构更新要先 diff 节点**：新 GLB 先用 glTF JSON 对比节点增删与 translation（Lucy v2：Top_Label→Side_Label、硬盘从上下叠改为左右并排），再改机位/标签/标注/HUD，别直接替换文件。

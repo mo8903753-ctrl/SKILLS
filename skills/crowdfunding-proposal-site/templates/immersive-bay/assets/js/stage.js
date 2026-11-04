@@ -111,19 +111,19 @@ export function createStage(canvas, { onProgress, mobile, labels }) {
   // ---------- drive top labels (chapter names printed on each HDD) ----------
   function makeLabelTexture(i) {
     const L = labels[i];
-    const c = document.createElement('canvas'); c.width = 1024; c.height = 720;
+    const c = document.createElement('canvas'); c.width = 1024; c.height = 1000;
     const g = c.getContext('2d');
-    g.fillStyle = '#F6F7F9'; g.fillRect(0, 0, 1024, 720);
-    g.fillStyle = '#2B50E0'; g.fillRect(0, 0, 26, 720);
-    g.fillStyle = '#2B50E0'; g.font = '600 50px "IBM Plex Mono", monospace';
-    g.fillText(`DRIVE 0${i + 1} / 05`, 84, 118);
-    g.fillStyle = '#111318'; g.font = '900 230px "Noto Serif SC", serif';
-    g.fillText(L.zh, 74, 380);
-    g.fillStyle = '#2B50E0'; g.font = '800 110px "Archivo", sans-serif';
-    g.fillText(L.en, 84, 520);
+    g.fillStyle = '#F6F7F9'; g.fillRect(0, 0, 1024, 1000);
+    g.fillStyle = '#2B50E0'; g.fillRect(0, 0, 1024, 30);
+    g.fillStyle = '#2B50E0'; g.font = '600 54px "IBM Plex Mono", monospace';
+    g.fillText(`DRIVE 0${i + 1} / 05`, 70, 150);
+    g.fillStyle = '#111318'; g.font = '900 300px "Noto Serif SC", serif';
+    g.fillText(L.zh, 56, 500);
+    g.fillStyle = '#2B50E0'; g.font = '800 130px "Archivo", sans-serif';
+    g.fillText(L.en, 66, 690);
     g.fillStyle = '#6B717C'; g.font = '500 40px "IBM Plex Mono", monospace';
-    g.fillText(L.ch, 84, 622);
-    g.strokeStyle = 'rgba(17,19,24,.15)'; g.lineWidth = 3; g.strokeRect(54, 30, 940, 660);
+    g.fillText(L.ch.split(' · ')[0], 70, 820); if (L.ch.includes(' · ')) g.fillText(L.ch.split(' · ')[1], 70, 880);
+    g.strokeStyle = 'rgba(17,19,24,.15)'; g.lineWidth = 3; g.strokeRect(40, 70, 944, 890);
     const t = new THREE.CanvasTexture(c);
     t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8;
     return t;
@@ -145,7 +145,7 @@ export function createStage(canvas, { onProgress, mobile, labels }) {
         d.traverse(o => { if (o.isMesh) { o.userData.drive = i; pickables.push(o); } });
         const handle = model.getObjectByName(`HDD_0${i + 1}_Pull_Handle`);
         if (handle) { handle.material = handle.material.clone(); handleMats.push(handle.material); }
-        const txt = model.getObjectByName(`HDD_0${i + 1}_Top_Text`);
+        const txt = model.getObjectByName(`HDD_0${i + 1}_Side_Text`);
         if (txt) txt.visible = false;
       }
       const led = model.getObjectByName('Front_Status_LED');
@@ -154,15 +154,16 @@ export function createStage(canvas, { onProgress, mobile, labels }) {
       try { await document.fonts.ready; await Promise.all(['900 40px "Noto Serif SC"', '800 40px Archivo', '600 20px "IBM Plex Mono"'].map(f => document.fonts.load(f, labels.map(l => l.zh + l.en).join('')))); } catch (e) {}
       model.updateMatrixWorld(true);
       api.drives.forEach((d, i) => {
-        const lab = model.getObjectByName(`HDD_0${i + 1}_Top_Label`);
+        // labels live on each drive's left (-X) side face: readable once the drive is pulled out
+        const lab = model.getObjectByName(`HDD_0${i + 1}_Side_Label`);
         if (!lab) return;
         tmpBox.setFromObject(lab);
         const size = tmpBox.getSize(new THREE.Vector3()), ctr = tmpBox.getCenter(new THREE.Vector3());
         const local = d.worldToLocal(ctr.clone());
-        const w = Math.min(size.x, 0.098), h = Math.min(size.z, 0.07);
+        const w = size.z, h = size.y;
         const plane = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshStandardMaterial({ map: makeLabelTexture(i), roughness: .55, metalness: 0 }));
-        plane.rotation.x = -Math.PI / 2;
-        plane.position.set(local.x, d.worldToLocal(new THREE.Vector3(0, tmpBox.max.y, 0)).y + 0.00035, local.z);
+        plane.rotation.y = -Math.PI / 2;
+        plane.position.set(d.worldToLocal(new THREE.Vector3(tmpBox.min.x, 0, 0)).x - 0.00035, local.y, local.z);
         plane.receiveShadow = true;
         d.add(plane);
       });
@@ -234,6 +235,12 @@ export function createStage(canvas, { onProgress, mobile, labels }) {
       x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
     }
     return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+  };
+  // top-centre / bottom-centre of a drive's front plate (drives stand side by side along X)
+  api.driveEdge = (i, top = true) => {
+    const p = api.model?.getObjectByName(`HDD_0${i + 1}_Front_Plate`); if (!p) return null;
+    tmpBox.setFromObject(p);
+    return new THREE.Vector3((tmpBox.min.x + tmpBox.max.x) / 2, top ? tmpBox.max.y : tmpBox.min.y, tmpBox.max.z);
   };
   api.driveY = i => api.drives[i] ? api.drives[i].position.y : 0.023 + 0.027 * i;
 

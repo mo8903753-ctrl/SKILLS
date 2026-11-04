@@ -22,7 +22,7 @@ const LABELS = [
   { zh: '市场', en: 'MARKET', ch: 'CH 03 市场与竞争' },
   { zh: '定价', en: 'MONEY', ch: 'CH 04 定价经济 · 05 资金转化' },
   { zh: '渠道', en: 'REACH', ch: 'CH 06 页面渠道 · 07 KOL 广告' },
-  { zh: '执行', en: 'EXECUTE', ch: 'CH 08 时间执行 · 09 可行资产' },
+  { zh: '执行', en: 'EXECUTE', ch: 'CH 08 时间执行 · 09–10 可行与案例' },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -66,13 +66,13 @@ function goTo(sel) {
 /* camera views                                                        */
 /* ------------------------------------------------------------------ */
 const V = {
-  hero0: { az: -0.66, el: 0.30, dist: 1.05, sx: 0.22, sy: 0.03, ty: 0.108, tz: 0 },
-  hero1: { az: -0.30, el: 0.20, dist: 0.92, sx: 0.16, sy: 0.02, ty: 0.108, tz: 0 },
-  front: { az: 0.0, el: 0.10, dist: 0.74, sx: 0.0, sy: 0.0, ty: 0.108, tz: 0 },
-  bay: { az: -0.16, el: 0.16, dist: 0.70, sx: 0.12, sy: 0, ty: 0.095, tz: 0.02 },
-  outro: { az: -0.55, el: 0.24, dist: 1.2, sx: 0, sy: -0.15, ty: 0.108, tz: 0 },
+  hero0: { az: -0.66, el: 0.30, dist: 1.05, sx: 0.22, sy: 0.03, tx: 0, ty: 0.108, tz: 0 },
+  hero1: { az: -0.30, el: 0.20, dist: 0.92, sx: 0.16, sy: 0.02, tx: 0, ty: 0.108, tz: 0 },
+  front: { az: 0.0, el: 0.10, dist: 0.74, sx: 0.0, sy: 0.0, tx: 0, ty: 0.108, tz: 0 },
+  bay: { az: -0.1, el: 0.14, dist: 0.66, sx: 0.06, sy: -0.04, tx: -0.035, ty: 0.085, tz: 0.02 },
+  outro: { az: -0.55, el: 0.24, dist: 1.2, sx: 0, sy: -0.15, tx: 0, ty: 0.108, tz: 0 },
 };
-const driveView = i => ({ az: -0.7 + i * 0.04, el: 0.42 - i * 0.02, dist: 0.84, sx: 0.19, sy: 0.06, ty: 0.075 + 0.012 * i, tz: 0.06 });
+const driveView = i => ({ az: -0.64 + i * 0.03, el: 0.3, dist: 0.8, sx: 0.2, sy: 0.04, tx: -0.089 + 0.027 * i, ty: 0.08, tz: 0.08 });
 function mob(v) {
   if (!isMobile()) return v;
   return { ...v, sx: 0, sy: -0.2, dist: v.dist * 1.75 };
@@ -158,13 +158,13 @@ const coUnbox = {
   size: mkCo('<b>222.5 × 222.5 × 224</b>MM · REAL SCALE'),
 };
 const coDrives = LABELS.map((L, i) => {
-  const d = mkCo(`<b>DRIVE 0${i + 1}</b>${L.zh} · ${L.en}`, 'drv');
+  const d = mkCo(`<b>DRIVE 0${i + 1}</b>${L.zh} · ${L.en}`, 'drv fan');
   d.querySelector('.cb').addEventListener('click', () => goTo('#d' + (i + 1)));
   return d;
 });
-const coActive = mkCo('<b>DRIVE 01</b>—', 'l');
+const coActive = mkCo('<b>DRIVE 01</b>—', 'l act');
 const pitchLine = document.createElementNS(NS, 'path'); ovSvg.appendChild(pitchLine);
-const pitchLbl = mkCo('<b>27 MM PITCH</b>5 × 3.5" SATA', 'l');
+const pitchLbl = mkCo('<b>27 MM PITCH</b>5 × 3.5" SATA · 竖向并排', 'fan');
 const coLine = document.createElementNS(NS, 'path'); coLine.setAttribute('class', 'dash'); ovSvg.appendChild(coLine);
 
 function placeCo(el, world, op) {
@@ -241,7 +241,7 @@ function drawBackdrop(s, p) {
 /* frame loop                                                          */
 /* ------------------------------------------------------------------ */
 let S = baseState(), modelReady = false, t0 = performance.now(), lastKey = '';
-const hud = $('#hud'), hudLinks = $$('#hud a'), navLinks = $$('[data-drive-nav]'), sbar = $('#scrollbar i');
+const hud = $('#hud'), hudLinks = $$('#hud a'), hudCap = (() => { const c = document.createElement('div'); c.className = 'hud-cap'; hud.appendChild(c); return c; })(), navLinks = $$('[data-drive-nav]'), sbar = $('#scrollbar i');
 const chapters = $$('.chapter');
 const themeBands = chapters.map(c => ({ c, bands: $$('[data-theme]', c), t: '' }));
 function updateThemes() {
@@ -297,7 +297,8 @@ function frame(now) {
   // HUD + nav state
   const g = activeGroup(y);
   hud.classList.toggle('show', g.idx >= 0);
-  hudLinks.forEach((a, i) => { a.classList.toggle('on', i === g.idx); a.querySelector('.pr').style.width = (i === g.idx ? g.p * 100 : i < g.idx ? 100 : 0) + '%'; });
+  hudLinks.forEach((a, i) => { a.classList.toggle('on', i === g.idx); a.querySelector('.pr').style.height = (i === g.idx ? g.p * 100 : i < g.idx ? 100 : 0) + '%'; });
+  if (hudCap && g.idx >= 0 && hudCap.dataset.i !== String(g.idx)) { hudCap.dataset.i = g.idx; hudCap.textContent = `0${g.idx + 1} ${LABELS[g.idx].zh}`; }
   navLinks.forEach((a, i) => a.classList.toggle('on', i === g.idx));
   const max = document.documentElement.scrollHeight - innerHeight;
   sbar.style.height = (clamp(y / max) * 100) + '%';
@@ -342,25 +343,34 @@ function drawOverlay(s, p, S) {
   placeCo(coUnbox.io, stage.nodeWorld('Front_IO_USB_C', [0.03, 0, 0.003]), a1);
   placeCo(coUnbox.size, stage.nodeWorld('Top_Right_Front_Screw', [0.01, 0.002, 0]), mob ? 0 : a1);
   const a2 = u < 0 ? 0 : seg(u, 0.56, 0.66) * (1 - seg(u, 0.9, 0.98));
-  coDrives.forEach((c, i) => { placeCo(c, stage.driveAnchor(i, 1), mob ? 0 : a2); c.querySelector('.cb').style.pointerEvents = a2 > 0.5 ? 'auto' : 'none'; c.classList.toggle('hov', hoverDrive === i); });
-  if (a2 > 0) {
-    const top = stage.driveAnchor(4, -1), bot = stage.driveAnchor(0, -1);
-    if (top && bot) {
-      const A = stage.project(top), B = stage.project(bot), off = -34;
-      pl = `M${A.x + off + 8} ${A.y}H${A.x + off}V${B.y}H${B.x + off + 8}`;
-      for (let k = 1; k < 4; k++) { const m = stage.project(stage.driveAnchor(k, -1)); pl += `M${m.x + off} ${m.y}h6`; }
-      placeCo(pitchLbl, top.clone().lerp(bot, 0.5).add({ x: -0.03, y: 0, z: 0 }), mob ? 0 : a2);
-    }
-  } else pitchLbl.style.opacity = 0;
+  // five drives stand side by side: labels fan out above the bay with leader lines down to each plate
+  const tops = [0, 1, 2, 3, 4].map(k => stage.driveEdge(k, true));
+  if (a2 > 0 && !mob && tops[0]) {
+    const P = tops.map(v => stage.project(v));
+    const cx = (P[0].x + P[4].x) / 2, spread = Math.min(190, innerWidth * 0.12), by = Math.min(...P.map(q => q.y)) - innerHeight * 0.16;
+    coDrives.forEach((c, k) => {
+      const bx = cx + (k - 2) * spread, yk = by - (k % 2) * 46;
+      c.style.opacity = a2; c.style.transform = `translate(${bx}px,${yk}px)`;
+      c.querySelector('.cb').style.pointerEvents = a2 > 0.5 ? 'auto' : 'none';
+      c.classList.toggle('hov', hoverDrive === k);
+      pl += `M${P[k].x} ${P[k].y}L${P[k].x} ${P[k].y - 22}L${bx} ${yk + 22}`;
+    });
+    // 27 mm pitch dimension under the bay
+    const B = [0, 1, 2, 3, 4].map(k => stage.project(stage.driveEdge(k, false)));
+    const ly = Math.max(...B.map(q => q.y)) + 26;
+    pl += `M${B[0].x} ${ly}H${B[4].x}`;
+    B.forEach(q => { pl += `M${q.x} ${ly - 5}v10`; });
+    pitchLbl.style.opacity = a2; pitchLbl.style.transform = `translate(${(B[0].x + B[4].x) / 2}px,${ly + 34}px)`;
+  } else { coDrives.forEach(c => { c.style.opacity = 0; c.querySelector('.cb').style.pointerEvents = 'none'; }); pitchLbl.style.opacity = 0; }
   pitchLine.setAttribute('d', pl); pitchLine.style.opacity = a2;
   // active drive callout during drive scenes
   if (s.type === 'drive') {
     const op = seg(p, 0.5, 0.6) * (1 - seg(p, 0.74, 0.8));
     const i = s.drive;
     if (coActive.dataset.i !== String(i)) { coActive.dataset.i = i; coActive.querySelector('.cb').innerHTML = `<b>DRIVE 0${i + 1} · PULLED</b>${LABELS[i].ch}`; }
-    const w = stage.driveAnchor(i, -1);
+    const w = stage.driveEdge(i, true);
     const sp = placeCo(coActive, w, mob ? 0 : op);
-    if (sp && op > 0) { cl = `M${sp.x} ${sp.y}L${sp.x - 60} ${sp.y + 60}`; }
+    if (sp && op > 0) { cl = `M${sp.x} ${sp.y}L${sp.x - 70} ${sp.y - 70}`; }
   } else coActive.style.opacity = 0;
   coLine.setAttribute('d', cl);
 }
@@ -481,7 +491,7 @@ function initScrollMotion() {
     gsap.from(split.chars, { yPercent: 115, rotate: 6, duration: 1.1, ease: 'expo.out', stagger: 0.035, scrollTrigger: { trigger: h, start: 'top 88%' } });
   });
   // generic reveals
-  ScrollTrigger.batch('.rv', { start: 'top 90%', once: true, onEnter: els => gsap.to(els, { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', stagger: 0.07, overwrite: true }) });
+  ScrollTrigger.batch('.rv', { start: 'top 90%', once: true, onEnter: els => gsap.to(els, { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', stagger: i => Math.min(i, 6) * 0.07, overwrite: true }) });
   // highlighter
   $$('.mk').forEach(m => ScrollTrigger.create({ trigger: m, start: 'top 80%', once: true, onEnter: () => m.classList.add('on') }));
   // tilted stack cards (More)
