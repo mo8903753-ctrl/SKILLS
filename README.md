@@ -16,7 +16,7 @@ cp -R SKILLS/skills/* ~/.codex/skills/         # Codex
 
 | Skill | 用途 |
 |---|---|
-| **crowdfunding-proposal-site** | 把众筹提案做成客户可直接看的滚动网站。三档版式：结论版 / 叙事版 / **沉浸版**（3D 产品结构=章节、整屏色块切换、彩色卡片堆叠、产品自转换色 + 3D 丝带、盘位 sleeve 转场；`templates/immersive-bay/` 为可运行母版）。含**演讲稿 + 演讲者窗口**（共享屏幕对方看不到讲稿）、方案图谱、时间线三件套，以及完整商业分析方法论（定价单位经济、预算公式、KPI 一致性、日本 Makuake 多配置定价）。 |
+| **crowdfunding-proposal-site** | 把众筹提案做成客户可直接看的**沉浸式 3D 滚动网站**（唯一形式，已替代原结论版 / 叙事版；3D 产品结构=章节、整屏色块切换、彩色卡片堆叠、产品自转换色 + 3D 丝带、盘位 sleeve 转场；`templates/immersive-bay/` 为可运行母版）。含**演讲稿 + 演讲者窗口**（共享屏幕对方看不到讲稿）、方案图谱、时间线三件套，以及完整商业分析方法论（定价单位经济、预算公式、KPI 一致性、日本 Makuake 多配置定价）。 |
 | **crowdfunding-proposal-ppt** | 众筹方案 PPT 版本 |
 | **crowdfunding-marketing-plan** | 众筹整合营销方案生成器 |
 

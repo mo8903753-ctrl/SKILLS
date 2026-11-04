@@ -1,21 +1,19 @@
 ---
 name: crowdfunding-proposal-site
-description: 把众筹提案/整体方案/pitch 做成客户可直接查看的单文件 HTML 滚动网站(3D 主角滚动驱动、钉屏场景、竞品对比、KOL矩阵、预算模型、广告素材、时间线与转化测算),并带完整商业分析深度(Mode A 代理对品牌方提案 / Mode B 国际 backer 页、定价单位经济、五档 Reward 阶梯、预算 17.96% 公式、KPI 一致性、spec-gap 决策闸、可行性判断、B2B 重定位)。当用户要求"做方案网站""提案做成网页""滚动动效 deck""做一份众筹方案的HTML""可行性方案",或提到 Kickstarter/Makuake/Indiegogo 方案的网页化交付、众筹商务方案、美国众筹方案、日本众筹方案(Makuake 折扣档体系)、可直接发客户的方案页时使用；用户要「动效拉满/巨型交互/复刻 lusion·oryzo·More/产品可拆开交互」时走沉浸版(3D 产品结构=章节、整屏色块切换、彩色卡片堆叠、产品自转换色、3D 丝带、盘位 sleeve 转场，文件夹交付+GitHub+Vercel)；方案要上会讲时同时产出演讲稿与演讲者窗口(共享屏幕对方看不到讲稿)。Build client-facing single-file crowdfunding proposal websites — scroll-driven 3D hero + full business analysis (pricing/unit-economics, budget formula, KPI consistency, competitive anchors, KOL/ad/media plans, conversion forecasts).
+description: 把众筹提案/整体方案/pitch 做成客户可直接查看的沉浸式 3D 滚动方案网站(产品物理结构=方案章节、滚动拆机与部件拉出、部件前板 sleeve 转场、整屏色块切换、大号彩色卡片堆叠、产品自转扩散换色弹卡、3D 文字丝带、巨字穿插、加载计数/滚字/自定义光标;GitHub 私有仓库 + Vercel 自动部署),并带完整商业分析深度(Mode A 代理对品牌方提案 / Mode B 国际 backer 页、定价单位经济、Reward/Makuake 折扣阶梯、预算公式、KPI 一致性、竞品价格带、KOL/广告/时间线/转化测算),方案上会时同时产出演讲稿与演讲者窗口(共享屏幕对方看不到讲稿)。当用户要求"做方案网站""提案做成网页""滚动动效 deck""做一份众筹方案的HTML""可行性方案""动效拉满/复刻 lusion·oryzo·More",或提到 Kickstarter/Makuake/Indiegogo 方案的网页化交付、美国/日本众筹方案、可直接发客户的方案页、方案演讲稿时使用。Build immersive 3D scroll proposal sites for crowdfunding with full business analysis and a synced presenter view.
 ---
 
 # 众筹方案网站 Crowdfunding Proposal Site（形式 + 内容 合并版）
 
-> **本 skill 合并了两个老 skill**：`crowdfunding-proposal-site`（**形式**：滚动网站、3D 主角、动效）+ `crowdfunding-plan-html`（**内容**：策略分析方法论、定价/预算/KPI）。
-> **形式** = 硅谷浅色滚动网站（本文 tokens），唯一主题，不做其他配色体系。
-> **内容深度** = 需要完整商业分析时，开工前先读 `reference/content-methodology.md`（这是"内容更全"的来源，原 plan-html 的全部策略方法论沉淀于此）。
+> **形式只有一种：沉浸版**（2026-11 起替代原结论版 / 叙事版，旧版已撤）。体系 `reference/immersive-system.md`，可运行母版 `templates/immersive-bay/`（Cephalon Lucy 日本方案全源码）。
+> **内容深度**：需要完整商业分析时，开工前先读 `reference/content-methodology.md`。
+> **上会**：同时产出演讲稿 + 演讲者窗口，规范 `reference/speech-presenter.md`。
 
 ## 触发条件
-用户要求把众筹提案/整体方案/pitch 做成网页、滚动网站、单文件 HTML 交付时使用本 skill。典型表述:"做一个 XX 式的方案网站""把这份规划做成网页""要滚动动效的提案页""做一份众筹方案的HTML""可行性方案""市场调研版"。无论是**对内汇报/老板审阅**、**对品牌方的代理提案(Mode A)**，还是**面向 backer 的国际众筹页(Mode B)**，都走本 skill。
+用户要求把众筹提案/整体方案/pitch 做成网页、滚动网站交付时使用本 skill。典型表述:"做一个 XX 式的方案网站""把这份规划做成网页""要滚动动效的提案页""做一份众筹方案的HTML""可行性方案""市场调研版"。无论是**对内汇报/老板审阅**、**对品牌方的代理提案(Mode A)**，还是**面向 backer 的国际众筹页(Mode B)**，都走本 skill。
 
 ## 产出标准
-- **结论版/叙事版**：如下单文件 HTML。
-- **沉浸版**：文件夹站（index.html + assets/{css,js,model,img,vendor}），GSAP/Lenis/three 本地 vendor，独立 GitHub 私有仓库 + Vercel，push 即部署。母版 `templates/immersive-bay/`，体系 `reference/immersive-system.md`。
-单文件 HTML(字体走 Google Fonts CDN、3D 走 jsdelivr three.js importmap),双击可开,可直接拖 Netlify Drop 部署(提醒用户点 Rename and deploy 改成 index.html)。图片压缩后 base64 内嵌,整文件尽量控制在 500KB 量级；若客户给了多张广告素材、KOL缩略图或职业照片,以视觉完整优先,压缩后再内嵌。
+文件夹站：`index.html` + `presenter.html` + `assets/{css,js,model,img,vendor}`；GSAP(ScrollTrigger/SplitText)/Lenis/three 放本地 vendor，字体走 Google Fonts。必须 http 打开（GLB fetch）。交付 = 独立 GitHub 私有仓库（**不要推进外层其他项目仓库**）+ Vercel（首发 `vercel deploy --prod --yes` 自动关联仓库，之后 push main 即部署，部署后 curl 核验线上内容）。`演讲稿.md` 用 `.vercelignore` 排除。图片压缩后放 `assets/img/`。
 
 ## 内容框架先定 Mode（开工前判断，决定全文口吻与必备章节）
 - **Mode A · 代理对品牌方提案（默认，MadSpace/中国出海众筹机构）**：HTML 是给**中国品牌客户**看的提案 deck，不是给 backer 的页面。正文**全中文**(产品名/slogan/平台名/无中文对应术语可留英日)；框架是"为什么众筹 / 怎么执行 / 预期结果"；必备分析章节：定价策略(含单位经济表)、目标市场与受众、资金需求与预算、竞争优势拆解。预算只展示**纯营销费用**。语气是策略总监在会议室里的专业中文，用"我们"做代理判断。
@@ -29,17 +27,18 @@ description: 把众筹提案/整体方案/pitch 做成客户可直接查看的�
 
 | 类型 | 例子 | 运动语法 |
 |---|---|---|
-| 被佩戴/陪伴的 | 戒指、手表、耳机 | 主角全程漂浮跟随,姿态随章节插值(POSES 系统) |
+| 被佩戴/陪伴的 | 戒指、手表、耳机 | 主角全程漂浮跟随,姿态随章节插值 |
 | 被操作的工具 | 相机、键盘、CNC | 产品定住,机位走:滚动驱动镜头推拉摇移,全身→部件特写 |
 | 价值在输出的 | 相机、投影、打印机 | 用产出当画布:样片铺屏、取景框线、失焦→合焦入场、光圈/快门转场 |
 | 价值在动作的 | 机器人、筋膜枪、外骨骼 | 让那个动作本身动,而不是产品空转 |
 
-主角层实现选型:几何简单(戒指)→ 程序化 LatheGeometry 实时 3D;细节复杂(相机/机器人)→ 预渲染视频滚动擦洗或序列帧,其余引擎照用。
+主角层实现选型:**有 GLB/可建模 → 实时 three.js 主角**(可动部件拆成独立命名节点,见 immersive-system §6);几何简单(戒指)→ 程序化 LatheGeometry;只有品牌真视频、没有模型 → 首屏用真实视频滚动擦洗(`reference/product-video-scrub.md`),其余沉浸版场景(色块、卡片堆叠、丝带可省)照用。**叙事骨架找产品"可打开/可拉出/可分层"的结构当章节容器**(Lucy:5 个硬盘位 = 5 章)。
 
-## 版式三档(先问用户要哪档,默认结论版)
-- **结论版(默认,对内汇报/老板审阅)**:章节 ≤10、每章一屏一结论;标题用 `.mk` 荧光标记结论词;受众+痛点合并一页(受众一行四格+痛点快读列表+粘性侧图);市场时机+竞品+差异化合并成**一张三列对比表**(竞品|它的主场|我方立场,立场列加粗);删纯装饰小字(封面说明段、预算行小注、与档位策略重复的卡内行)。
-- **沉浸版(动效拉满/对标 Awwwards,明确要求时)**:产品物理结构 = 方案结构(Lucy:5 个硬盘位 = 5 章),滚动拆机、拉出部件、部件前板长出 sleeve 进入章节;白底 + 整屏色块切换(白/冰蓝/品牌蓝/墨)+ 彩色卡片堆叠 + 产品自转扩散换色 + 3D 文字丝带 + 巨字从产品背后穿过 + 巨型页脚字标。**纯白会被嫌单调,每章至少一个蓝或墨色块。**照 `templates/immersive-bay/` 改,规范 `reference/immersive-system.md`。
-- **叙事版(对外展示/路演,明确要求时才做)**:钉屏场景切换、粘性堆叠卡、特写章等"时间型"模块全开。注意:时间型模块在内部汇报场景会被嫌"花时间没重点"——这是真实老板反馈。
+## 形式：沉浸版（唯一）
+- 滚动顺序：加载计数 → hero(主角 + 巨字 + 彩色圆盘,可拖拽) → spin(自转 + 扩散换色 + 弹卡 + 丝带) → 跑马灯 → 拆机/开盖(构造线标注 + 部件标签) → 每章 intro(上一部件收回 / 本部件拉出 / sleeve 铺满) → 章节内容(圆角幕布 + 色块 band) → outro(复原 + 结语) → 蓝色巨型字标页脚。
+- **纯白会被嫌单调**(用户原话"整体颜色一片白,不是很好看"):每章至少一个蓝或墨色块;冰蓝给数据段;彩色卡片堆叠、全屏主张、彩色圆盘都要有。
+- **一屏一结论仍然适用**:章节标题用 `.mk` 荧光标记结论词;受众+痛点合并一页(横向画廊 + 痛点四格);市场+竞品+差异化合并为价格带坐标轴 + 一张对比表(竞品|它的主场|我方立场,立场列加粗)+ 三锚点卡;删纯装饰小字。
+- 导航:顶栏章节 pill + 全屏菜单(M / 1–N)+ 左下部件 HUD + 演讲者窗口(P)。
 
 ## 客户可见文案红线
 - 客户交付版只能出现最终商务判断、数据、执行动作和交付物,不得出现内部沟通、修改记录、制作说明、代理商自我批注或对用户反馈的复述。
@@ -67,45 +66,38 @@ description: 把众筹提案/整体方案/pitch 做成客户可直接查看的�
 2. **定 Mode + 运动语法**(上两节)。
 3. **参考母版锁定**:若用户上传或指定一份已有方案 HTML/PPT/PDF 作为参考,必须把它当成母版,沿用其页面顺序、模块类型、标题层级、卡片/表格表达、KOL 卡片形式、预算/漏斗/时间线呈现方式;只替换项目内容和数据。不得另起一套版式、另做一版结构,除非用户明确要求重新设计。
 4. **内容核对**:所有数字加总与占比=100%;客单×支持者≈目标金额;前后口径一致;外部数据(竞品营收、众筹纪录、YouTube播放/互动/订阅)必须搜索核实并附来源链接;交付版删除一切内部口径,只保留外部商务表述。**深度商业分析(定价/预算/KPI/可行性)按 `reference/content-methodology.md` 执行。**
-5. **设计系统**:默认浅色硅谷风 tokens(见下);深浅反转留给定价等关键章做"插曲";MadSpace logo 两处低调(封面 Prepared by + 页脚);站点 UI 避免大面积绿色,但 Kickstarter/广告素材自身用色可保留。**站点底盘交互层(卡片 hover/弹层/手风琴/骨架屏/入场)默认按 `reference/craftwork-motion-system.md` 执行**——纯 CSS 克制微交互,JS 只切状态;3D/滚动主角引擎不受影响。
-6. **章节映射**:提案页数→8-13 个网页章节,左侧 mono 编号导航 rail;每章按内容选模块(见模块清单)。若存在参考母版,章节数量和编号优先跟母版一致。
-7. **构建**:bash heredoc 分块写入,每块后 wc -c;JS 写完提取 module 做 node --check。
+5. **设计系统**:沉浸版 tokens(见下)+ `reference/immersive-system.md`;MadSpace logo 两处(封面 Prepared by + 页脚,蓝底上用原色 logo + 白色胶囊底,不反白);站点 UI 避免大面积绿色。**从 `templates/immersive-bay/` 复制起步**,按其 `TEMPLATE.md` 改结构/模型/机位/内容。
+6. **章节映射**:提案内容 → 3–6 个"部件章"(每章装 1–2 个内容章节,章节号按阅读顺序重排);顶栏 pill + 菜单 + HUD 同步;每章按内容选模块(见模块清单)。若存在参考母版,章节数量和编号优先跟母版一致。
+7. **构建**:改模板文件;JS 改完 `node --check`(app.js 复制成 .mjs 再查);本地 `python3 -m http.server` 预览。
 8. **文案润色(每个方案必跑,2026-07-30 拍板)**:构建完成后、QA 之前,调用 `chinese-business-copy` skill 把全站客户可见中文文案整体过一遍——去翻译腔、去口语化、正式但不僵硬,改动回写 HTML 再进 QA。修改已有方案时,被改动的章节同样要过一遍。(Mode B 英文页不适用。)
-9. **QA**:playwright 截图自查(见 QA 清单)。
+9. **QA**:CDP 截图自查(见 QA 清单)。
 10. **演讲稿(方案要上会时)**:按 `reference/speech-presenter.md` 一屏一段写 notes,口吻简洁谦虚、大陆商务句式;沉浸版自带演讲者窗口(按 P),交付时附共享屏幕说明。
-11. **交付**:保留一个工作文件,再同步一份到用户指定交付路径;提醒联网打开、Netlify 改名 index.html、可改站点名。若修改已有 HTML,先改工作文件,QA 通过后覆盖交付文件。
+11. **交付**:独立 GitHub 私有仓库 + Vercel(见产出标准);给用户线上链接、演讲者窗口用法(按 P)与共享屏幕说明;提醒 presenter.html 知道 URL 的人能打开。后续修改 push main 自动部署,每次 curl 核验线上。
 
-## 设计 tokens(默认:浅色硅谷风)
-- 底:#FAFAF8 / 卡:#FFFFFF + 1px rgba(23,24,29,.1) 边 + 柔投影
-- 字:ink #17181D / mut #4E545E / faint #6F7580(最浅灰对比度必须 ≥4.5:1)
-- accent:饱和蓝 #2B50E0(与 MadSpace 蓝同语系);深色插曲 #8093EF
-- 深色插曲:#101218 底
-- **沉浸版色块**:冰蓝 #E6EBFF(卡 #DCE4FF)/ 品牌蓝 #2B50E0 / 墨 #0E1117(强调 #8EA4FF)/ 信号橙 #FF6A3D(只点缀)/ 浅紫蓝 #B9C7FF;变量用 `@property` 注册后整屏平滑换色;拉丁巨字用 Archivo 可变字宽(font-stretch 66–80%)。
-- 字体:Noto Serif SC(标题/立场句)+ Noto Sans SC(正文,**禁用 300 细体**)+ IBM Plex Mono(数据/眉题);所有可见文字最小 14px,包括左侧 rail、眉题、图例、表格脚注、卡片内小字
-- 层级靠"字号+色阶",不靠细体和过浅灰;**默认正文别太小**:lede ~21-23px、正文/表格/卡片/列表 ~15-16px;**章节名做大标题**(~40-62px 衬线),"一页一结论"句做其下副标题(用户反复要求"标题突出/内文放大",默认给够)
+## 设计 tokens(沉浸版)
+- 底:白 #FFFFFF;卡:var(--card)(白主题 #FFF + 1px rgba(17,19,24,.14) 边 + 22px 圆角)
+- 字:ink #111318 / mut #4A505B / faint #6B717C(最浅灰对比度 ≥4.5:1)
+- 色块 band:冰蓝 #E6EBFF(卡 #DCE4FF)/ 品牌蓝 #2B50E0(蓝主题里 acc=白、on-acc=蓝)/ 墨 #0E1117(强调 #8EA4FF);点缀:信号橙 #FF6A3D、浅紫蓝 #B9C7FF;巨字底色 #E3E9FD。颜色变量全部 `@property` 注册,`.chapter` 上做 .9s 过渡实现整屏换色。
+- 拉丁巨字/大数字:Archivo 可变字宽(wdth 62..125,font-stretch 66–80%,800 字重)
+- 字体:Noto Serif SC 900(标题/立场句)+ Noto Sans SC(正文,**禁用 300 细体**)+ IBM Plex Mono(数据/眉题)+ Archivo(巨字);可见文字最小 12px(mono 眉题/HUD)、正文 ≥15px
+- 层级靠"字号+色阶",不靠细体和过浅灰;**默认正文别太小**:lede ~21-23px、正文/表格/卡片/列表 ~15-16px;**章节名做大标题**(clamp(48px,7vw,124px) 衬线 900),"一页一结论"句做其下副标题(用户反复要求"标题突出/内文放大",默认给够)
 - 重点标记 `.mk`:linear-gradient(transparent 62%, var(--acc-dim) 0) 荧光笔效果,每章标题的结论词必须标记
 - 章节标题层级必须固定为:章节编号/模块名(如 `04 / Funding Models`)在上,该章节大标题紧跟在其正下方;不要把编号放左列、标题放右列。若用 grid 做内容排版,也必须让编号与标题保持同一纵向阅读轴。
 
-## 模块清单(双参考文件)
-- **reference/vocci-conclusion.html** = 结论版成品(对比表、合并页、mk 标记的活代码)
-- **reference/vocci-narrative.html** = 叙事版成品(钉屏 `.pin6`/`pinUpdate`、堆叠卡 `.pcard`、场景图卡内双栏的活代码)
-**沉浸版模块** → `reference/immersive-system.md` §4(加载计数、滚字 hover、光标、巨字穿插、构造线标注、自转换色弹卡、3D 丝带、sleeve 转场、圆角幕布、彩色卡片堆叠、全屏主张逐字点亮、横向画廊、可拖拽素材条、价格带坐标轴、配置比例对比条、盘位 HUD、全屏菜单、巨型页脚字标)
-通用模块(各版都有):
-- 真实产品视频滚动逐帧擦洗首屏 + 电影感全屏字幕场景(可选深色底盘,能扒到品牌真视频/真图时优先于程序化3D) → `reference/product-video-scrub.md`
-- 滚动姿态引擎:`POSES` 字典 + `.pm` 标记 + 四元数 slerp + 指数阻尼(搜 `target()`)
-- 三列竞品对比表:`table.cmp`,我方立场列 `.vs` 加粗,竞品名带来源链接(仅结论版)
-- 钉屏场景切换:`.pin6` 540vh 轨道 + sticky + 场景交叉淡入 + blur 入场 + 进度计数(搜 `pinUpdate`)——学自 vocci.ai 但主角必须换成自有实时元素,**不抄光圈遮罩等签名细节**(仅叙事版)
-- 粘性堆叠卡:`.pcard` sticky 递增 top 偏移(痛点/步骤类内容,仅叙事版)
-- 深浅主题反转:标记 `data-theme` + CSS 变量过渡(搜 `applyTheme`)
-- 数据动效:`.num[data-n]` 计数器、`.brow` 预算条、垂直时间线、定价卡(Launch Special 主力档高亮);**进度条/柱状图的填充元素必须 `display:block`**(`<i>` 默认 inline,宽度不生效——见 PITFALLS #19)
-- 全案周计划表(甘特矩阵) + 周级竖向时间线 + 筹款节奏图 → 规格 `reference/timeline-gantt.md`,活代码 `reference/timeline-gantt.html`
-- **方案图谱(会议导航层)**:按 `M` 全屏节点图,悬停章节展开子节点,**点节点就在图谱右侧克隆展开该部分内容**(不跳走、不滚动)。开会时对方问预算/问 KOL,一点即到,且始终看得见自己在体系里的位置。改一个 `NODES` 数组即可套到任何项目 → 活代码 `reference/meeting-graph.html`
-- 3D 投影标注:按键世界坐标 → 屏幕坐标钉 HTML 标牌(搜 `placeCallout`)
-- 鼠标反馈:晕影跟随 + 主角 ±3° 微视差,触屏/减动效自动关(搜 `cursorlight`)
-- 场景图:全宽出血图(章节收束)/ 卡内图文双栏,双语 mono 配注
+## 模块清单
+**沉浸版场景与动效** → `reference/immersive-system.md` §4(加载计数、滚字 hover、自定义光标、磁吸按钮、巨字穿插、构造线标注、自转扩散换色弹卡、3D 丝带、部件 sleeve 转场、圆角幕布、彩色卡片堆叠、全屏主张逐字点亮、SplitText 标题、荧光笔、横向画廊、可拖拽素材条、跑马灯、部件 HUD、全屏菜单、巨型页脚字标),活代码在 `templates/immersive-bay/`。
+**内容模块**(都在母版里有现成实现):
+- 价格带坐标轴(竞品点 + 我方区间条)`#ladder` + 三列竞品对比表(竞品|它的主场|我方立场,立场列加粗,竞品名带来源链接)+ 三锚点卡
+- 配置比例对比条(实际销量 vs 本次规划)`#mixbars`;档位卡分组(主推款四档 + 其余款两档)
+- 预算:目标切换按钮 + KPI 四格 + 预算条 `.brow`(**填充元素 `display:block`**,见 PITFALLS #19)+ 预算表 + 来源转化卡 + Reward 转化表
+- 订单来源 SVG 环形图 `buildDonut` + 图例;广告 Meta/Google 双环
+- KOL 卡(头像 + 竞品视频封面 + 数据 + 链接,hover 放大 + 播放钮)
+- 时间线三件套:上线 0–48h 作战线 → 全案周计划甘特表 → 周级竖向时间线 → 筹款节奏柱 → 规格 `reference/timeline-gantt.md`
+- 卖点卡(现可展示 / 上线前实测两类)、配置三卡(主推款流光描边)
+- 首屏备选:只有品牌真视频时用视频滚动擦洗 → `reference/product-video-scrub.md`
 
 ## 内容硬规则
-- **竞品话语权**:大标题/立场列永远是我方立场句(从"应对"文案提炼),竞品名只进眉题或表格首列;不在竞品章引用对方营收等强数据(那类数据放市场验证章并附来源);钉屏时加常驻定位锚让我方定位始终在屏。
+- **竞品话语权**:大标题/立场列永远是我方立场句(从"应对"文案提炼),竞品名只进眉题或表格首列;不在竞品章引用对方营收等强数据(那类数据放市场验证章并附来源)。
 - **竞品分析**:优先使用用户提供的 Excel/表格作为竞品数据源;竞品数量不足、字段无效或比较维度偏少时,补齐为可决策的对比表。面向 AI recorder / AI notetaker / 办公 AI 产品时,至少覆盖 Plaud、Otter、Fathom、Limitless、Bee/同类穿戴记录器等可比对象,并用价格、硬件形态、录音/转写、工作流、隐私、本地留存、订阅和众筹表现做横向比较。用户指出刷单、异常或不可作为参考的项目必须从竞品分析、比较表和结论引用中删除;Voxmate 同类方案中不要把 TicNote Pods 作为有效竞品案例。
 - **竞品三锚点**:竞品比较表下方必须保留三张决策锚点卡:价格锚点、形态锚点、叙事锚点。价格锚点说明主力价/订阅/客单如何被竞品验证;形态锚点说明硬件形态与可被理解的品类参照;叙事锚点说明我方从竞品叙事中避开什么、强化什么。除非用户明确删除,不得省略。
 - **章节压缩**:删掉空泛的"营销目标与执行框架"类页面;把核心判断与产品证明合并,把受众、痛点、使用场景合并,把目标、预算、KPI和执行动作放进数据页/时间线/预算页。客户页不解释"为什么合并",只呈现最终结构。
@@ -140,7 +132,7 @@ description: 把众筹提案/整体方案/pitch 做成客户可直接查看的�
   - **KOL 排期必须与名单容量对得上**:达人通常一人一条视频,「每周 N 条 × M 周」总数不得超过 KOL 矩阵的达人总数——这是甲方一眼能算穿的自相矛盾。
   - 「评测样机寄送」排在**上线前 3–5 周**(寄送 1–2 周 + 视频制作 2–3 周)。样机数量在甘特表/KOL 矩阵/品牌方配合清单三处必须一致。
   - 筹款节奏柱状图:30 根柱模拟 daily funding,按档期给形状(30 天更陡、45 天中段更长),下配首周/中段/最后 72h 三张说明卡。
-- **方案图谱(强烈建议加)**:方案是线性的,但会上老板是随机跳的。加一层图谱导航,客户提问时一点即到,还能顺带展示"这是个体系"。内容用 `cloneNode` 从正文取,**不另写一份**(避免同一数字两处出处)。母版 `reference/meeting-graph.html`。
+- **会议导航**:全屏菜单(M / 数字键直达)+ 部件 HUD + 演讲者窗口(P,两窗同步翻页),会上被问到任何一章都能一步跳过去。
 - **可行性与物料**:列产品/量产、AI功能证明、内容生产物料等客户需要准备的材料;**认证与开户类内容一律不列**——品牌方合规认证、物流认证、平台认证(FCC/CE/技适/KC/ISO/SOC/物流资质/平台审核状态等),以及美国实体/主体注册、收款账户、Meta BM 开户充值、平台协议签署这类开户注册事项,都与方案无关,不进物料清单、信任章、时间线或任何章节;不要展示本次方案制作工作本身,也不要展示"一套可复用叙事体系"这类 agency 内部交付说明。
 
 ## 日本众筹商务方案默认模块
@@ -208,9 +200,9 @@ description: 把众筹提案/整体方案/pitch 做成客户可直接查看的�
 - 从 logo PNG 提品牌色 → `reference/brand-color-extraction.md`
 - 完整工作案例(C2000 企业级 NAS 重定位上 KS) → `reference/c2000-case-study.md`
 
-## QA 清单(playwright,本地 http 服务,--enable-unsafe-swiftshader)
+## QA 清单(本地 http 服务;ego-browser 用 CDP `Page.captureScreenshot` + 固定视口 1600×900 / 390×844)
 - 确认客户可见中文文案已过 `chinese-business-copy` 润色(工作流第 8 步,每个方案必跑);抽查 3 段正文验证无翻译腔/口语化残留
-- 每个关键章节截图:hero、特写章、钉屏各场景、主题反转章、预算/KPI、收尾页脚
+- 每个场景在 p=.1/.5/.9 截图:加载页、hero、spin 各色段、拆机、每个部件章 intro、各色块 band、预算/KPI、outro、页脚
 - `document.body.innerText.includes('NaN')` 必须 false;pageerror 必须空
 - 检查 `document.body.innerText` 和 HTML 源码,不得包含客户可见文案红线中的禁词;不得包含 `preheat` / `prelaunch`;不得包含认证与开户类内容(扫 `认证`、`FCC`、`技适`、`ISO 27`、`SOC 2`、`HIPAA`、`实体注册`、`收款账户`、`平台协议`、`Meta BM`,命中即整块删除;**日本方案对 `PSE` 豁免**,其余照禁)
 - 额外扫描客户可见预算/目标页是否出现 `用户指定`、`用户要求`、`已纳入`、`模型以`、`按用户反馈`、`配套 Excel` 等内部协作口吻;命中即改成外部商务表述。
@@ -230,31 +222,23 @@ description: 把众筹提案/整体方案/pitch 做成客户可直接查看的�
   - 受众照片为日本语境;页面叙事章为中文
   - 所有日文串已过日语校对(抽查档位名、Return 文案、广告图文案)
 - **实测所有进度条/柱状图的 `getComputedStyle(fill).width` 不为 0**(inline 元素宽度不生效是隐形杀手)
-- 若加了方案图谱:实测**根节点文字与其圆底的对比度 ≥4.5**(CSS 会覆盖 SVG `fill` 属性,极易白字白底);逐个点一遍所有节点,**不得有空面板**;确认克隆后**无重复 id**
 - **在 1440px 与 375px 两个宽度实测 `documentElement.scrollWidth - clientWidth === 0`**;1440 附近还要确认固定导航不压正文
 - **同类元素字号一致性**:新增模块后跑一遍,别让后加的模块停在放大前的字号
 - 交付前**逐个回源核竞品价格与市场数据**(价格会过期);改过档位名/价格/删过段落后,全文搜旧名与被删概念的关键词
 - 文字遮挡用像素法验证(与无遮挡区域对比暗像素占比)
-- 430px 手机宽抽查(钉屏降级为卡片流)
+- 390px 手机宽抽查(主角上半屏、文案下半屏、横向画廊降级为纵向卡片流、HUD 隐藏)
 - 注意:无头渲染只有 ~2fps,截图前等待 ≥2.5s
 - **沉浸版 QA**:本地 http 服务;1600×900 与 390×844 两档用 CDP 截图走查每个场景的 p=.1/.5/.9;整页滚一遍 `Runtime.exceptionThrown` 必须为 0;带滚动位置刷新一次(查 TDZ);sticky 场景滚到中段 `.sticky` top 必须为 0;手机端 MENU 不出屏、`scrollWidth===clientWidth`;每个 band 换色时顶栏字可读;盘面标签/丝带文字不镜像;HUD/菜单/盘位点击都能跳到对应章;客户版里搜 `策略边界`、`决策前提`、`红线`、`归因`、`众筹社区`(日本) 必须为 0。
 - **演讲稿 QA**:每段 ≤3 句、全长 10–15 分钟;notes 顺序与页面一致(滚动时演讲者窗口逐屏前进不跳号);演讲者窗口翻页 5 次 + 回退 1 次,方案页位置与讲稿一致;讲稿里的数字与页面逐个对得上。
 
 ## reference 文件清单
-**形式（底盘）**
-- `reference/vocci-conclusion.html` — 结论版滚动网站成品母版（内容恰好是一份日本方案）。⚠️**只复用版式,不复用其日本口径**:它的档位是美元定价、周期写 10–12 周、无 Makuake 折扣档——均早于现行规则,新日本项目一律按「日本众筹商务方案默认模块」重做。
-- `reference/vocci-narrative.html` — 叙事版滚动网站成品母版
-- `reference/viaim-conclusion-scrub.html` — 结论版 + 真实产品视频滚动擦洗 + 大章节标题 + 预热转化测算/竞品众筹对标表 成品母版（活代码，assets 为外部相对路径不随附）。⚠️各母版内的档位命名与价格是当时项目数据,只复用版式;新项目档位/饼图比例一律按本文「价格与行动」与「广告预算分配」的现行默认。
-- `reference/PITFALLS.md` — 形式/3D/动效的已知坑（新项目开工前必读；含 rAF-挂-scroll、大章节标题、正文放大、真 logo 无白底等实战坑）
-- `reference/product-video-scrub.md` — 真实产品视频→滚动逐帧擦洗 hero + 电影感字幕场景 + 扒品牌素材（Shopify/OSS/SPA-via-Chrome）
-- `reference/timeline-gantt.md` — **时间线三件套**规格：全案周计划表（甘特矩阵，客户最认的形式）+ 周级竖向时间线 + 筹款节奏图；含 30/45 双档期规格
-- `reference/timeline-gantt.html` — 上者的**可直接打开的活代码母版**（四模块全渲染 + tokens + tbody 生成脚本），复制粘贴即用
-- `reference/meeting-graph.html` — **方案图谱（会议导航层）活代码母版**：节点图 + 悬停展开 + 点击在图内克隆展开内容；只改 `NODES` 数组即可复用
-- `reference/craftwork-motion-system.md` — **站点底盘交互层默认体系**（craftwork.design 实拆:纯 CSS 微交互数值宪法、卡片 hover 三件套、data-state 弹层、骨架屏/入场/drawLine,2026-07 起默认全量应用）
-
-- `reference/immersive-system.md` — **沉浸版**动效/交互/色彩体系(参考 lusion/oryzo/More 的逐项对照 + 代码位置)
-- `reference/speech-presenter.md` — **演讲稿口吻 + 演讲者窗口 + 共享屏幕说明**(含用户亲改的改写对照)
-- `templates/immersive-bay/` — 沉浸版**可运行母版**(Cephalon Lucy 日本方案全源码 + 3D 模型 + 演讲者窗口 + notes2md 工具),改造步骤见其 `TEMPLATE.md`
+**形式（沉浸版）**
+- `templates/immersive-bay/` — **可运行母版**(Cephalon Lucy 日本方案全源码 + 3D 模型 + 演讲者窗口 + `tools/notes2md.py`),改造步骤见其 `TEMPLATE.md`。⚠️内含真实客户内容与素材,只复用结构/动效/口吻,新项目全部替换。
+- `reference/immersive-system.md` — 动效 / 交互 / 色彩体系(lusion·oryzo·More 逐项对照 + 代码位置 + 3D 主角规范)
+- `reference/speech-presenter.md` — 演讲稿口吻(含用户亲改对照)+ 演讲者窗口 + 共享屏幕说明
+- `reference/timeline-gantt.md` — 时间线三件套规格(甘特表是客户最认的形式)
+- `reference/product-video-scrub.md` — 首屏备选:真实产品视频滚动擦洗 + 扒品牌素材
+- `reference/PITFALLS.md` — 已知坑(#29 起为沉浸版实战坑,开工前必读)
 
 **内容（深度分析）**
 - `reference/content-methodology.md` — 策略方法论总纲（预算/KPI/定价/可行性/战略章节/claim 软化）

@@ -1,6 +1,6 @@
 # 真实产品视频 → 滚动逐帧擦洗 hero + 电影感字幕场景
 
-做"用真实产品动画当首屏、随滚动播放"时读本文。默认仍是 SKILL.md 的浅色滚动站；本文是可选的**深色首屏底盘**。成品母版见 `viaim-conclusion-scrub.html`。
+做"用真实产品动画当首屏、随滚动播放"时读本文。这是沉浸版的**首屏备选**：只有品牌真视频、没有 3D 模型时，用视频擦洗替代 3D hero，其余沉浸版场景照用（母版 `templates/immersive-bay/`）。
 
 ## 1. 先扒品牌方真实素材（别用程序化 3D 占位）
 - **Shopify 店（store.xxx）**：`/products/handle.json` 拿全部产品图；首页 HTML 里 `<video><source src="//store.../cdn/shop/videos/c/vp/HASH/HASH.HD-1080p-*.mp4">` 是真视频（多为达人口播）。透明产品图找 `*-removebg-preview*.png` / `*_white*.png`。
@@ -19,7 +19,7 @@ ffmpeg -i in.mp4 -an -vf scale=1280:-2 -c:v libx264 -pix_fmt yuv420p \
 - `.hero-track{height:260-300vh}` + `.hero-sticky{position:sticky;top:0;height:100vh;background:#07080B}`；`<video id="heroVid" muted playsinline preload="auto" poster=首帧图>` object-fit:cover 铺满。
 - 文案（标题/statbar）绝对定位覆盖，左侧深色渐变 veil 保可读；首屏 pose marker `data-theme="dark"`，下一章 `data-theme="light"` 翻回。
 - 擦洗 JS 要点：**别只信 loadedmetadata**（preload 常抢先触发），用 `heroVid.readyState>=1 && heroVid.duration>0` 现取时长；`currentTime=p*duration` 用 seeking 守卫（seeked 后若目标已变再 seek）防排队。
-- 交付是**文件夹**（index.html + assets/），不是单文件；提醒用户部署 Netlify 拖整个文件夹。
+- 视频放 `assets/`，随沉浸版走 GitHub + Vercel 交付。
 
 ## 4. 电影感全屏字幕场景（可选：一屏大场景 + 字幕随滚动渐显、场景渐隐）
 - `.cine-track{height:~320vh}` + sticky 全屏 bg 图 + scrim；多条 `.csub` 绝对居中，按滚动进度 p 分窗口交叉淡入淡出（seg<.5 淡入，否则淡出；最后一条到末段常驻）；`cine-bg` opacity 随 p→1 渐隐到近黑，最后只剩一句主张。

@@ -4,7 +4,7 @@
 > ① 上线 0–48h 作战窗口（速览）→ ② **全案周计划表（甘特矩阵，主模块）** → ③ 周级竖向时间线 → ④ 筹款节奏柱状图。
 > ②是客户最认的形式（"表格形式最好"），源自品牌方/代理侧真实在用的「全案时间表」工作表。
 >
-> **活代码母版：同目录 `timeline-gantt.html`——双击打开即可看到四个模块全渲染，含 tokens 与 tbody 生成脚本，复制粘贴即用。**
+> **活代码：`templates/immersive-bay/`（index.html 的 `#launch` / `.gwrap` / `#tl2` / `#rhythmBars`，app.js 的 `GANTT_ROWS` + `renderGantt` + `renderRhythm`）。**
 
 ---
 
