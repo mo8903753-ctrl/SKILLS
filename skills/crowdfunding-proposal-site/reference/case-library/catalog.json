@@ -1,0 +1,1928 @@
+{
+  "schema_version": 1,
+  "source_document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+  "source_note": "User-provided 2026 company introduction; public project links verify identity, not agency attribution or all amounts.",
+  "historical_conversion": {
+    "JPY_per_USD": 160,
+    "TWD_per_USD": 32
+  },
+  "cases": [
+    {
+      "id": "rokid-glasses-us",
+      "product": "rokid-glasses",
+      "name": "Rokid · Rokid Glasses",
+      "category": "AI/AR 智能眼镜",
+      "tags": [
+        "XR眼镜",
+        "AI硬件",
+        "穿戴"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/rokid-glasses.jpg",
+      "amount_display": "$3,633,205",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 58,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/rokid/new-rokid-glassesworlds-lighest-full-function-ai-glasses",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/rokid/new-rokid-glassesworlds-lighest-full-function-ai-glasses"
+    },
+    {
+      "id": "allpowers-monster-x-us",
+      "product": "allpowers-monster-x",
+      "name": "ALLPOWERS · Monster X",
+      "category": "大容量户外电源",
+      "tags": [
+        "储能",
+        "户外"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/allpowers-monster-x.jpg",
+      "amount_display": "$2,051,250",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 58,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "walkingpad-r1-pro-us",
+      "product": "walkingpad-r1-pro",
+      "name": "WalkingPad · R1 Pro",
+      "category": "折叠跑步机",
+      "tags": [
+        "健身",
+        "家居"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/walkingpad-r1-pro.jpg",
+      "amount_display": "$1,522,699",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 58,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "Forbes/Digital Trends/Gear Patrol 报道",
+      "project_url": "https://www.indiegogo.com/en/projects/xiaomicrowdfunding/walkingpad-r1-pro-the-best-gym-alternative",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.indiegogo.com/en/projects/xiaomicrowdfunding/walkingpad-r1-pro-the-best-gym-alternative"
+    },
+    {
+      "id": "dnsys-x1-us",
+      "product": "dnsys-x1",
+      "name": "dnsys · X1",
+      "category": "髋部助力外骨骼",
+      "tags": [
+        "健身",
+        "户外",
+        "穿戴"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/dnsys-x1.jpg",
+      "amount_display": "$1,188,887",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 58,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/dnsys/dnsys-x1-exoskeleton-unleash-superhuman-athletic-potential",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/dnsys/dnsys-x1-exoskeleton-unleash-superhuman-athletic-potential"
+    },
+    {
+      "id": "rokid-ar-lite-us",
+      "product": "rokid-ar-lite",
+      "name": "Rokid · AR lite",
+      "category": "AR 空间计算眼镜",
+      "tags": [
+        "XR眼镜",
+        "穿戴"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/rokid-ar-lite.jpg",
+      "amount_display": "$1,158,200",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 58,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/rokid/rokid-ar-lite",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/rokid/rokid-ar-lite"
+    },
+    {
+      "id": "irmo-m1-us",
+      "product": "irmo-m1",
+      "name": "IRMO · M1 Exoskeleton",
+      "category": "髋部外骨骼",
+      "tags": [
+        "健身",
+        "户外",
+        "穿戴"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/irmo-m1.jpg",
+      "amount_display": "$1,112,581",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 59,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/irmoglobal/irmo-m1-worlds-first-vision-navigate-exoskeleton",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/irmoglobal/irmo-m1-worlds-first-vision-navigate-exoskeleton"
+    },
+    {
+      "id": "feiyu-pocket3-us",
+      "product": "feiyu-pocket3",
+      "name": "FeiyuTech · Pocket 3",
+      "category": "分体式口袋云台相机",
+      "tags": [
+        "影像",
+        "创作者"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/feiyu-pocket3.jpg",
+      "amount_display": "$1,090,214",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 59,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/feiyutech/feiyu-pocket-3-compact-and-versatile-3-axis-gimbal-camera",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/feiyutech/feiyu-pocket-3-compact-and-versatile-3-axis-gimbal-camera"
+    },
+    {
+      "id": "leoch-powerstation-us",
+      "product": "leoch-powerstation",
+      "name": "LEOCH · Leoch",
+      "category": "户外储能电源",
+      "tags": [
+        "储能",
+        "户外"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/leoch-powerstation.jpg",
+      "amount_display": "$1,059,294",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 59,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.indiegogo.com/projects/leoch-the-next-generation-battery-power-station",
+      "link_status": "candidate",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.indiegogo.com/projects/leoch-the-next-generation-battery-power-station"
+    },
+    {
+      "id": "mokacam-moka4k-us",
+      "product": "mokacam-moka4k",
+      "name": "Mokacam · Moka 4K",
+      "category": "4K 运动相机",
+      "tags": [
+        "影像"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/mokacam-moka4k.jpg",
+      "amount_display": "$1,053,550",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 59,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.indiegogo.com/en/projects/mokacam/the-world-s-smallest-4k-camera-mokacam",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.indiegogo.com/en/projects/mokacam/the-world-s-smallest-4k-camera-mokacam"
+    },
+    {
+      "id": "inmo-go3-us",
+      "product": "inmo-go3",
+      "name": "INMO · GO3",
+      "category": "AI 智能眼镜",
+      "tags": [
+        "XR眼镜",
+        "AI硬件",
+        "穿戴"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/inmo-go3.jpg",
+      "amount_display": "$1,035,332",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 59,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/inmo-go3-ai-glasses/everyday-wear-ai-glasses",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/inmo-go3-ai-glasses/everyday-wear-ai-glasses"
+    },
+    {
+      "id": "hengbot-sirius-us",
+      "product": "hengbot-sirius",
+      "name": "HENGBOT · Sirius",
+      "category": "桌面机器狗",
+      "tags": [
+        "机器人",
+        "AI陪伴"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/hengbot-sirius.jpg",
+      "amount_display": "$880,612",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 60,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "hyperdisk-us",
+      "product": "hyperdisk",
+      "name": "HYPER DISK · Hyperdisk",
+      "category": "便携高速固态存储",
+      "tags": [
+        "存储计算",
+        "创作者"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/hyperdisk.jpg",
+      "amount_display": "$782,343",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 60,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/hyperdisk/hyperdisk-probably-the-smallest-and-fastest-portable-ssd",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/hyperdisk/hyperdisk-probably-the-smallest-and-fastest-portable-ssd"
+    },
+    {
+      "id": "3dmakerpro-whale-us",
+      "product": "3dmakerpro-whale",
+      "name": "3DMakerpro · Whale",
+      "category": "3D 扫描仪",
+      "tags": [
+        "创客制造",
+        "创作者"
+      ],
+      "platform": "Shopify 独立站",
+      "market": "US",
+      "image": "cards/3dmakerpro-whale.jpg",
+      "amount_display": "$752,034",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 60,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "yashica-fx-d-us",
+      "product": "yashica-fx-d",
+      "name": "YASHICA · FX-D",
+      "category": "复古数码相机",
+      "tags": [
+        "影像"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/yashica-fx-d.jpg",
+      "amount_display": "$745,175",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 60,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/1940283777/yashica-fx-d-camera-blending-film-aesthetics-and-digital-ease",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/1940283777/yashica-fx-d-camera-blending-film-aesthetics-and-digital-ease"
+    },
+    {
+      "id": "petkit-purobot-ultra-us",
+      "product": "petkit-purobot-ultra",
+      "name": "PETKIT · PUROBOT ULTRA",
+      "category": "智能猫砂盆",
+      "tags": [
+        "宠物",
+        "家居"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/petkit-purobot-ultra.jpg",
+      "amount_display": "$618,706",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 60,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "hoorii-clawstage-us",
+      "product": "hoorii-clawstage",
+      "name": "HooRii · ClawStage",
+      "category": "AI 桌面全息陪伴",
+      "tags": [
+        "AI陪伴",
+        "AI硬件"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/hoorii-clawstage.jpg",
+      "amount_display": "$608,372",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 61,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/hoorii/hoorii-stage-your-proactive-smart-personalized-companion-hub",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/hoorii/hoorii-stage-your-proactive-smart-personalized-companion-hub"
+    },
+    {
+      "id": "allpowers-monster-pro-us",
+      "product": "allpowers-monster-pro",
+      "name": "ALLPOWERS · Monster Pro",
+      "category": "户外电源",
+      "tags": [
+        "储能",
+        "户外"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/allpowers-monster-pro.jpg",
+      "amount_display": "$578,882",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 61,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "nagualep-us",
+      "product": "nagualep",
+      "name": "NAGUALEP · Nagualep",
+      "category": "厨余垃圾处理机",
+      "tags": [
+        "家居"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/nagualep.jpg",
+      "amount_display": "$493,601",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 61,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "Indiegogo 年度最佳文案奖 2021",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "mokacam-alpha4k-us",
+      "product": "mokacam-alpha4k",
+      "name": "Mokacam · Alpha 4K",
+      "category": "运动相机",
+      "tags": [
+        "影像"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/mokacam-alpha4k.jpg",
+      "amount_display": "$468,638",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 61,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "feiyu-scorp-mini-us",
+      "product": "feiyu-scorp-mini",
+      "name": "FeiyuTech · Scorp mini",
+      "category": "相机稳定器",
+      "tags": [
+        "影像",
+        "创作者"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/feiyu-scorp-mini.jpg",
+      "amount_display": "$460,318",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 61,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/feiyutech/feiyutech-scorp-mini-4-in-1-gimbal-to-meet-all-your-needs",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/feiyutech/feiyutech-scorp-mini-4-in-1-gimbal-to-meet-all-your-needs"
+    },
+    {
+      "id": "ortur-h20-us",
+      "product": "ortur-h20",
+      "name": "ORTUR · H20",
+      "category": "桌面激光雕刻机",
+      "tags": [
+        "创客制造",
+        "创作者"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/ortur-h20.jpg",
+      "amount_display": "$441,605",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 62,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.kickstarter.com/projects/ortur/ortur-h20-the-worlds-most-powerful-laser-engraver",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/ortur/ortur-h20-the-worlds-most-powerful-laser-engraver"
+    },
+    {
+      "id": "inkjoy-frame-us",
+      "product": "inkjoy-frame",
+      "name": "InkJoy · InkJoy Frame",
+      "category": "彩色电子墨水画框",
+      "tags": [
+        "家居",
+        "AI硬件"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/inkjoy-frame.jpg",
+      "amount_display": "$413,574",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 62,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "tecno-pocket-go-us",
+      "product": "tecno-pocket-go",
+      "name": "TECNO · Pocket GO",
+      "category": "AR 眼镜 + 掌机 PC",
+      "tags": [
+        "XR眼镜",
+        "存储计算",
+        "游戏"
+      ],
+      "platform": "Kickstarter",
+      "market": "US",
+      "image": "cards/tecno-pocket-go.jpg",
+      "amount_display": "$400,288",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 62,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "ETA PRIME / ShortCircuit 评测；IFA 2024 Best of",
+      "project_url": "https://www.kickstarter.com/projects/tecno-pocketgo/worlds-first-ar-windows-11-gaming-handheld-computer",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.kickstarter.com/projects/tecno-pocketgo/worlds-first-ar-windows-11-gaming-handheld-computer"
+    },
+    {
+      "id": "litheli-w1-pro-us",
+      "product": "litheli-w1-pro",
+      "name": "Litheli · W1 PRO",
+      "category": "电动露营推车",
+      "tags": [
+        "户外"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/litheli-w1-pro.jpg",
+      "amount_display": "$373,109",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 62,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "Indiegogo 年度最佳文案奖 2023",
+      "project_url": "https://www.indiegogo.com/en/projects/litheli/litheli-electric-utility-wagon-with-power-bank",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.indiegogo.com/en/projects/litheli/litheli-electric-utility-wagon-with-power-bank"
+    },
+    {
+      "id": "smartmi-p1-us",
+      "product": "smartmi-p1",
+      "name": "smartmi · P1",
+      "category": "空气净化器",
+      "tags": [
+        "家居"
+      ],
+      "platform": "Indiegogo",
+      "market": "US",
+      "image": "cards/smartmi-p1.jpg",
+      "amount_display": "$354,084",
+      "original_amount": "—",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 62,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.indiegogo.com/en/projects/smartmi-25638554/smartmi-p1-purifier-cleaner-freshen-air-in-10-mins",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.indiegogo.com/en/projects/smartmi-25638554/smartmi-p1-purifier-cleaner-freshen-air-in-10-mins"
+    },
+    {
+      "id": "ugreen-nasync-jp",
+      "product": "ugreen-nasync",
+      "name": "UGREEN · NASync",
+      "category": "多盘位私有云 NAS",
+      "tags": [
+        "存储计算",
+        "AI硬件"
+      ],
+      "platform": "GREEN FUNDING",
+      "market": "JP",
+      "image": "cards/ugreen-nasync.jpg",
+      "amount_display": "$6.39M",
+      "original_amount": "¥1,022,589,620",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 63,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "日本 Funded 历史纪录；韩国 Wadiz 科技类第 1（₩2,386,783,550）",
+      "project_url": "https://greenfunding.jp/focal/projects/8650",
+      "link_status": "page_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://greenfunding.jp/focal/projects/8650",
+      "page_title": "大容量、安全、私だけのクラウド。 デジタルライフをアップデート！UGREEN NASyncシリーズがいよいよ日本上陸！ | FOCAL GADGET"
+    },
+    {
+      "id": "allpowers-monster-x-jp",
+      "product": "allpowers-monster-x",
+      "name": "ALLPOWERS · Monster X",
+      "category": "大容量户外电源",
+      "tags": [
+        "储能",
+        "户外"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/allpowers-monster-x.jpg",
+      "amount_display": "$2.33M",
+      "original_amount": "¥373,325,800",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 63,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "日本 Funded 历史纪录",
+      "project_url": "https://www.makuake.com/project/monster_x/",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/monster_x/"
+    },
+    {
+      "id": "code27-jp",
+      "product": "code27",
+      "name": "CODE27 · CODE27",
+      "category": "AI 桌面全息陪伴",
+      "tags": [
+        "AI陪伴",
+        "AI硬件"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/code27.jpg",
+      "amount_display": "$1.35M",
+      "original_amount": "¥215,524,600",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 63,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/code27",
+      "link_status": "page_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/code27",
+      "page_title": "北米で大ヒット！共に暮らす「AIパートナー」、推しが会話と記憶で進化し続ける｜マクアケ - アタラシイものや体験の応援購入サービス"
+    },
+    {
+      "id": "hoverair-x1-smart-jp",
+      "product": "hoverair-x1-smart",
+      "name": "HOVERAir · X1 SMART",
+      "category": "AI 跟拍飞行相机",
+      "tags": [
+        "影像",
+        "AI硬件",
+        "创作者"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/hoverair-x1-smart.jpg",
+      "amount_display": "$1.33M",
+      "original_amount": "¥212,410,602",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 63,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "Makuake 相机类历史销售额第 1；Makuake Of The Year 2024",
+      "project_url": "https://www.makuake.com/project/hover/",
+      "link_status": "page_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/hover/",
+      "page_title": "シネマティックな瞬間をすべて記録してくれる『HOVERAir』AI飛行カメラ｜マクアケ - アタラシイものや体験の応援購入サービス"
+    },
+    {
+      "id": "tcl-note-a1-jp",
+      "product": "tcl-note-a1",
+      "name": "TCL · Note A1",
+      "category": "AI 电子纸笔记本",
+      "tags": [
+        "AI办公",
+        "AI硬件"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/tcl-note-a1.jpg",
+      "amount_display": "$1.18M",
+      "original_amount": "¥188,052,430",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 63,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/tclnotea1/",
+      "link_status": "page_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/tclnotea1/",
+      "page_title": "紙の質感に、AIの知性を。スマートノートTCL Note A1 NXTPAPER｜マクアケ - アタラシイものや体験の応援購入サービス"
+    },
+    {
+      "id": "neabot-nomo-q11-jp",
+      "product": "neabot-nomo-q11",
+      "name": "neabot · NoMo Q11",
+      "category": "扫地机器人",
+      "tags": [
+        "清洁家电",
+        "家居"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/neabot-nomo-q11.jpg",
+      "amount_display": "$1.15M",
+      "original_amount": "¥183,885,780",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 64,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "iflytek-aiwatch-jp",
+      "product": "iflytek-aiwatch",
+      "name": "iFLYTEK · AIWATCH",
+      "category": "AI 智能手表",
+      "tags": [
+        "穿戴",
+        "AI硬件",
+        "AI办公"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/iflytek-aiwatch.jpg",
+      "amount_display": "$1.07M",
+      "original_amount": "¥170,927,660",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 64,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "Makuake 智能穿戴历史销售额第 1",
+      "project_url": "https://www.makuake.com/project/iflytek_aiwtch/",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/iflytek_aiwtch/"
+    },
+    {
+      "id": "halliday-ai-glass-jp",
+      "product": "halliday-ai-glass",
+      "name": "Halliday · AI Glass",
+      "category": "AI 智能眼镜",
+      "tags": [
+        "XR眼镜",
+        "AI硬件",
+        "穿戴"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/halliday-ai-glass.jpg",
+      "amount_display": "$1.01M",
+      "original_amount": "¥161,308,420",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 64,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "Makuake 智能眼镜历史销售额第 1",
+      "project_url": "https://www.makuake.com/project/halliday/",
+      "link_status": "candidate",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/halliday/"
+    },
+    {
+      "id": "iflytek-ainote-air2-jp",
+      "product": "iflytek-ainote-air2",
+      "name": "iFLYTEK · AINOTE Air2",
+      "category": "AI 办公电子纸",
+      "tags": [
+        "AI办公",
+        "AI硬件"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/iflytek-ainote-air2.jpg",
+      "amount_display": "$810K",
+      "original_amount": "¥129,557,650",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 64,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/ainote_air2/",
+      "link_status": "page_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/ainote_air2/",
+      "page_title": "音声文字起こし×手書きノート！アイデアを逃さないiFLYTEK AINOTE｜マクアケ - アタラシイものや体験の応援購入サービス"
+    },
+    {
+      "id": "hidock-p1-jp",
+      "product": "hidock-p1",
+      "name": "HiDock · P1",
+      "category": "AI 录音与会议纪要",
+      "tags": [
+        "AI办公",
+        "AI硬件"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/hidock-p1.jpg",
+      "amount_display": "$758K",
+      "original_amount": "¥121,346,380",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 64,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/hidock_p1/",
+      "link_status": "page_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/hidock_p1/",
+      "page_title": "ChatGPT連携で要約も！ワイヤレスイヤホンをつけたまま録音できるHiDock｜マクアケ - アタラシイものや体験の応援購入サービス"
+    },
+    {
+      "id": "makera-carvera-air-jp",
+      "product": "makera-carvera-air",
+      "name": "MAKERA · Carvera Air",
+      "category": "桌面 CNC",
+      "tags": [
+        "创客制造",
+        "创作者"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/makera-carvera-air.jpg",
+      "amount_display": "$582K",
+      "original_amount": "¥93,085,800",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 65,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/carvera_air/",
+      "link_status": "page_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/carvera_air/",
+      "page_title": "プロ品質のモノづくりを自宅で。Carvera Airがあなたの創造力を解き放つ｜マクアケ - アタラシイものや体験の応援購入サービス"
+    },
+    {
+      "id": "feiyu-pocket2s-jp",
+      "product": "feiyu-pocket2s",
+      "name": "FeiyuTech · Pocket 2S",
+      "category": "口袋云台相机",
+      "tags": [
+        "影像",
+        "创作者"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/feiyu-pocket2s.jpg",
+      "amount_display": "$518K",
+      "original_amount": "¥82,892,723",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 65,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/feiyutech/",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/feiyutech/"
+    },
+    {
+      "id": "looi-jp",
+      "product": "looi",
+      "name": "LOOI Robot · LOOI",
+      "category": "AI 桌面机器人",
+      "tags": [
+        "机器人",
+        "AI陪伴",
+        "AI硬件"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/looi.jpg",
+      "amount_display": "$495K",
+      "original_amount": "¥79,177,200",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 65,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "Makuake 机器人类历史销售额第 1",
+      "project_url": "https://www.makuake.com/project/looirobot/",
+      "link_status": "page_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/looirobot/",
+      "page_title": "スマホにココロをインストール。お喋りで物知りなAIロボット LOOI（ルーイ）｜マクアケ - アタラシイものや体験の応援購入サービス"
+    },
+    {
+      "id": "ropet-lopeto-jp",
+      "product": "ropet-lopeto",
+      "name": "ropet · lopeto",
+      "category": "AI 情感陪伴机器人",
+      "tags": [
+        "机器人",
+        "AI陪伴"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/ropet-lopeto.jpg",
+      "amount_display": "$475K",
+      "original_amount": "¥76,075,420",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 65,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "creality-crscan-lizard-jp",
+      "product": "creality-crscan-lizard",
+      "name": "CREALITY · CR-Scan Lizard",
+      "category": "3D 扫描仪",
+      "tags": [
+        "创客制造",
+        "创作者"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/creality-crscan-lizard.jpg",
+      "amount_display": "$454K",
+      "original_amount": "¥72,578,940",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 65,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/creality/",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/creality/"
+    },
+    {
+      "id": "mirror-fit-jp",
+      "product": "mirror-fit",
+      "name": "MIRROR FIT · MIRROR FIT",
+      "category": "智能健身镜",
+      "tags": [
+        "健身",
+        "家居"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/mirror-fit.jpg",
+      "amount_display": "$419K",
+      "original_amount": "¥67,016,215",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 66,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/mirrorfit/",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/mirrorfit/"
+    },
+    {
+      "id": "loona-jp",
+      "product": "loona",
+      "name": "KEYi Tech · Loona",
+      "category": "AI 宠物机器人",
+      "tags": [
+        "机器人",
+        "AI陪伴"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/loona.jpg",
+      "amount_display": "$353K",
+      "original_amount": "¥56,466,983",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 66,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/loona/",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/loona/"
+    },
+    {
+      "id": "goovis-g3-max-jp",
+      "product": "goovis-g3-max",
+      "name": "GOOVIS · G3 MAX",
+      "category": "头戴影院",
+      "tags": [
+        "XR眼镜",
+        "影音"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/goovis-g3-max.jpg",
+      "amount_display": "$351K",
+      "original_amount": "¥56,089,000",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 66,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "litheli-frozenpack-jp",
+      "product": "litheli-frozenpack",
+      "name": "Litheli · FrozenPack",
+      "category": "电池供电车载冰箱",
+      "tags": [
+        "户外",
+        "储能"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/litheli-frozenpack.jpg",
+      "amount_display": "$335K",
+      "original_amount": "¥53,567,480",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 66,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/frozenpack/",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/frozenpack/"
+    },
+    {
+      "id": "litheli-frozenpack-wild-jp",
+      "product": "litheli-frozenpack-wild",
+      "name": "Litheli · FrozenPack Wild",
+      "category": "背负式电动冰箱",
+      "tags": [
+        "户外",
+        "储能"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/litheli-frozenpack-wild.jpg",
+      "amount_display": "$285K",
+      "original_amount": "¥45,622,040",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 66,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "dreame-x30-ultra-jp",
+      "product": "dreame-x30-ultra",
+      "name": "Dreame · X30 ULTRA",
+      "category": "扫地机器人",
+      "tags": [
+        "清洁家电",
+        "家居"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/dreame-x30-ultra.jpg",
+      "amount_display": "$268K",
+      "original_amount": "¥42,902,408",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 67,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "udcap-vr-glove-jp",
+      "product": "udcap-vr-glove",
+      "name": "UDCAP · VR Glove",
+      "category": "VR 动捕手套",
+      "tags": [
+        "XR眼镜",
+        "游戏"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/udcap-vr-glove.jpg",
+      "amount_display": "$261K",
+      "original_amount": "¥41,798,251",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 67,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/udcap/",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/udcap/"
+    },
+    {
+      "id": "3dmakerpro-whale-jp",
+      "product": "3dmakerpro-whale",
+      "name": "3DMakerpro · Whale",
+      "category": "3D 扫描仪",
+      "tags": [
+        "创客制造",
+        "创作者"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/3dmakerpro-whale.jpg",
+      "amount_display": "$259K",
+      "original_amount": "¥41,510,240",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 67,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "nagualep-jp",
+      "product": "nagualep",
+      "name": "NAGUALEP · Nagualep",
+      "category": "厨余垃圾处理机",
+      "tags": [
+        "家居"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/nagualep.jpg",
+      "amount_display": "$259K",
+      "original_amount": "¥41,463,330",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 67,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.makuake.com/project/nagualep/",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.makuake.com/project/nagualep/"
+    },
+    {
+      "id": "segway-cube1000-jp",
+      "product": "segway-cube1000",
+      "name": "Segway-Ninebot · Cube 1000",
+      "category": "户外储能",
+      "tags": [
+        "储能",
+        "户外"
+      ],
+      "platform": "Makuake",
+      "market": "JP",
+      "image": "cards/segway-cube1000.jpg",
+      "amount_display": "$255K",
+      "original_amount": "¥40,771,920",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 67,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "东京线下媒体实机体验会",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "ecovacs-deebot-x1-tw",
+      "product": "ecovacs-deebot-x1",
+      "name": "ECOVACS · DEEBOT X1",
+      "category": "扫地机器人",
+      "tags": [
+        "清洁家电",
+        "家居"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/ecovacs-deebot-x1.jpg",
+      "amount_display": "$3.53M",
+      "original_amount": "NT$112,885,672",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 68,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "2022 台湾募资金额第 1",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "ecovacs-deebot-t8-tw",
+      "product": "ecovacs-deebot-t8",
+      "name": "ECOVACS · DEEBOT T8",
+      "category": "扫地机器人",
+      "tags": [
+        "清洁家电",
+        "家居"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/ecovacs-deebot-t8.jpg",
+      "amount_display": "$1.66M",
+      "original_amount": "NT$53,120,464",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 68,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "2020 台湾募资金额第 1",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "hoverair-x1-smart-tw",
+      "product": "hoverair-x1-smart",
+      "name": "HOVERAir · X1 SMART",
+      "category": "AI 跟拍飞行相机",
+      "tags": [
+        "影像",
+        "AI硬件",
+        "创作者"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/hoverair-x1-smart.jpg",
+      "amount_display": "$1.05M",
+      "original_amount": "NT$33,536,825",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 68,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "petsnowy-snow-plus-tw",
+      "product": "petsnowy-snow-plus",
+      "name": "PetSnowy · SNOW+",
+      "category": "智能猫砂盆",
+      "tags": [
+        "宠物",
+        "家居"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/petsnowy-snow-plus.jpg",
+      "amount_display": "$986K",
+      "original_amount": "NT$31,557,152",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 68,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "台湾宠物类募资金额第 1",
+      "project_url": "https://www.flyingv.cc/projects/34163",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.flyingv.cc/projects/34163"
+    },
+    {
+      "id": "mokacam-alpha3-tw",
+      "product": "mokacam-alpha3",
+      "name": "Mokacam · Alpha3",
+      "category": "运动相机",
+      "tags": [
+        "影像"
+      ],
+      "platform": "嘖嘖",
+      "market": "TW",
+      "image": "cards/mokacam-alpha3.jpg",
+      "amount_display": "$777K",
+      "original_amount": "NT$24,870,280",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 68,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "furbulous-box-tw",
+      "product": "furbulous-box",
+      "name": "FURBULOUS · Furbulous BOX",
+      "category": "智能猫砂盆",
+      "tags": [
+        "宠物",
+        "家居"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/furbulous-box.jpg",
+      "amount_display": "$628K",
+      "original_amount": "NT$20,103,845",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 69,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": "https://www.flyingv.cc/projects/33473",
+      "link_status": "search_match",
+      "checked_at": "2026-11-13",
+      "link_source": "https://www.flyingv.cc/projects/33473"
+    },
+    {
+      "id": "neabot-nomo-q11-tw",
+      "product": "neabot-nomo-q11",
+      "name": "neabot · NoMo Q11",
+      "category": "扫地机器人",
+      "tags": [
+        "清洁家电",
+        "家居"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/neabot-nomo-q11.jpg",
+      "amount_display": "$411K",
+      "original_amount": "NT$13,161,170",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 69,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "feiyu-pocket3-tw",
+      "product": "feiyu-pocket3",
+      "name": "FeiyuTech · Pocket 3",
+      "category": "分体式口袋云台相机",
+      "tags": [
+        "影像",
+        "创作者"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/feiyu-pocket3.jpg",
+      "amount_display": "$328K",
+      "original_amount": "NT$10,500,351",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 69,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "makera-carvera-air-tw",
+      "product": "makera-carvera-air",
+      "name": "MAKERA · Carvera Air",
+      "category": "桌面 CNC",
+      "tags": [
+        "创客制造",
+        "创作者"
+      ],
+      "platform": "嘖嘖",
+      "market": "TW",
+      "image": "cards/makera-carvera-air.jpg",
+      "amount_display": "$318K",
+      "original_amount": "NT$10,174,040",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 69,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "iflytek-ainote-air2-tw",
+      "product": "iflytek-ainote-air2",
+      "name": "iFLYTEK · AINOTE Air 2",
+      "category": "AI 办公电子纸",
+      "tags": [
+        "AI办公",
+        "AI硬件"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/iflytek-ainote-air2.jpg",
+      "amount_display": "$254K",
+      "original_amount": "NT$8,140,628",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 69,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "lava-genie-tw",
+      "product": "lava-genie",
+      "name": "LAVA MUSIC · GENIE",
+      "category": "智能吉他",
+      "tags": [
+        "乐器",
+        "创作者"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/lava-genie.jpg",
+      "amount_display": "$249K",
+      "original_amount": "NT$7,983,471",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 70,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "lalahome-realscooper-tw",
+      "product": "lalahome-realscooper",
+      "name": "LALAHOME · RealScooper",
+      "category": "智能猫砂盆",
+      "tags": [
+        "宠物",
+        "家居"
+      ],
+      "platform": "嘖嘖",
+      "market": "TW",
+      "image": "cards/lalahome-realscooper.jpg",
+      "amount_display": "$223K",
+      "original_amount": "NT$7,145,044",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 70,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "ecovacs-n8-tw",
+      "product": "ecovacs-n8",
+      "name": "ECOVACS · ECOVACS N8",
+      "category": "扫地机器人",
+      "tags": [
+        "清洁家电",
+        "家居"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/ecovacs-n8.jpg",
+      "amount_display": "$165K",
+      "original_amount": "NT$5,293,366",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 70,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "creality-crscan-lizard-tw",
+      "product": "creality-crscan-lizard",
+      "name": "CREALITY · CR-Scan Lizard",
+      "category": "3D 扫描仪",
+      "tags": [
+        "创客制造",
+        "创作者"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/creality-crscan-lizard.jpg",
+      "amount_display": "$148K",
+      "original_amount": "NT$4,725,000",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 70,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    },
+    {
+      "id": "lava-me4-tw",
+      "product": "lava-me4",
+      "name": "LAVA MUSIC · LAVA ME 4",
+      "category": "智能吉他",
+      "tags": [
+        "乐器",
+        "创作者"
+      ],
+      "platform": "flyingV",
+      "market": "TW",
+      "image": "cards/lava-me4.jpg",
+      "amount_display": "$130K",
+      "original_amount": "NT$4,156,663",
+      "amount_source": {
+        "document": "(CN)MadSpace公司介绍2026_compressed (1).pdf",
+        "page": 70,
+        "kind": "company_material_snapshot"
+      },
+      "historic_badge": "",
+      "project_url": null,
+      "link_status": "needs_link_verification",
+      "checked_at": null,
+      "link_source": null
+    }
+  ],
+  "resources": [
+    {
+      "id": "platform-partners",
+      "image": "resources/platform-partners.jpg",
+      "source_page": 5,
+      "category": "platform",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "pr-walkingpad",
+      "image": "resources/pr-walkingpad.jpg",
+      "source_page": 18,
+      "category": "pr",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "pr-ar-treadmill",
+      "image": "resources/pr-ar-treadmill.jpg",
+      "source_page": 19,
+      "category": "pr",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "pr-cnet-fox",
+      "image": "resources/pr-cnet-fox.jpg",
+      "source_page": 20,
+      "category": "pr",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "pr-tecno",
+      "image": "resources/pr-tecno.jpg",
+      "source_page": 21,
+      "category": "pr",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-wall",
+      "image": "resources/kol-wall.jpg",
+      "source_page": 22,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-etaprime",
+      "image": "resources/kol-etaprime.jpg",
+      "source_page": 23,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-shortcircuit-ltt",
+      "image": "resources/kol-shortcircuit-ltt.jpg",
+      "source_page": 24,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-us-reviews",
+      "image": "resources/kol-us-reviews.jpg",
+      "source_page": 25,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-selfsufficientme",
+      "image": "resources/kol-selfsufficientme.jpg",
+      "source_page": 26,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-arthur-r",
+      "image": "resources/kol-arthur-r.jpg",
+      "source_page": 27,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-mame-jp",
+      "image": "resources/kol-mame-jp.jpg",
+      "source_page": 28,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-us-grid-1",
+      "image": "resources/kol-us-grid-1.jpg",
+      "source_page": 29,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-us-grid-2",
+      "image": "resources/kol-us-grid-2.jpg",
+      "source_page": 30,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-jp-grid",
+      "image": "resources/kol-jp-grid.jpg",
+      "source_page": 31,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "kol-tw-grid",
+      "image": "resources/kol-tw-grid.jpg",
+      "source_page": 32,
+      "category": "kol",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "celebrity",
+      "image": "resources/celebrity.jpg",
+      "source_page": 33,
+      "category": "celebrity",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "ad-creative-1",
+      "image": "resources/ad-creative-1.jpg",
+      "source_page": 35,
+      "category": "ad",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "ad-creative-2",
+      "image": "resources/ad-creative-2.jpg",
+      "source_page": 36,
+      "category": "ad",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "landing-page-1",
+      "image": "resources/landing-page-1.jpg",
+      "source_page": 37,
+      "category": "landing",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "sns",
+      "image": "resources/sns.jpg",
+      "source_page": 40,
+      "category": "sns",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "edm",
+      "image": "resources/edm.jpg",
+      "source_page": 41,
+      "category": "edm",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-pepcom",
+      "image": "resources/offline-pepcom.jpg",
+      "source_page": 45,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-rokid-times-square",
+      "image": "resources/offline-rokid-times-square.jpg",
+      "source_page": 47,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-pet-ny-ces",
+      "image": "resources/offline-pet-ny-ces.jpg",
+      "source_page": 49,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-tokyo-isetan-feiyu-creality",
+      "image": "resources/offline-tokyo-isetan-feiyu-creality.jpg",
+      "source_page": 50,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-segway-tokyo-litheli-tv",
+      "image": "resources/offline-segway-tokyo-litheli-tv.jpg",
+      "source_page": 51,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-nojima",
+      "image": "resources/offline-nojima.jpg",
+      "source_page": 52,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-tsutaya",
+      "image": "resources/offline-tsutaya.jpg",
+      "source_page": 53,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-yodobashi",
+      "image": "resources/offline-yodobashi.jpg",
+      "source_page": 54,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-tw-ecovacs-segway",
+      "image": "resources/offline-tw-ecovacs-segway.jpg",
+      "source_page": 55,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "offline-tw-hoverair-petsnowy",
+      "image": "resources/offline-tw-hoverair-petsnowy.jpg",
+      "source_page": 56,
+      "category": "offline",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "brand-wall",
+      "image": "resources/brand-wall.jpg",
+      "source_page": 72,
+      "category": "brand",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "testimonials",
+      "image": "resources/testimonials.jpg",
+      "source_page": 73,
+      "category": "testimonials",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "platform-kickstarter-visit",
+      "image": "resources/platform-kickstarter-visit.jpg",
+      "source_page": 76,
+      "category": "platform",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "platform-igg-award",
+      "image": "resources/platform-igg-award.jpg",
+      "source_page": 77,
+      "category": "platform",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "platform-makuake-talk",
+      "image": "resources/platform-makuake-talk.jpg",
+      "source_page": 78,
+      "category": "platform",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "platform-makuake-expo",
+      "image": "resources/platform-makuake-expo.jpg",
+      "source_page": 79,
+      "category": "platform",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "platform-makuake-award",
+      "image": "resources/platform-makuake-award.jpg",
+      "source_page": 80,
+      "category": "platform",
+      "evidence": "company_material_snapshot"
+    },
+    {
+      "id": "platform-flyingv-visit",
+      "image": "resources/platform-flyingv-visit.jpg",
+      "source_page": 81,
+      "category": "platform",
+      "evidence": "company_material_snapshot"
+    }
+  ]
+}

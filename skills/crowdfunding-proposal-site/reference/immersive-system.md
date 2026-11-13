@@ -98,3 +98,6 @@
 
 ## 8. 交付
 文件夹 → `git init`（**不要推进外层别的项目仓库**）→ `gh repo create <name> --private --source=. --push` → `vercel deploy --prod --yes` 首发（会自动关联仓库）→ 之后 push main 即自动部署，部署后 curl 核验线上内容。`.vercelignore` 排除 `演讲稿.md`。
+
+## 内容直达导航补充（2026-11）
+会议跳读采用双层固定 headbar：章节入口与细分内容入口并存。预算、订单来源、广告素材、案例与平台资源分别定位到正文，不经部件转场；手机保留横滑细分按钮和完整目录。正文 `[data-nav][id]` 为唯一配置源，实现见 `section-navigation.md` 及母版 `assets/js/quick-nav.js`。

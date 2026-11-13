@@ -1,6 +1,7 @@
 // Lucy AI Studio · Japan plan v2 — scroll engine, 3D choreography and page motion
 import { createStage } from './stage.js';
 import { NOTES } from './notes.js';
+import { initQuickNav } from './quick-nav.js';
 
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 const gsap = window.gsap, ScrollTrigger = window.ScrollTrigger, SplitText = window.SplitText;
@@ -55,11 +56,12 @@ function measure() {
   });
 }
 const sceneById = id => scenes.find(s => s.el.id === id);
-function goTo(sel) {
-  if (sel === '#hero') return scrollToY(0);
+function goTo(sel, immediate = false) {
+  if (sel === '#hero') return scrollToY(0, immediate || reduced);
   const s = sceneById(sel.slice(1));
-  if (s && s.type === 'drive') return scrollToY(s.start + (s.end - s.start) * 0.64);
-  const el = $(sel); if (el) scrollToY(el.getBoundingClientRect().top + scrollY());
+  if (s && s.type === 'drive') return scrollToY(s.start + (s.end - s.start) * 0.64, immediate || reduced);
+  const el = document.getElementById(sel.slice(1));
+  if (el) scrollToY(Math.max(0, el.getBoundingClientRect().top + scrollY() - ($('#hdr')?.offsetHeight || 0) - 20), immediate || reduced);
 }
 
 /* ------------------------------------------------------------------ */
@@ -438,28 +440,39 @@ $$('[data-roll]').forEach(el => {
 });
 
 // nav
-$$('[data-go]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); closeMenu(); goTo(a.dataset.go); }));
+$$('[data-go]').forEach(a => a.addEventListener('click', e => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; e.preventDefault(); closeMenu(); if (location.hash !== a.dataset.go) history.pushState(null, '', a.dataset.go); goTo(a.dataset.go); }));
 const menu = $('#menu'), menuBtn = $('#menuBtn');
 let menuOpen = false;
 function openMenu() {
   if (menuOpen) return; menuOpen = true; menuBtn.setAttribute('aria-expanded', 'true'); lenis?.stop();
-  gsap.set(menu, { visibility: 'visible' });
-  gsap.to(menu, { clipPath: 'inset(0 0 0% 0)', duration: 0.9, ease: 'expo.inOut' });
-  gsap.fromTo('#menu .mrow', { yPercent: 60, opacity: 0 }, { yPercent: 0, opacity: 1, stagger: 0.06, duration: 0.9, ease: 'expo.out', delay: 0.35 });
-  menuBtn.querySelector('.roll').setAttribute('aria-label', 'CLOSE');
+  gsap.killTweensOf(menu);
+  gsap.set(menu, { visibility: 'visible', clipPath: 'inset(0 0 0% 0)' });
+  gsap.set('#menu .mrow', { yPercent: 0, opacity: 1 });
+  menuBtn.setAttribute('aria-label', '关闭目录');
+  $('#menuClose').focus();
 }
 function closeMenu() {
-  if (!menuOpen) return; menuOpen = false; menuBtn.setAttribute('aria-expanded', 'false'); lenis?.start();
-  gsap.to(menu, { clipPath: 'inset(0 0 100% 0)', duration: 0.8, ease: 'expo.inOut', onComplete: () => gsap.set(menu, { visibility: 'hidden' }) });
+  if (!menuOpen) return; menuBtn.setAttribute('aria-label', '打开目录'); menuOpen = false; menuBtn.setAttribute('aria-expanded', 'false'); lenis?.start();
+  gsap.killTweensOf(menu);
+  gsap.set(menu, { visibility: 'hidden', clipPath: 'inset(0 0 100% 0)' });
 }
 menuBtn.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+$('#menuClose').addEventListener('click', () => { closeMenu(); menuBtn.focus(); });
 $$('[data-open-menu]').forEach(b => b.addEventListener('click', openMenu));
 addEventListener('keydown', e => {
-  if (/input|textarea/i.test(e.target.tagName)) return;
+  if (/input|textarea|select/i.test(e.target.tagName) || e.target.isContentEditable || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (menuOpen && e.key === 'Tab') {
+    const items = [...menu.querySelectorAll('a,button')].filter(el => el.getClientRects().length);
+    const first = items[0], last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
   if (e.key === 'm' || e.key === 'M') { e.preventDefault(); menuOpen ? closeMenu() : openMenu(); }
-  if (e.key === 'Escape') closeMenu();
+  if (e.key === 'Escape') { closeMenu(); menuBtn.focus(); }
   if (/^[1-5]$/.test(e.key)) { closeMenu(); goTo('#d' + e.key); }
 });
+
+const quickNav = initQuickNav({ goTo, closeMenu });
 
 // magnetic pills
 $$('.pill').forEach(b => {
@@ -827,6 +840,7 @@ function finishLoader() {
   document.documentElement.classList.remove('loading');
   lenis?.start();
   setTimeout(heroIn, 350);
+  quickNav.restore();
 }
 
 // model intro lift: apply as an offset on vertical screen shift
@@ -851,7 +865,7 @@ function gotoNote(i) {
     const f = { hero: 0, spin: 0.14, unbox: 0.62, drive: 0.64, outro: 0.72 }[sc.type] ?? 0;
     return scrollToY(sc.start + (sc.end - sc.start) * f, document.hidden);
   }
-  scrollToY(el.getBoundingClientRect().top + scrollY() - innerHeight * 0.12, document.hidden);
+  scrollToY(el.getBoundingClientRect().top + scrollY() - Math.max(innerHeight * 0.12, ($('#hdr')?.offsetHeight || 0) + 20), document.hidden || reduced);
 }
 if (pres) {
   pres.onmessage = e => {

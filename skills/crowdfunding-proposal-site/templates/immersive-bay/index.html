@@ -42,7 +42,7 @@
 
 <header id="hdr">
   <a class="brand roll-host" href="#hero" data-go="#hero"><i></i><span class="roll" data-roll>CEPHALON · LUCY</span></a>
-  <nav aria-label="盘位导航">
+  <nav aria-label="章节导航">
     <a href="#ch1" data-go="#d1" data-drive-nav="1"><span class="roll" data-roll>01 判断</span></a>
     <a href="#ch2" data-go="#d2" data-drive-nav="2"><span class="roll" data-roll>02 市场</span></a>
     <a href="#ch3" data-go="#d3" data-drive-nav="3"><span class="roll" data-roll>03 定价</span></a>
@@ -53,9 +53,11 @@
     <span class="pill dark" aria-hidden="true"><span class="dot"></span>JAPAN · MAKUAKE</span>
     <button class="pill blue" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu"><span class="roll" data-roll>MENU</span></button>
   </div>
+  <div id="quickNav" aria-label="细分内容导航"></div>
 </header>
 
-<div id="menu" role="dialog" aria-modal="true" aria-label="方案目录">
+<div id="menu" role="dialog" aria-modal="true" aria-label="方案目录" data-lenis-prevent>
+  <button id="menuClose" class="pill" type="button" aria-label="关闭目录">关闭 ×</button>
   <div class="mlist">
     <a class="mrow" href="#ch1" data-go="#d1"><span class="n">01</span><span class="t">判断<small>WHY LUCY · 核心判断 / 受众与场景</small></span><span class="s">CH 01—02</span></a>
     <a class="mrow" href="#ch2" data-go="#d2"><span class="n">02</span><span class="t">市场<small>MARKET · 市场与竞争</small></span><span class="s">CH 03</span></a>
@@ -63,8 +65,8 @@
     <a class="mrow" href="#ch4" data-go="#d4"><span class="n">04</span><span class="t">渠道<small>REACH · 页面叙事与渠道 / KOL 与广告</small></span><span class="s">CH 06—07</span></a>
     <a class="mrow" href="#ch5" data-go="#d5"><span class="n">05</span><span class="t">执行<small>EXECUTE · 时间线 / 可行性 / 迈思案例</small></span><span class="s">CH 08—10</span></a>
   </div>
-  <div class="mside">
-    <div><h3>五章方案</h3><p>滚动浏览，或直接点选盘位进入对应章节。</p></div>
+  <div class="mside"><div id="menuTopics" aria-label="全部内容入口"></div>
+    <div><h3>五章方案</h3><p>顶部细分入口可直达预算、订单来源、广告素材和案例；也可按章节浏览。</p></div>
     <div class="keys">M — 打开 / 关闭目录<br>1–5 — 直达对应盘位<br>拖拽 — 旋转主机（首屏与开盘场景）</div>
   </div>
 </div>
@@ -144,7 +146,7 @@
 </section>
 
 <section id="ch1" class="chapter" data-group="1">
- <div class="wrap" id="c01">
+ <div class="wrap" id="c01" data-nav="核心判断">
   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 01</b>01 / Core Judgment</div><h2 class="chname sp">核心判断</h2></div><div class="bignum" aria-hidden="true">01</div></div>
   <p class="lede rv">Lucy 的占位是 <span class="mk">AI Agent 专用计算机</span>：把长期任务、所选本地模型、项目文件和可扩展存储放进同一个常开工作空间，让用户的日常电脑回到用户手里。</p>
   <div class="deck" id="deck" aria-label="核心价值四张卡片">
@@ -188,7 +190,7 @@
   <div class="sticky"><div class="stmt-k">AD DIRECTION 02 · 首屏承诺</div><p class="stmt-t">笔记本合上，<br>任务继续。</p><p class="stmt-s">长任务在 Lucy 上持续运行，用户的日常电脑回到用户手里。</p></div>
  </div>
 
- <div id="c02" class="band" data-theme="ink" style="padding:130px 0 120px">
+ <div id="c02" data-nav="受众场景" class="band" data-theme="ink" style="padding:130px 0 120px">
   <div class="wrap">
    <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 01</b>02 / Audience &amp; Use Cases</div><h2 class="chname sp">受众与场景</h2></div><div class="bignum" aria-hidden="true">02</div></div>
   </div>
@@ -230,7 +232,7 @@
 </section>
 
 <section id="ch2" class="chapter" data-group="2">
- <div class="wrap" id="c03">
+ <div class="wrap" id="c03" data-nav="市场竞品">
   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 02</b>03 / Market &amp; Competition</div><h2 class="chname sp">市场与竞争</h2></div><div class="bignum" aria-hidden="true">03</div></div>
 
   <div class="ladder" id="ladder">
@@ -282,7 +284,7 @@
 </section>
 
 <section id="ch3" class="chapter" data-group="3">
- <div class="wrap" id="c04">
+ <div class="wrap" id="c04" data-nav="定价档位">
   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 03</b>04 / Pricing &amp; Unit Economics</div><h2 class="chname sp">定价与单位经济</h2></div><div class="bignum" aria-hidden="true">04</div></div>
   <p class="lede rv">日本首发 <span class="mk">Pro / Max / Ultra 三款同步上线，主推 Max · 128GB</span>。价格以美国公开档位 1.2 倍为基准，再按日本折扣梯与价格尾数落地；三款的数量比例参考 Kickstarter 各档位的实际销量。</p>
   <div class="tbw mt-lg rv" tabindex="0" role="region" aria-label="美国价格换算表"><table class="dt">
@@ -330,7 +332,7 @@
   <span class="srcline rv">价格依据：<a href="https://www.kickstarter.com/projects/744045479/cephalon-ondevice-ai-with-a-selfevolving-ecosystem/rewards" target="_blank" rel="noreferrer">Kickstarter 原始奖励页</a></span>
  </div>
 
- <div class="wrap band" id="c06" data-theme="ice" style="padding-top:150px;padding-bottom:120px;margin-top:40px">
+ <div class="wrap band" id="c06" data-nav="预算测算" data-theme="ice" style="padding-top:150px;padding-bottom:120px;margin-top:40px">
   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 03</b>05 / Funding &amp; Conversion</div><h2 class="chname sp">资金需求与转化</h2></div><div class="bignum" aria-hidden="true">05</div></div>
   <p class="lede rv">两档目标对应两套独立营销配置。<span class="mk">$500K 先验证达标确定性，$1M 放大平台与广告供给</span>；支持者、来源与档位全部同步扩容。</p>
   <div class="seg mt-lg" id="n-budget" role="group" aria-label="目标预算切换">
@@ -384,7 +386,7 @@
 </section>
 
 <section id="ch4" class="chapter" data-group="4">
- <div class="wrap" id="c05">
+ <div class="wrap" id="c05" data-nav="页面叙事">
   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 04</b>06 / Campaign Narrative &amp; Channels</div><h2 class="chname sp">页面叙事与渠道</h2></div><div class="bignum" aria-hidden="true">06</div></div>
   <p class="lede rv">页面先回答“为什么需要一台 Agent 专用计算机”，再证明本地计算、项目存储与工具链。<span class="mk">先建立工作方式，再给出 Max 价格</span>。</p>
   <div class="band" data-theme="blue">
@@ -397,7 +399,7 @@
    <div class="fstep rv"><span class="fbig">06</span><div class="fk">06 / 行动与风险解除</div><h3>价格、交付、软件状态与常见问题</h3><p>依次呈现 24 小时限定、超早鸟、早鸟与 Makuake 限定，写清首日 1% 券、交付月份、软件清单与实测边界。</p></div>
   </div>
   </div>
-  <h3 class="sub-t sp" data-n="06.A">订单来源：平台流量与上线广告承担 75%</h3>
+  <h3 class="sub-t sp" data-n="06.A" id="order-sources" data-nav="订单来源">订单来源：平台流量与上线广告承担 75%</h3>
   <div class="mixrow mt">
    <div class="donut-svg" id="mixDonut" role="img" aria-label="订单来源饼图：平台 45%，上线广告 30%，预热 10%，其他 13%，PR 与 KOL 2%" data-seg="45:#2B50E0,30:#63B4A6,10:#D4AB5E,13:#8991A3,2:#4E5566"><svg viewBox="0 0 200 200"></svg><div class="dc"><b>136 / 272</b><span>目标支持者</span></div></div>
    <ul class="legend">
@@ -419,7 +421,7 @@
   <div class="sticky"><div class="stmt-k">AD DIRECTION 04 · 数据主权</div><p class="stmt-t">AI、数据<br>本地化。</p><p class="stmt-s">适合本地处理的数据留在本地，在授权范围内调用所选模型与工具。</p></div>
  </div>
 
- <div class="wrap" id="c07" style="margin-top:120px">
+ <div class="wrap" id="c07" data-nav="KOL与广告" style="margin-top:120px">
   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 04</b>07 / KOL &amp; Paid Media</div><h2 class="chname sp">KOL 与广告</h2></div><div class="bignum" aria-hidden="true">07</div></div>
   <p class="lede rv">日本以 YouTube 实机内容建立可信度，以 Meta 90% / Google 10% <span class="mk">投广获取意向用户</span>。固定预算下可以优先考虑内容复用。</p>
   <div class="kmat mt-lg">
@@ -453,7 +455,7 @@
   </div>
  </div>
  <div class="band" data-theme="ink" style="padding:20px 0 110px">
- <div class="wrap"><h3 class="sub-t sp" data-n="07.C">5 组 1:1 广告素材方向</h3></div>
+ <div class="wrap"><h3 class="sub-t sp" data-n="07.C" id="ad-creatives" data-nav="广告素材">5 组 1:1 广告素材方向</h3></div>
  <div class="strip" id="adStrip" data-cursor="DRAG">
   <div class="strip-track">
    <div class="adtile"><img src="assets/img/i01-2c4b71.jpg" width="1024" height="576" loading="lazy" alt="给 AI Agent 一个家"><div class="cap">给 AI Agent 一个家<span>AD 01</span></div></div>
@@ -482,7 +484,7 @@
 </section>
 
 <section id="ch5" class="chapter" data-group="5">
- <div class="wrap" id="c08">
+ <div class="wrap" id="c08" data-nav="执行时间线">
   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 05</b>08 / Timeline &amp; Launch</div><h2 class="chname sp">时间线与上线执行</h2></div><div class="bignum" aria-hidden="true">08</div></div>
   <p class="lede rv">2026 年 12 月 7 日开始 45 天预热，2027 年 1 月 21 日上线。<span class="mk">60 天建立冲刺效率，90 天延长中段转化</span>；两档上线广告总额相同。</p>
   <div class="band" data-theme="blue" style="padding-bottom:60px">
@@ -544,7 +546,7 @@
   </div>
  </div>
 
- <div class="wrap" id="c09" style="margin-top:170px">
+ <div class="wrap" id="c09" data-nav="可行性" style="margin-top:170px">
   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 05</b>09 / Feasibility &amp; Brand Assets</div><h2 class="chname sp">可行性与品牌资产</h2></div><div class="bignum" aria-hidden="true">09</div></div>
   <div class="grid3">
    <div class="card win rv"><div class="num">01 / PRODUCT</div><h3>差异可以演示</h3><p>长任务独立运行、128GB 本地模型、五盘位项目记忆和开放工具链，都能用真实工作流表达，无需依赖概念口号。</p></div>
@@ -578,9 +580,9 @@
   </div>
  </div>
 
- <div class="wrap" id="c10" style="margin-top:170px">
+ <div class="wrap" id="c10" data-nav="相关案例" style="margin-top:170px">
   <div class="ch-head"><div><div class="eyebrow"><b>DRIVE 05</b>10 / MadSpace Cases</div><h2 class="chname sp">迈思相关案例</h2></div><div class="bignum" aria-hidden="true">10</div></div>
-  <p class="lede rv">迈思自 2015 年起运营海外众筹，日本团队 16 人，其中 8 位日籍同事。与 Lucy 关联最紧的是三类经验：<span class="mk">存储与计算设备、AI 硬件、创作者桌面工具</span>，以及 Makuake 高客单项目。</p>
+  <p class="lede rv">以下八个产品案例覆盖与 Lucy 相关的三类经验：<span class="mk">存储与计算设备、AI 硬件、创作者桌面工具</span>，覆盖日本众筹市场。</p>
   <div class="band" data-theme="blue" style="padding:60px 0 20px">
    <div class="cs-stats">
     <div class="rv"><b>300+</b><span>累计众筹项目</span></div>
@@ -591,51 +593,53 @@
   </div>
   <div class="band" data-theme="ink" style="padding:80px 0 40px">
    <h3 class="sub-t sp" data-n="10.A">最直接的同品类参照：<span style="white-space:nowrap">UGREEN NASync</span></h3>
-   <div class="cs-hero rv">
+   <a class="cs-hero cs-link rv" data-case-id="ugreen-nasync-jp" href="https://greenfunding.jp/focal/projects/8650" target="_blank" rel="noopener noreferrer">
     <div class="cs-hero-im"><img src="assets/img/cases/nasync.jpg" alt="UGREEN NASync"></div>
     <div class="cs-hero-tx">
-     <div class="cs-plat makuake">Makuake · Wadiz</div>
-     <div class="cs-hero-amt">$6.39M</div>
-     <p class="cs-hero-k">Makuake 日本 Funded 历史纪录</p>
-     <p>多盘位私有存储设备，在日本与韩国同时创下纪录：韩国 Wadiz 科技类目第 1。Lucy 的五盘位项目存储面向同一批重视数据本地化的专业用户，NASync 积累的受众画像、素材方向和投放人群可以直接复用。</p>
+     <div class="cs-plat">GREEN FUNDING · 日本</div>
+     <div class="cs-hero-amt">约 $6.39M</div>
+     <p class="cs-hero-k">多盘位 NAS 日本众筹案例 ↗</p>
+     <p>NASync 与 Lucy 面向重视数据本地化的专业用户。多盘位存储设备的使用场景、素材方向与受众沟通可为本项目提供参照。</p>
     </div>
-   </div>
+   </a>
   </div>
   <h3 class="sub-t sp" data-n="10.B">存储、AI 硬件与创作者工具案例</h3>
-  <div class="cs-group rv"><div class="cs-gh"><span class="cs-gn">01</span><h4>存储与计算</h4><span class="cs-gs">与 Lucy 同一硬件形态</span></div></div>
-  <div class="cs-grid"><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/hyperdisk.jpg" loading="lazy" alt="HYPER DISK Hyperdisk"></div><div class="cs-tx"><div class="cs-plat kickstarter">Kickstarter</div><h4>Hyperdisk</h4><div class="cs-amt">$782,343</div><p>便携高速存储</p></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/pocket-go.jpg" loading="lazy" alt="TECNO Pocket GO"></div><div class="cs-tx"><div class="cs-plat kickstarter">Kickstarter</div><h4>Pocket GO</h4><div class="cs-amt">$400,288</div><p>AMD Ryzen 平台掌机 PC，ETA PRIME、ShortCircuit 实机评测</p></div></article></div>
-
-  <div class="cs-group rv"><div class="cs-gh"><span class="cs-gn">02</span><h4>AI 硬件</h4><span class="cs-gs">AI 用途讲到可感知</span></div></div>
-  <div class="cs-grid"><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/code27.jpg" loading="lazy" alt="CODE27 CODE27"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>CODE27</h4><div class="cs-amt">$1.35M</div><p>AI 桌面硬件</p></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/notea1.jpg" loading="lazy" alt="TCL Note A1"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>Note A1</h4><div class="cs-amt">$1.18M</div><p>AI 电子纸笔记本</p></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/aiwatch.jpg" loading="lazy" alt="iFLYTEK AIWATCH"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>AIWATCH</h4><div class="cs-amt">$1.07M</div><p>AI 智能手表</p><span class="cs-badge">智能穿戴 历史第 1</span></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/aiglass.jpg" loading="lazy" alt="Halliday AI Glass"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>AI Glass</h4><div class="cs-amt">$1.01M</div><p>AI 智能眼镜</p><span class="cs-badge">智能眼镜 历史第 1</span></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/ainote-air2.jpg" loading="lazy" alt="iFLYTEK AINOTE Air2"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>AINOTE Air2</h4><div class="cs-amt">$810K</div><p>AI 办公笔记本</p></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/hidock-p1.jpg" loading="lazy" alt="HiDock P1"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>P1</h4><div class="cs-amt">$758K</div><p>AI 录音与会议纪要</p></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/looi.jpg" loading="lazy" alt="LOOI Robot LOOI"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>LOOI</h4><div class="cs-amt">$495K</div><p>AI 桌面机器人</p><span class="cs-badge">机器人 历史第 1</span></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/rokid-glasses.jpg" loading="lazy" alt="Rokid Rokid Glasses"></div><div class="cs-tx"><div class="cs-plat kickstarter">Kickstarter</div><h4>Rokid Glasses</h4><div class="cs-amt">$3,633,205</div><p>AI / AR 眼镜</p></div></article></div>
-
-  <div class="cs-group rv"><div class="cs-gh"><span class="cs-gn">03</span><h4>创作者与桌面工具</h4><span class="cs-gs">与 Lucy 的创作用户重合</span></div></div>
-  <div class="cs-grid"><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/x1smart.jpg" loading="lazy" alt="HOVERAir X1 SMART"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>X1 SMART</h4><div class="cs-amt">$1.33M</div><p>AI 跟拍相机，Makuake Of The Year 2024</p><span class="cs-badge">相机 历史第 1</span></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/carvera-air.jpg" loading="lazy" alt="MAKERA Carvera Air"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>Carvera Air</h4><div class="cs-amt">$582K</div><p>桌面 CNC</p></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/pocket2s.jpg" loading="lazy" alt="FeiyuTech Pocket 2S"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>Pocket 2S</h4><div class="cs-amt">$518K</div><p>口袋云台相机</p></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/crscan-lizard.jpg" loading="lazy" alt="CREALITY CR-Scan Lizard"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>CR-Scan Lizard</h4><div class="cs-amt">$454K</div><p>3D 扫描仪</p></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/whale.jpg" loading="lazy" alt="3DMakerpro Whale"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>Whale</h4><div class="cs-amt">$259K</div><p>3D 扫描仪</p></div></article></div>
-
-  <div class="cs-group rv"><div class="cs-gh"><span class="cs-gn">04</span><h4>高客单项目</h4><span class="cs-gs">$2,000+ 客单在日本的成交经验</span></div></div>
-  <div class="cs-grid"><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/monsterx-jp.jpg" loading="lazy" alt="ALLPOWERS Monster X"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>Monster X</h4><div class="cs-amt">$2.33M</div><p>高客单储能</p><span class="cs-badge">日本 Funded 历史纪录</span></div></article><article class="cs-card "><div class="cs-im"><img src="assets/img/cases/cube1000.jpg" loading="lazy" alt="Segway-Ninebot Cube 1000"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>Cube 1000</h4><div class="cs-amt">$255K</div><p>高客单储能</p></div></article></div>
-
-  <span class="srcline rv">来源：迈思创新公司介绍 2026。Makuake 金额按 160 JPY/USD 折算：NASync ¥1,022,589,620 · Monster X ¥373,325,800 · CODE27 ¥215,524,600 · X1 SMART ¥212,410,602 · Note A1 ¥188,052,430 · AIWATCH ¥170,927,660 · AI Glass ¥161,308,420 · AINOTE Air2 ¥129,557,650 · P1 ¥121,346,380 · Carvera Air ¥93,085,800 · Pocket 2S ¥82,892,723 · LOOI ¥79,177,200 · CR-Scan Lizard ¥72,578,940 · Whale ¥41,510,240 · Cube 1000 ¥40,771,920；NASync 韩国 Wadiz ₩2,386,783,550。</span>
+<div class="cs-group rv"><div class="cs-gh"><span class="cs-gn">01</span><h4>AI 办公与本地工作流</h4></div><p>录音、笔记与会议资料对应同一批知识工作者。</p></div><div class="cs-grid">
+<a class="cs-card cs-link" data-case-id="tcl-note-a1-jp" href="https://www.makuake.com/project/tclnotea1/" target="_blank" rel="noopener noreferrer"><div class="cs-im"><img src="assets/img/cases/notea1.jpg" loading="lazy" alt="TCL · Note A1"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>Note A1 ↗</h4><div class="cs-amt">约 $1.18M</div><p>AI 笔记与信息整理，连接办公用户的记录习惯。</p></div></a>
+<a class="cs-card cs-link" data-case-id="iflytek-ainote-air2-jp" href="https://www.makuake.com/project/ainote_air2/" target="_blank" rel="noopener noreferrer"><div class="cs-im"><img src="assets/img/cases/ainote-air2.jpg" loading="lazy" alt="iFLYTEK · AINOTE Air2"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>AINOTE Air2 ↗</h4><div class="cs-amt">约 $810K</div><p>手写与语音资料汇集，关联专业用户的项目工作流。</p></div></a>
+<a class="cs-card cs-link" data-case-id="hidock-p1-jp" href="https://www.makuake.com/project/hidock_p1/" target="_blank" rel="noopener noreferrer"><div class="cs-im"><img src="assets/img/cases/hidock-p1.jpg" loading="lazy" alt="HiDock · P1"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>HiDock P1 ↗</h4><div class="cs-amt">约 $758K</div><p>会议记录与纪要需求，关联团队资料整理和调用。</p></div></a>
+</div>
+<div class="cs-group rv"><div class="cs-gh"><span class="cs-gn">02</span><h4>桌面 AI 与交互体验</h4></div><p>以看得见的设备行为解释抽象 AI 能力。</p></div><div class="cs-grid">
+<a class="cs-card cs-link" data-case-id="code27-jp" href="https://www.makuake.com/project/code27" target="_blank" rel="noopener noreferrer"><div class="cs-im"><img src="assets/img/cases/code27.jpg" loading="lazy" alt="CODE27 · CODE27"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>CODE27 ↗</h4><div class="cs-amt">约 $1.35M</div><p>桌面 AI 硬件，将交互过程转成易理解的视频内容。</p></div></a>
+<a class="cs-card cs-link" data-case-id="looi-jp" href="https://www.makuake.com/project/looirobot/" target="_blank" rel="noopener noreferrer"><div class="cs-im"><img src="assets/img/cases/looi.jpg" loading="lazy" alt="LOOI Robot · LOOI"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>LOOI ↗</h4><div class="cs-amt">约 $495K</div><p>桌面机器人以真实动作建立体验认知，供 AI 演示借鉴。</p></div></a>
+</div>
+<div class="cs-group rv"><div class="cs-gh"><span class="cs-gn">03</span><h4>创作者与高客单硬件</h4></div><p>围绕实机演示、专业场景和产出建立购买理由。</p></div><div class="cs-grid">
+<a class="cs-card cs-link" data-case-id="makera-carvera-air-jp" href="https://www.makuake.com/project/carvera_air/" target="_blank" rel="noopener noreferrer"><div class="cs-im"><img src="assets/img/cases/carvera-air.jpg" loading="lazy" alt="MAKERA · Carvera Air"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>Carvera Air ↗</h4><div class="cs-amt">约 $582K</div><p>桌面 CNC 服务创客用户，参考高客单设备的实测表达。</p></div></a>
+<a class="cs-card cs-link" data-case-id="hoverair-x1-smart-jp" href="https://www.makuake.com/project/hover/" target="_blank" rel="noopener noreferrer"><div class="cs-im"><img src="assets/img/cases/x1smart.jpg" loading="lazy" alt="HOVERAir · X1 SMART"></div><div class="cs-tx"><div class="cs-plat makuake">Makuake</div><h4>X1 SMART ↗</h4><div class="cs-amt">约 $1.33M</div><p>真实拍摄产出与创作者需求，参考任务结果展示。</p></div></a>
+</div>
+  <span class="srcline">来源：迈思创新公司介绍 2026，第 63–66 页；金额按资料快照以 160 JPY/USD 折算，非实时汇率。整卡可打开对应项目页。NASync 日本项目平台为 GREEN FUNDING。</span>
   <div class="band" data-theme="ice" style="padding:30px 0 90px">
-   <h3 class="sub-t sp" data-n="10.C">KOL 合作实绩：1,500+ 位合作经验</h3>
+   <h3 class="sub-t sp" data-n="10.C" id="kol-resources" data-nav="KOL实绩">KOL 合作实绩：1,500+ 位合作经验</h3>
    <div class="cs-kol">
-    <figure class="cs-shot rv"><img src="assets/img/cases/kol-etaprime.jpg" loading="lazy" alt="ETA PRIME 评测 TECNO Pocket GO"><figcaption><b>ETA PRIME · 125 万订阅</b>评测 AMD Ryzen 平台的 TECNO Pocket GO，视频 42.6 万播放，发布当日带动项目支持者明显上升。</figcaption></figure>
+    <figure class="cs-shot rv"><img src="assets/img/cases/kol-etaprime.jpg" loading="lazy" alt="ETA PRIME 评测 TECNO Pocket GO"><figcaption><b>ETA PRIME · 125 万订阅</b>评测 AMD Ryzen 平台的 TECNO Pocket GO，视频 42.6 万播放，公司介绍收录的历史合作数据。</figcaption></figure>
     <figure class="cs-shot rv"><img src="assets/img/cases/kol-shortcircuit.jpg" loading="lazy" alt="ShortCircuit 与 Linus Tech Tips"><figcaption><b>ShortCircuit · Linus Tech Tips</b>欧美头部科技频道实机测评，单条播放突破 350 万次。</figcaption></figure>
     <figure class="cs-shot wide rv"><img src="assets/img/cases/kol-japan.jpg" loading="lazy" alt="日本本地 KOL 合作案例"><figcaption><b>日本本地 KOL</b>瀬戸弘司（167 万订阅）、桜雲AUN（133 万）、Kaede and Ahtan（375 万）、taroshin、Mikasu-Channel、サトシの趣味部屋 等。</figcaption></figure>
    </div>
   </div>
-  <h3 class="sub-t sp" data-n="10.D">日本线下展示与平台认可</h3>
+  <h3 class="sub-t sp" data-n="10.D" id="offline-resources" data-nav="线下资源">日本线下展示与平台认可</h3>
   <div class="cs-off">
    <figure class="cs-shot rv"><img src="assets/img/cases/offline-yodobashi.jpg" loading="lazy" alt="Yodobashi 线下店展示"><figcaption><b>Yodobashi</b>Makuake 专区线下展示</figcaption></figure>
    <figure class="cs-shot rv"><img src="assets/img/cases/offline-nojima.jpg" loading="lazy" alt="Nojima 线下店展示"><figcaption><b>Nojima 横滨 · 涩谷</b>实机陈列与体验</figcaption></figure>
    <figure class="cs-shot rv"><img src="assets/img/cases/offline-tsutaya.jpg" loading="lazy" alt="茑屋家电线下店展示"><figcaption><b>茑屋家电</b>体验会与店内展示</figcaption></figure>
   </div>
   <div class="band" data-theme="blue" style="padding:70px 0 40px;margin-top:60px">
+   <h3 class="sub-t" id="platform-resources" data-nav="平台资源">平台资源与合作实绩</h3>
    <div class="cs-award rv">
     <div class="cs-award-im"><img src="assets/img/cases/makuake-award.jpg" loading="lazy" alt="Makuake Of The Year 与 Makuake Partner 赏"></div>
     <div class="cs-award-tx">
-     <div class="cs-plat">PLATFORM</div>
+     <div class="cs-plat">平台合作实绩</div>
      <h4>Makuake Of The Year 2023 / 2024 · Makuake Partner 赏</h4>
-     <p>2022、2024、2025、2026 年受邀在 Makuake 年度活动分享众筹经验；Indiegogo 年度最佳文案奖 2021 / 2023。</p>
+     <p>公司介绍收录 Makuake 年度活动分享、平台奖项与线下展示合作。项目执行可结合品类与档期申请平台推荐、EDM 及体验展示资源，具体安排以平台确认结果为准。</p><span class="srcline">来源：迈思创新公司介绍 2026，第 78–80 页；历史合作实绩。</span>
     </div>
    </div>
   </div>
