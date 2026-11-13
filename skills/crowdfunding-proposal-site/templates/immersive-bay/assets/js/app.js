@@ -697,14 +697,14 @@ const GANTT_N = 25;
 const span = (a, b, cls) => Object.fromEntries(Array.from({ length: b - a + 1 }, (_, i) => [a + i, cls]));
 const gcat = t => ({ cat: t }), grow = (name, cells) => ({ name, cells });
 const GANTT_ROWS = [
-  gcat('关键节点'), grow('预热正式开始（2026.12.07）', { 4: 'ms' }), grow('众筹正式上线（2027.01.21）', { 10: 'ms' }), grow('60 天档期结束（2027.03.22）', { 19: 'ms' }), grow('90 天档期结束（2027.04.21）', { 23: 'ms' }), grow('发货期启动（2027 年 4 月第 4 周）', { 24: 'ms' }),
+  gcat('关键节点'), grow('预热正式开始（2026.12.22）', { 8: 'ms' }), grow('众筹正式上线（2027.01.21）', { 10: 'ms' }), grow('60 天档期结束（2027.03.22）', { 19: 'ms' }), grow('发货期启动（2027 年 4 月第 4 周）', { 24: 'ms' }),
   gcat('必备前置 · 品牌方'), grow('产品素材与本地化授权提供', span(0, 1, 'on')), grow('评测样机备货（7 / 10 台）', span(1, 3, 'on')),
   gcat('筹备期 · 4 周'), grow('策略、时间表与卖点对齐', { 0: 'on' }), grow('三款配置 Reward 结构确认', { 1: 'on' }), grow('实机演示与页面主视觉', span(1, 2, 'on')), grow('5 组 1:1 广告素材方向', { 2: 'on' }), grow('预热页与平台预约路径', span(2, 3, 'on')), grow('邮件序列与转化追踪校验', { 3: 'on' }), grow('KOL 名单确认与档期锁定', span(1, 3, 'on')),
-  gcat('预热期 · 45 天'), grow('预热广告启动与 CPL 校准', { 4: 'pre' }), grow('素材 A/B 轮换与扩量', span(5, 7, 'pre')), grow('平台预约与 LINE 内容运营', span(4, 9, 'pre')), grow('评测样机寄送至 KOL', span(5, 6, 'pre')), grow('KOL 提纲与预热内容', span(7, 8, 'pre')), grow('PR TIMES 通稿排期', span(7, 8, 'pre')), grow('众筹页面制作与优化', span(4, 8, 'pre')), grow('上线前邮件（一周 / 48h / 24h）', span(9, 10, 'pre')), grow('页面与 Reward 最终确认', { 9: 'pre' }),
-  gcat('众筹期 · 60 / 90 天'), grow('KOL 评测解禁与分批释放', Object.assign(span(10, 13, 'camp'), span(14, 15, 'ext'))), grow('上线期广告投放与再营销', Object.assign(span(10, 19, 'camp'), span(20, 23, 'ext'))), grow('项目上线与首 72h 冲刺', { 10: 'camp' }), grow('首日流量与转化分析', { 10: 'camp' }), grow('每周复盘与预算再分配', Object.assign(span(10, 19, 'camp'), span(20, 23, 'ext'))), grow('PR TIMES 通稿与线下展示', Object.assign(span(10, 12, 'camp'), span(20, 21, 'ext'))), grow('早鸟同价加开', Object.assign({ 14: 'camp' }, { 21: 'ext' })), grow('结束前邮件与 LINE 冲刺', Object.assign({ 19: 'camp' }, { 23: 'ext' })), grow('项目结束与 Update 发布', Object.assign({ 19: 'camp' }, { 23: 'ext' })),
+  gcat('预热期 · 30 天'), grow('预热广告启动与 CPL 校准', { 8: 'pre' }), grow('素材 A/B 轮换与扩量', span(8, 9, 'pre')), grow('平台预约与 LINE 内容运营', span(8, 9, 'pre')), grow('评测样机寄送至 KOL', span(5, 6, 'pre')), grow('KOL 提纲与预热内容', span(8, 9, 'pre')), grow('PR TIMES 通稿排期', span(8, 9, 'pre')), grow('众筹页面制作与优化', span(8, 9, 'pre')), grow('上线前邮件（一周 / 48h / 24h）', span(9, 10, 'pre')), grow('页面与 Reward 最终确认', { 9: 'pre' }),
+  gcat('众筹期 · 60 天'), grow('KOL 评测解禁与分批释放', span(10, 13, 'camp')), grow('上线期广告投放与再营销', span(10, 19, 'camp')), grow('项目上线与首 72h 冲刺', { 10: 'camp' }), grow('首日流量与转化分析', { 10: 'camp' }), grow('每周复盘与预算再分配', span(10, 19, 'camp')), grow('PR TIMES 通稿与线下展示', span(10, 12, 'camp')), grow('早鸟同价加开', { 14: 'camp' }), grow('结束前邮件与 LINE 冲刺', { 19: 'camp' }), grow('项目结束与 Update 发布', { 19: 'camp' }),
   gcat('发货期'), grow('订单整理与地址收集', { 24: 'ship' }), grow('发货通知与生产排期确认', { 24: 'ship' })
 ];
-const GANTT_STATE = { on: '筹备期', pre: '预热期', camp: '60 天主档', ext: '90 天延伸', ship: '发货期' };
+const GANTT_STATE = { on: '筹备期', pre: '预热期', camp: '60 天众筹', ship: '发货期' };
 function renderGantt() {
   const body = $('#ganttBody'); if (!body) return;
   body.innerHTML = GANTT_ROWS.map(r => {
