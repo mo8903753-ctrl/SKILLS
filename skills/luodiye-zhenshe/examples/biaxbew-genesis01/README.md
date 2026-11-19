@@ -1,3 +1,5 @@
+> **历史示例（legacy）**：这个案例保留的价值是 **Wix 打包/部署脚本** 与 **CNC 刀路揭开、慢动作按压** 等针对键盘的滚动短片技法。它的**视觉风格（深色舞台、噪点、标签式切换等）不再作为模板**——新项目的视觉与动效一律以 `references/design-system.md`、`references/motion-library.md` 和 `examples/sweetmyo-gen2-v4/` 为准。
+
 # 案例：biaXbew Genesis01 预热页
 
 线上：https://www.biaxbew.com/

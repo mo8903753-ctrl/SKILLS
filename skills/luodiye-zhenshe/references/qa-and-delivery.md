@@ -56,3 +56,13 @@
 
 - 压缩包单个文件太大可能在对方那边被截断（出现过 15 MB 被截断）。拆成每个不超过约 3.6 MB 的小包，文档和代码放第一个包，图片分到后面几个，再写一份"先看我"说明解压到同一文件夹。
 - 打包前检查：没有密码、令牌；脚本里没有写死本机路径；不带旧测试站的产物。
+
+## 自动门槛（2026-11 起，交付前必跑）
+
+```bash
+node scripts/serve.mjs <项目目录> 8796 &
+ego-browser nodejs < <skill>/scripts/qa/page-metrics.mjs   # 必须输出 GATE: PASS
+ego-browser nodejs < <skill>/scripts/qa/scroll-shots.mjs   # 每场景 3 个进度点，桌面 1440 + 手机 390
+```
+HARD 项：可见字符 ≤5,000 · 无 <12px 文字 · ≤12px 占比 ≤5% · 字体 ≤3 · 带边框元素 ≤6 · 无 backdrop-filter/blur · 背景色 ≤3 · 视频 ≥5 且视频+canvas ≥6 · 钉住场景 ≥6 · 无破图 · 无横向溢出 · Wix 表单位恰好 3 个。
+任一失败就修，不能交付。参考：`examples/sweetmyo-gen2-v4/` 通过；aroti.ai/deposit-new 与 :4180 版均未通过。

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sweetmyo Gen2 — Work Out Smarter. Not Longer. | Live Dec. 08 on Kickstarter</title>
+  <meta name="description" content="Sweetmyo Gen2 AI bio-electric training suit. 2 kHz sine wave, 16 electrodes, motion-adaptive AI. Reserve up to 50% OFF before the Kickstarter launch.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Preview-only stand-ins for the three Wix native forms (Wix renders the real ones). */
+    html, body { margin: 0; padding: 0; background: #F6F5F2; }
+    .pv-sec { position: relative; overflow-x: clip; }
+    .pv-grid { display: grid; grid-template-rows: 1fr; grid-template-columns: 100%; }
+    .pv-grid > * { grid-area: 1 / 1 / 2 / 2; place-self: start; }
+    .pv-form-wrap { width: min(560px, calc(100vw - 40px)); z-index: 35; }
+    .pv-form { display: flex; align-items: center; gap: 8px; padding: 6px; border-radius: 999px; width: 100%; box-sizing: border-box; font-family: 'Inter Tight', Arial, sans-serif; }
+    .pv-form input { flex: 1 1 auto; min-width: 0; height: 52px; border: 0; outline: none; background: transparent; font: 500 16px 'Inter Tight', Arial, sans-serif; padding: 0 18px; }
+    .pv-form button { flex: none; height: 52px; padding: 0 26px; border: 0; border-radius: 999px; font: 600 15px 'Inter Tight', Arial, sans-serif; cursor: pointer; white-space: nowrap; background: #CBF23A; color: #0E0F0C; }
+    .pv-form.is-ink { background: #0E0F0C; }
+    .pv-form.is-ink input { color: #F6F5F2; }
+    .pv-form.is-ink input::placeholder { color: #A9ACA3; }
+    .pv-form.is-paper { background: #F6F5F2; }
+    .pv-form.is-paper input { color: #0E0F0C; }
+    .pv-form.is-paper input::placeholder { color: #5A5C55; }
+    .pv-form.is-paper button { background: #0E0F0C; color: #F6F5F2; }
+    @media (max-width: 760px) {
+      .pv-form input { height: 48px; font-size: 15px; padding: 0 12px; }
+      .pv-form button { height: 48px; padding: 0 16px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <section class="pv-sec">
+    <div class="pv-grid">
+      <div style="width:100%;"><sweetmyo-gen2-landing></sweetmyo-gen2-landing></div>
+      <div class="pv-form-wrap"><form class="pv-form is-ink" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You’re on the list';"><input type="email" required placeholder="Enter your email" aria-label="Email"><button type="submit">Notify Me</button></form></div>
+      <div class="pv-form-wrap"><form class="pv-form is-paper" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You’re on the list';"><input type="email" required placeholder="Enter your email" aria-label="Email"><button type="submit">Lock In 50% OFF</button></form></div>
+      <div class="pv-form-wrap"><form class="pv-form is-paper" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Reserved';"><input type="email" required placeholder="Enter your email" aria-label="Email"><button type="submit">Notify Me</button></form></div>
+    </div>
+  </section>
+  <script src="wix/sweetmyo-gen2-landing.root.js"></script>
+</body>
+</html>

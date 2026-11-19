@@ -14,7 +14,13 @@
 | https://w95182.wixsite.com/my-site-5 | MorrorART Morning Blues 壁画音箱 |
 | https://w95182.wixsite.com/website-40 | Careld 智能枕 |
 
-## 结构（从上到下）
+## 结构按卖点组织（2026-11 起）
+
+- **至少 6–7 屏**，必须包含三个表单屏：首屏、中段横幅、终极 CTA。其余每个卖点一屏，不把两个卖点塞进一屏。
+- 骨架只作参考：强开场 → 安静 → 惊喜 → 密集 → 收尾，节奏要有起伏。
+- 最新的参考实现是 `examples/sweetmyo-gen2-v4/`（10 屏），每屏的原语、素材、字数见该目录 `README.md` 的“逐屏计划表”。
+
+## 经典结构（从上到下）
 
 1. 顶栏：品牌 logo（白色版）+ "Launching soon on [Kickstarter 字标]"。
 2. **首屏**：大标题 + 副标题 + "Launching Soon on [Kickstarter 字标]" + "Sign up now and enjoy over XX% OFF" + **邮箱框（原生表单 1）**。首屏不滚动就要看到邮箱框。
@@ -41,7 +47,7 @@
 - 用 Kickstarter 官方绿色字标图（客户站点媒体库里通常已有），放在 "Launching Soon on" 后面，高度约 17px。
 - 不要用文字 "KICKSTARTER" 代替。
 
-## biaXbew 最终版的区块（参考）
+## biaXbew 最终版的区块（历史参考，视觉风格不再沿用）
 
 | 区块 | 做法 |
 |---|---|

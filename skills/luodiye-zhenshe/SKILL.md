@@ -1,6 +1,6 @@
 ---
 name: luodiye-zhenshe
-description: 落地页震慑版（luodiye-zhenshe）。MadSpace 的 Kickstarter / 众筹预热落地页（Landing Page）全流程：盘点品牌方素材 → 按卖点参考竞品做动效 → 写成高质感滚动交互网页 → 用 Wix「自定义元素」落到 Wix 并用 Wix 原生表单收邮箱 → 截图自检 → 发布与交接。用户说「做预热页 / landing page / 落地页 / 按范例做一个新项目 / 放到 Wix / 收邮箱」，或提到「落地页震慑版」、给出 w95182.wixsite.com 范例链接、飞书文案表、素材文件夹时使用。也用于已有预热页的后续修改。
+description: 落地页震慑版（luodiye-zhenshe）。MadSpace 的 Kickstarter / 众筹预热落地页（Landing Page）全流程：盘点品牌方素材 → 按卖点参考竞品做动效 → 写成高质感滚动交互网页 → 用 Wix「自定义元素」落到 Wix 并用 Wix 原生表单收邮箱 → 截图自检 → 发布与交接。用户说「做预热页 / landing page / 落地页 / 按范例做一个新项目 / 放到 Wix / 收邮箱」，或提到「落地页震慑版」、给出 w95182.wixsite.com 范例链接、飞书文案表、素材文件夹时使用。也用于已有预热页的后续修改，以及「重构 / 动效拉满 / 设计不够震撼 / 对比其他模型的页面 / 还原参考页动效」类请求。
 ---
 
 # 落地页震慑版
@@ -10,9 +10,37 @@ Kickstarter / 众筹预热落地页，落到 Wix，用 Wix 原生表单收邮箱
 这个 skill 复刻 MadSpace 做 biaXbew Genesis01 预热页的完整方法，包括负责人（下称"客户"）的审美偏好和历次反馈。目标是同样的输入能做出同样水准、同样做法的页面。
 
 **动手前必须读：**
-1. `references/client-taste-and-rules.md`：客户的偏好、禁忌和工作方式。**违反其中任何一条都会被打回。**
-2. 当前阶段对应的 reference（见每一步）。
-3. 完整案例 `examples/biaxbew-genesis01/`：源码、Wix 打包脚本、交接文档，遇到不确定的做法先看它怎么做的。
+1. 本文件的「速查卡」与 `references/design-system.md`：所有可量化的硬规则。
+2. `references/client-taste-and-rules.md`：客户的偏好、禁忌和工作方式。**违反其中任何一条都会被打回。**
+3. `references/motion-library.md` 与 `references/reference-teardown.md`：动效库与参考页拆解流程。
+4. 标杆案例 `examples/sweetmyo-gen2-v4/`：源码、素材流水线、Wix 打包、逐屏计划表、截图总览。遇到不确定的做法先看它怎么做的。
+5. 把 `references/positive-prompts.md` 与 `references/negative-prompts.md` 里的英文提示词贴给你自己（或你调度的其他模型）。
+
+---
+
+## 先读这张速查卡（硬规则，全部可检查）
+
+**目标**：用本 skill 的任何模型，做出和标杆 `examples/sweetmyo-gen2-v4/` 同等的视觉、交互动效与审美。  
+完整数字在 `references/design-system.md`；动效在 `references/motion-library.md`；可直接粘给其他模型的提示词在 `references/positive-prompts.md` 与 `references/negative-prompts.md`。
+
+| 项 | 硬规则 |
+|---|---|
+| 字体 | 四套白名单选一套（默认 Inter Tight + Instrument Serif 斜体 + JetBrains Mono）；禁止压缩/窄体/像素体；字距 ≥ −0.05em |
+| 字号 | Hero `clamp(52px,9.4vw,156px)`；标题 `clamp(38px,5.4vw,88px)`；正文 16–17px；数字说明 13px；**任何文字 ≥12px**；≤12px 文字占比 ≤5% |
+| 文字量 | 每屏 1 标题(≤8 词)+≤1 段(≤35 词)+≤3 个规格数字；全页 ≤5,000 字符 |
+| 线框 | 零边框 / 角括号 / tab 切图 / 装饰编号；仅允许 2px 进度条、荧光下划线、药丸表单；细线只在规格表与页脚 |
+| 版面 | 每屏 sticky 100svh 舞台（外层 240–420vh）；主视觉 ≥视口 40%；内容分在对角两端；文字栏 ≤560px；**禁止把小区块塞进角落** |
+| 配色 | 从品牌方视频/官网取色；全页 ≤3 种背景色，仅在章节边界切换；点缀色每画面 ≤2 元素；文字用近黑/近白；不改产品色 |
+| 动效 | 参考页动效 100% 还原，再额外 ≥2 种；全页 ≥8 种原语、≥6 个钉住场景；相邻不重复 |
+| 素材 | 每屏证明这一屏的文案（实拍 / 生成 / Blender / 数据可视化）；同镜头只用一次；视频只正放、每段 ≥4.5s |
+| 首屏 | 全屏真实视频→滚动收缩成胶囊；或大静图 + 滚动联动。必须有标题、一句话、表单、计数规格数字 |
+| 页面 | ≥6–7 屏，按卖点组织；必含首屏 / 中段 / 终极 CTA 三个表单屏 |
+| 引擎 | 自写进度 + `position: sticky`；**不要 ScrollTrigger `pin:true`**；表单占位不得放进 sticky 容器 |
+| 门槛 | `scripts/qa/page-metrics.mjs` 必须 `GATE: PASS` 才能交付 |
+
+**绝对不要**：开场加载 · 淡入上浮 · 全屏噪点 · 毛玻璃 · 运行时 blur · 整页跳色 · 描边卡片 · 蓝/银产品变体 · 制作说明文字 · 倒放视频 · 同镜头重复 · 手绘示意图 · 仿 UI。
+
+> 为什么要这么多数字：别的模型回到“HUD 说明书”套路时，问题永远是小字太多、线框太多、字太多、版面挤、没视频、颜色乱跳、字体怪。把这些写成数字并自动检查，就不再靠模型自觉。
 
 ---
 
@@ -47,31 +75,38 @@ Kickstarter / 众筹预热落地页，落到 Wix，用 Wix 原生表单收邮箱
 
 详见 `references/asset-pipeline.md`。
 
+### 2.5 拆解参考页（强制，先于任何设计）
+- 按 `references/reference-teardown.md`：固定 1440×900 录 20 个滚动点 + 每个动效场景 5 个进度点，写**动效表**交给客户看。
+- 参考页的每一个动效都要 100% 还原；还原完再从 `references/motion-library.md` 额外加 ≥2 种、且必须服务某个卖点。
+- 然后写**逐屏计划表**（标题 / 主视觉 / 动效原语 / 素材 / 字数），**客户确认后**才动手写代码。
+
 ### 3. 每个卖点：先查竞品怎么表达，再定画面和动效
 - 每个卖点都要回答"用户看完这一屏能不能看懂这个卖点"。
 - 先搜同类竞品官网（苹果、Razer、Wooting、Keychron、NuPhy 等）这个卖点是怎么用画面和动效讲的，截图存档，再决定本页做法。
-- 已被客户认可的做法和被否掉的做法都在 `references/motion-playbook.md`，优先复用认可过的。
+- 动效从 `references/motion-library.md`（26 个原语）里选；已被客户否掉的做法见 `references/negative-prompts.md` 与 `references/motion-playbook.md` 第二节。
 - 每张图都要能回答"它在证明哪一句文案"。同一个镜头全页只出现一次。
 
 ### 4. 处理素材（不能裸用）
 - 裁切到版位比例（不靠 CSS 硬裁）、统一调色、压暗背景、去道具。
 - 灯效连拍先对齐再做切换；产品抠图做透视校正；需要"动起来"的产品拆层（例：轴体拆成轴心和外壳）。
+- **素材要证明这一屏的文案，不一定是“产品穿在人身上”**：按卖点选择或创造最合适的素材——实拍、基于产品图生成、Blender 3D 建模渲染、由真实参数驱动的 canvas/SVG 数据可视化；整页都是产品特写也不好看。
 - 缺少的画面可以生成，但**不能改变产品本身**（键帽字符、布局、配色、Logo），生成的工艺示意图要在画面上标 "Process visualization"。
 - 主展示配色以客户指定的为准（biaXbew 是亮银为主、烟枪灰其次、黑色辅助），同一画面里产品配色必须一致。
 - 详见 `references/asset-pipeline.md`。
 
 ### 5. 写页面
-- 一个静态页：`index.html` + `css/style.css` + `js/main.js` + `assets/`。动效用 GSAP + ScrollTrigger。
-- 版式、字体、色彩、动效的规矩见 `references/client-taste-and-rules.md` 和 `references/motion-playbook.md`。
-- 结构从 `examples/biaxbew-genesis01/` 起步最快：保留它的骨架（首屏 3D 产品、整屏滚动短片、自动轮播、数字计数），替换内容和素材。
+- **先读标杆 `examples/sweetmyo-gen2-v4/`**（`src/template.js` / `src/element.js` / `src/styles.css`）：保留它的场景引擎、sticky 结构和 Wix 表单对位，替换内容和素材。
+- 版式、字体、色彩、字号全部按 `references/design-system.md`；动效按 `references/motion-library.md`；视觉否决清单见 `references/negative-prompts.md`。
+- `examples/biaxbew-genesis01/` 是历史示例，**只参考它的 Wix 打包和键盘类滚动短片技法，不沿用其视觉风格**。
 
-### 6. 本地自检
-- 本地起服务，用浏览器自动化在 1440 宽和 390 宽（手机）逐屏截图，看完每一张再交付。
+### 6. 本地自检（强制门槛）
+- `node scripts/serve.mjs <项目目录> 8796`（支持 Range，视频 scrub 必须）。
+- 跑 `scripts/qa/page-metrics.mjs`，必须 `GATE: PASS`；再跑 `scripts/qa/scroll-shots.mjs`，在 1440 与 390 宽逐场景（3 个进度点）看完每张截图再交付。
 - 检查清单见 `references/qa-and-delivery.md`。
 
 ### 7. 落到 Wix
 - 原理和全部操作见 `references/wix-custom-element.md`（技术细节）和 `references/wix-custom-page-prompt.md`（给其他 AI 的完整提示词版本）。
-- 打包：`scripts/wix/build_wix.py`（案例里的版本，换项目时要改选择器和分段）。
+- 打包：新项目用 `examples/sweetmyo-gen2-v4/scripts/build_wix.py`（自定义元素 + 本地 Wix 980px 宿主测试页，`part=a|b|c|d` 分段）；`scripts/wix/build_wix.py` 是 biaXbew 的旧版本。
 - 部署：`scripts/wix/deploy.mjs`（上传图片 → 写入代码文件 → 发布）。
 - **只能在发布后的线上页面验证**，Wix 编辑器的预览里自定义元素是空白的。
 - **Wix 发布是整站发布，每次发布前都要得到客户同意。**
@@ -92,6 +127,7 @@ Kickstarter / 众筹预热落地页，落到 Wix，用 Wix 原生表单收邮箱
 - 详细的历次反馈见 `references/feedback-log.md`。
 
 ## 工具要求
+- 视频处理：`ffmpeg`（可用 `imageio_ffmpeg` 自带的二进制）。
 - 浏览器自动化：能打开已登录的 Wix 编辑器并在页面里执行 JavaScript（客户用 Ego Lite 的 `ego-browser`；也可用 Playwright、Claude in Chrome 等）。
 - Python 3（Pillow、OpenCV、NumPy；抠图要 rembg）、Node。
 - 飞书读表：`lark-cli`（或客户导出的表格文件）。

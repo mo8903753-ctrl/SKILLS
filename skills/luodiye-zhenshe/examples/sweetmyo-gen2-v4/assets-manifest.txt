@@ -1,0 +1,25 @@
+# Media keys referenced by src/template.js (A('<key>') -> assets/<key>)
+# v4/* are produced by scripts/process_assets_v4.py from official sweetmyo.com media.
+banners/mid-vip-banner.webp
+brand/cert-ce.svg
+brand/cert-emc.svg
+brand/cert-fcc.svg
+brand/cert-rohs.svg
+brand/cert-safety.svg
+brand/ks-wordmark.png
+brand/sweetmyo-wordmark-white.svg
+brand/sweetmyo-wordmark.svg
+gallery/poster-couch.webp
+gallery/vid-couch.mp4
+hero/hero-montage-poster.webp
+hero/hero-workout-montage.mp4
+layers/layer-1-fabric.webp
+v4/fit-two-piece.webp
+v4/glow-volt.png
+v4/hub-float.webp
+v4/hub-lock.mp4
+v4/hub-lock.webp
+v4/scan-glass.mp4
+v4/scan-glass.webp
+v4/zones-body.mp4
+v4/zones-body.webp
