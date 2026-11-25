@@ -599,9 +599,11 @@ function initScrollMotion() {
     $$('.tl2-wk', tl2).forEach(w => gsap.from($('.card', w), { x: w.classList.contains('l') && !isMobile() ? -80 : 80, opacity: 0, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: w, start: 'top 88%' } }));
     $$('.tl2-ph', tl2).forEach(ph => gsap.from(ph, { scale: 0.6, opacity: 0, duration: 0.8, ease: 'back.out(2)', scrollTrigger: { trigger: ph, start: 'top 88%' } }));
   }
-  // rhythm bars
+  // rhythm bars & paid media daily/allocation charts
   const rb = $('#rhythmBars');
   if (rb) gsap.from($$('.rb', rb), { scaleY: 0, duration: 0.9, ease: 'expo.out', stagger: 0.012, scrollTrigger: { trigger: rb, start: 'top 80%' } });
+  $$('.dchart-bars').forEach(ch => gsap.from($$('.fill', ch), { scaleY: 0, duration: 0.9, ease: 'expo.out', stagger: 0.06, scrollTrigger: { trigger: ch, start: 'top 84%', once: true } }));
+  $$('.alloc-bar').forEach(ab => gsap.from($$('i', ab), { scaleX: 0, transformOrigin: 'left', duration: 0.9, ease: 'expo.out', stagger: 0.08, scrollTrigger: { trigger: ab, start: 'top 85%', once: true } }));
   // strike-throughs
   const dont = $('#dont');
   if (dont) gsap.to($$('.strike', dont), { scaleX: 1, duration: 0.9, ease: 'expo.inOut', stagger: 0.18, scrollTrigger: { trigger: dont, start: 'top 70%' } });
